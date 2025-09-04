@@ -33,7 +33,7 @@ export class Group extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly attributes: pulumi.Output<string | undefined>;
     declare public readonly groupId: pulumi.Output<string>;
@@ -89,7 +89,7 @@ export class Group extends pulumi.CustomResource {
  */
 export interface GroupState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     groupId?: pulumi.Input<string>;
@@ -111,7 +111,7 @@ export interface GroupState {
  */
 export interface GroupArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     groupId?: pulumi.Input<string>;

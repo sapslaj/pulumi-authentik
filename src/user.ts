@@ -33,7 +33,7 @@ export class User extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly attributes: pulumi.Output<string | undefined>;
     declare public readonly email: pulumi.Output<string | undefined>;
@@ -115,7 +115,7 @@ export class User extends pulumi.CustomResource {
  */
 export interface UserState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     email?: pulumi.Input<string>;
@@ -152,7 +152,7 @@ export interface UserState {
  */
 export interface UserArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     email?: pulumi.Input<string>;

@@ -50,6 +50,14 @@ export class StageEmail extends pulumi.CustomResource {
      * Defaults to `25`.
      */
     declare public readonly port: pulumi.Output<number | undefined>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
+     */
+    declare public readonly recoveryCacheTimeout: pulumi.Output<string | undefined>;
+    /**
+     * Defaults to `5`.
+     */
+    declare public readonly recoveryMaxAttempts: pulumi.Output<number | undefined>;
     declare public readonly stageEmailId: pulumi.Output<string>;
     /**
      * Defaults to `authentik`.
@@ -64,7 +72,7 @@ export class StageEmail extends pulumi.CustomResource {
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     declare public readonly tokenExpiry: pulumi.Output<string | undefined>;
     /**
@@ -94,6 +102,8 @@ export class StageEmail extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["password"] = state?.password;
             resourceInputs["port"] = state?.port;
+            resourceInputs["recoveryCacheTimeout"] = state?.recoveryCacheTimeout;
+            resourceInputs["recoveryMaxAttempts"] = state?.recoveryMaxAttempts;
             resourceInputs["stageEmailId"] = state?.stageEmailId;
             resourceInputs["subject"] = state?.subject;
             resourceInputs["template"] = state?.template;
@@ -111,6 +121,8 @@ export class StageEmail extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["port"] = args?.port;
+            resourceInputs["recoveryCacheTimeout"] = args?.recoveryCacheTimeout;
+            resourceInputs["recoveryMaxAttempts"] = args?.recoveryMaxAttempts;
             resourceInputs["stageEmailId"] = args?.stageEmailId;
             resourceInputs["subject"] = args?.subject;
             resourceInputs["template"] = args?.template;
@@ -150,6 +162,14 @@ export interface StageEmailState {
      * Defaults to `25`.
      */
     port?: pulumi.Input<number>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
+     */
+    recoveryCacheTimeout?: pulumi.Input<string>;
+    /**
+     * Defaults to `5`.
+     */
+    recoveryMaxAttempts?: pulumi.Input<number>;
     stageEmailId?: pulumi.Input<string>;
     /**
      * Defaults to `authentik`.
@@ -164,7 +184,7 @@ export interface StageEmailState {
      */
     timeout?: pulumi.Input<number>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     tokenExpiry?: pulumi.Input<string>;
     /**
@@ -198,6 +218,14 @@ export interface StageEmailArgs {
      * Defaults to `25`.
      */
     port?: pulumi.Input<number>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
+     */
+    recoveryCacheTimeout?: pulumi.Input<string>;
+    /**
+     * Defaults to `5`.
+     */
+    recoveryMaxAttempts?: pulumi.Input<number>;
     stageEmailId?: pulumi.Input<string>;
     /**
      * Defaults to `authentik`.
@@ -212,7 +240,7 @@ export interface StageEmailArgs {
      */
     timeout?: pulumi.Input<number>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     tokenExpiry?: pulumi.Input<string>;
     /**

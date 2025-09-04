@@ -35,7 +35,7 @@ export class ApplicationEntitlement extends pulumi.CustomResource {
     declare public readonly application: pulumi.Output<string>;
     declare public readonly applicationEntitlementId: pulumi.Output<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly attributes: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -79,7 +79,7 @@ export interface ApplicationEntitlementState {
     application?: pulumi.Input<string>;
     applicationEntitlementId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -92,7 +92,7 @@ export interface ApplicationEntitlementArgs {
     application: pulumi.Input<string>;
     applicationEntitlementId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     name?: pulumi.Input<string>;

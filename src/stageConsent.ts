@@ -33,7 +33,7 @@ export class StageConsent extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `weeks=4`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `weeks=4`.
      */
     declare public readonly consentExpireIn: pulumi.Output<string | undefined>;
     /**
@@ -77,7 +77,7 @@ export class StageConsent extends pulumi.CustomResource {
  */
 export interface StageConsentState {
     /**
-     * Defaults to `weeks=4`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `weeks=4`.
      */
     consentExpireIn?: pulumi.Input<string>;
     /**
@@ -93,7 +93,7 @@ export interface StageConsentState {
  */
 export interface StageConsentArgs {
     /**
-     * Defaults to `weeks=4`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `weeks=4`.
      */
     consentExpireIn?: pulumi.Input<string>;
     /**

@@ -62,7 +62,7 @@ export class StageAuthenticatorEmail extends pulumi.CustomResource {
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     declare public readonly tokenExpiry: pulumi.Output<string | undefined>;
     /**
@@ -162,7 +162,7 @@ export interface StageAuthenticatorEmailState {
      */
     timeout?: pulumi.Input<number>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     tokenExpiry?: pulumi.Input<string>;
     /**
@@ -208,7 +208,7 @@ export interface StageAuthenticatorEmailArgs {
      */
     timeout?: pulumi.Input<number>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     tokenExpiry?: pulumi.Input<string>;
     /**

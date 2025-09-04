@@ -46,7 +46,7 @@ export class RacEndpoint extends pulumi.CustomResource {
     declare public readonly protocolProvider: pulumi.Output<number>;
     declare public readonly racEndpointId: pulumi.Output<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly settings: pulumi.Output<string | undefined>;
 
@@ -114,7 +114,7 @@ export interface RacEndpointState {
     protocolProvider?: pulumi.Input<number>;
     racEndpointId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }
@@ -137,7 +137,7 @@ export interface RacEndpointArgs {
     protocolProvider: pulumi.Input<number>;
     racEndpointId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }

@@ -33,13 +33,10 @@ export class ProviderGoogleWorkspace extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly credentials: pulumi.Output<string | undefined>;
     declare public readonly defaultGroupEmailDomain: pulumi.Output<string>;
-    /**
-     * Defaults to `seconds=0`.
-     */
     declare public readonly delegatedSubject: pulumi.Output<string | undefined>;
     /**
      * Defaults to `false`.
@@ -113,13 +110,10 @@ export class ProviderGoogleWorkspace extends pulumi.CustomResource {
  */
 export interface ProviderGoogleWorkspaceState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     credentials?: pulumi.Input<string>;
     defaultGroupEmailDomain?: pulumi.Input<string>;
-    /**
-     * Defaults to `seconds=0`.
-     */
     delegatedSubject?: pulumi.Input<string>;
     /**
      * Defaults to `false`.
@@ -146,13 +140,10 @@ export interface ProviderGoogleWorkspaceState {
  */
 export interface ProviderGoogleWorkspaceArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     credentials?: pulumi.Input<string>;
     defaultGroupEmailDomain: pulumi.Input<string>;
-    /**
-     * Defaults to `seconds=0`.
-     */
     delegatedSubject?: pulumi.Input<string>;
     /**
      * Defaults to `false`.

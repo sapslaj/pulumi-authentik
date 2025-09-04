@@ -43,11 +43,15 @@ export class StageUserLogin extends pulumi.CustomResource {
      */
     declare public readonly networkBinding: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
+     */
+    declare public readonly rememberDevice: pulumi.Output<string | undefined>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     declare public readonly rememberMeOffset: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     declare public readonly sessionDuration: pulumi.Output<string | undefined>;
     declare public readonly stageUserLoginId: pulumi.Output<string>;
@@ -72,6 +76,7 @@ export class StageUserLogin extends pulumi.CustomResource {
             resourceInputs["geoipBinding"] = state?.geoipBinding;
             resourceInputs["name"] = state?.name;
             resourceInputs["networkBinding"] = state?.networkBinding;
+            resourceInputs["rememberDevice"] = state?.rememberDevice;
             resourceInputs["rememberMeOffset"] = state?.rememberMeOffset;
             resourceInputs["sessionDuration"] = state?.sessionDuration;
             resourceInputs["stageUserLoginId"] = state?.stageUserLoginId;
@@ -81,6 +86,7 @@ export class StageUserLogin extends pulumi.CustomResource {
             resourceInputs["geoipBinding"] = args?.geoipBinding;
             resourceInputs["name"] = args?.name;
             resourceInputs["networkBinding"] = args?.networkBinding;
+            resourceInputs["rememberDevice"] = args?.rememberDevice;
             resourceInputs["rememberMeOffset"] = args?.rememberMeOffset;
             resourceInputs["sessionDuration"] = args?.sessionDuration;
             resourceInputs["stageUserLoginId"] = args?.stageUserLoginId;
@@ -106,11 +112,15 @@ export interface StageUserLoginState {
      */
     networkBinding?: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
+     */
+    rememberDevice?: pulumi.Input<string>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     rememberMeOffset?: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     sessionDuration?: pulumi.Input<string>;
     stageUserLoginId?: pulumi.Input<string>;
@@ -135,11 +145,15 @@ export interface StageUserLoginArgs {
      */
     networkBinding?: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
+     */
+    rememberDevice?: pulumi.Input<string>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     rememberMeOffset?: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     sessionDuration?: pulumi.Input<string>;
     stageUserLoginId?: pulumi.Input<string>;

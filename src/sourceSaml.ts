@@ -67,8 +67,8 @@ export class SourceSaml extends pulumi.CustomResource {
      * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` Defaults to
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
+     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     declare public readonly nameIdPolicy: pulumi.Output<string | undefined>;
     /**
@@ -90,7 +90,7 @@ export class SourceSaml extends pulumi.CustomResource {
     declare public readonly sourceSamlId: pulumi.Output<string>;
     declare public readonly ssoUrl: pulumi.Output<string>;
     /**
-     * Defaults to `days=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=1`.
      */
     declare public readonly temporaryUserDeleteAfter: pulumi.Output<string | undefined>;
     /**
@@ -227,8 +227,8 @@ export interface SourceSamlState {
      * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` Defaults to
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
+     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     nameIdPolicy?: pulumi.Input<string>;
     /**
@@ -250,7 +250,7 @@ export interface SourceSamlState {
     sourceSamlId?: pulumi.Input<string>;
     ssoUrl?: pulumi.Input<string>;
     /**
-     * Defaults to `days=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=1`.
      */
     temporaryUserDeleteAfter?: pulumi.Input<string>;
     /**
@@ -304,8 +304,8 @@ export interface SourceSamlArgs {
      * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
      * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` Defaults to
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
+     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     nameIdPolicy?: pulumi.Input<string>;
     /**
@@ -327,7 +327,7 @@ export interface SourceSamlArgs {
     sourceSamlId?: pulumi.Input<string>;
     ssoUrl: pulumi.Input<string>;
     /**
-     * Defaults to `days=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=1`.
      */
     temporaryUserDeleteAfter?: pulumi.Input<string>;
     /**

@@ -36,7 +36,7 @@ export class PropertyMappingRac extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     declare public readonly propertyMappingRacId: pulumi.Output<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly settings: pulumi.Output<string | undefined>;
 
@@ -77,7 +77,7 @@ export interface PropertyMappingRacState {
     name?: pulumi.Input<string>;
     propertyMappingRacId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }
@@ -90,7 +90,7 @@ export interface PropertyMappingRacArgs {
     name?: pulumi.Input<string>;
     propertyMappingRacId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }

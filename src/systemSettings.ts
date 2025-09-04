@@ -37,7 +37,7 @@ export class SystemSettings extends pulumi.CustomResource {
      */
     declare public readonly avatars: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     declare public readonly defaultTokenDuration: pulumi.Output<string | undefined>;
     /**
@@ -57,9 +57,13 @@ export class SystemSettings extends pulumi.CustomResource {
      */
     declare public readonly defaultUserChangeUsername: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `days=365`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=365`.
      */
     declare public readonly eventRetention: pulumi.Output<string | undefined>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{"policies_buffered_access_view": false}`.
+     */
+    declare public readonly flags: pulumi.Output<string | undefined>;
     declare public readonly footerLinks: pulumi.Output<{[key: string]: string}[] | undefined>;
     /**
      * Defaults to `true`.
@@ -99,6 +103,7 @@ export class SystemSettings extends pulumi.CustomResource {
             resourceInputs["defaultUserChangeName"] = state?.defaultUserChangeName;
             resourceInputs["defaultUserChangeUsername"] = state?.defaultUserChangeUsername;
             resourceInputs["eventRetention"] = state?.eventRetention;
+            resourceInputs["flags"] = state?.flags;
             resourceInputs["footerLinks"] = state?.footerLinks;
             resourceInputs["gdprCompliance"] = state?.gdprCompliance;
             resourceInputs["impersonation"] = state?.impersonation;
@@ -114,6 +119,7 @@ export class SystemSettings extends pulumi.CustomResource {
             resourceInputs["defaultUserChangeName"] = args?.defaultUserChangeName;
             resourceInputs["defaultUserChangeUsername"] = args?.defaultUserChangeUsername;
             resourceInputs["eventRetention"] = args?.eventRetention;
+            resourceInputs["flags"] = args?.flags;
             resourceInputs["footerLinks"] = args?.footerLinks;
             resourceInputs["gdprCompliance"] = args?.gdprCompliance;
             resourceInputs["impersonation"] = args?.impersonation;
@@ -135,7 +141,7 @@ export interface SystemSettingsState {
      */
     avatars?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     defaultTokenDuration?: pulumi.Input<string>;
     /**
@@ -155,9 +161,13 @@ export interface SystemSettingsState {
      */
     defaultUserChangeUsername?: pulumi.Input<boolean>;
     /**
-     * Defaults to `days=365`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=365`.
      */
     eventRetention?: pulumi.Input<string>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{"policies_buffered_access_view": false}`.
+     */
+    flags?: pulumi.Input<string>;
     footerLinks?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     /**
      * Defaults to `true`.
@@ -187,7 +197,7 @@ export interface SystemSettingsArgs {
      */
     avatars?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
     defaultTokenDuration?: pulumi.Input<string>;
     /**
@@ -207,9 +217,13 @@ export interface SystemSettingsArgs {
      */
     defaultUserChangeUsername?: pulumi.Input<boolean>;
     /**
-     * Defaults to `days=365`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=365`.
      */
     eventRetention?: pulumi.Input<string>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{"policies_buffered_access_view": false}`.
+     */
+    flags?: pulumi.Input<string>;
     footerLinks?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     /**
      * Defaults to `true`.

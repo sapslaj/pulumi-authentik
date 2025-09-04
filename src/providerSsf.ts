@@ -33,7 +33,7 @@ export class ProviderSsf extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     declare public readonly eventRetention: pulumi.Output<string | undefined>;
     /**
@@ -80,7 +80,7 @@ export class ProviderSsf extends pulumi.CustomResource {
  */
 export interface ProviderSsfState {
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     eventRetention?: pulumi.Input<string>;
     /**
@@ -97,7 +97,7 @@ export interface ProviderSsfState {
  */
 export interface ProviderSsfArgs {
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     eventRetention?: pulumi.Input<string>;
     /**

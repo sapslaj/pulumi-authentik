@@ -32,6 +32,14 @@ export class EventTransport extends pulumi.CustomResource {
         return obj['__pulumiType'] === EventTransport.__pulumiType;
     }
 
+    /**
+     * Defaults to `authentik Notification:`.
+     */
+    declare public readonly emailSubjectPrefix: pulumi.Output<string | undefined>;
+    /**
+     * Defaults to `email/event_notification.html`.
+     */
+    declare public readonly emailTemplate: pulumi.Output<string | undefined>;
     declare public readonly eventTransportId: pulumi.Output<string>;
     /**
      * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`
@@ -59,6 +67,8 @@ export class EventTransport extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EventTransportState | undefined;
+            resourceInputs["emailSubjectPrefix"] = state?.emailSubjectPrefix;
+            resourceInputs["emailTemplate"] = state?.emailTemplate;
             resourceInputs["eventTransportId"] = state?.eventTransportId;
             resourceInputs["mode"] = state?.mode;
             resourceInputs["name"] = state?.name;
@@ -71,6 +81,8 @@ export class EventTransport extends pulumi.CustomResource {
             if (args?.mode === undefined && !opts.urn) {
                 throw new Error("Missing required property 'mode'");
             }
+            resourceInputs["emailSubjectPrefix"] = args?.emailSubjectPrefix;
+            resourceInputs["emailTemplate"] = args?.emailTemplate;
             resourceInputs["eventTransportId"] = args?.eventTransportId;
             resourceInputs["mode"] = args?.mode;
             resourceInputs["name"] = args?.name;
@@ -88,6 +100,14 @@ export class EventTransport extends pulumi.CustomResource {
  * Input properties used for looking up and filtering EventTransport resources.
  */
 export interface EventTransportState {
+    /**
+     * Defaults to `authentik Notification:`.
+     */
+    emailSubjectPrefix?: pulumi.Input<string>;
+    /**
+     * Defaults to `email/event_notification.html`.
+     */
+    emailTemplate?: pulumi.Input<string>;
     eventTransportId?: pulumi.Input<string>;
     /**
      * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`
@@ -107,6 +127,14 @@ export interface EventTransportState {
  * The set of arguments for constructing a EventTransport resource.
  */
 export interface EventTransportArgs {
+    /**
+     * Defaults to `authentik Notification:`.
+     */
+    emailSubjectPrefix?: pulumi.Input<string>;
+    /**
+     * Defaults to `email/event_notification.html`.
+     */
+    emailTemplate?: pulumi.Input<string>;
     eventTransportId?: pulumi.Input<string>;
     /**
      * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`

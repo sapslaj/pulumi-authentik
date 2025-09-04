@@ -39,6 +39,7 @@ export class StageAuthenticatorWebauthn extends pulumi.CustomResource {
     declare public readonly configureFlow: pulumi.Output<string | undefined>;
     declare public readonly deviceTypeRestrictions: pulumi.Output<string[] | undefined>;
     declare public readonly friendlyName: pulumi.Output<string | undefined>;
+    declare public readonly maxAttempts: pulumi.Output<number | undefined>;
     declare public readonly name: pulumi.Output<string>;
     /**
      * Allowed values: - `discouraged` - `preferred` - `required` Defaults to `preferred`.
@@ -67,6 +68,7 @@ export class StageAuthenticatorWebauthn extends pulumi.CustomResource {
             resourceInputs["configureFlow"] = state?.configureFlow;
             resourceInputs["deviceTypeRestrictions"] = state?.deviceTypeRestrictions;
             resourceInputs["friendlyName"] = state?.friendlyName;
+            resourceInputs["maxAttempts"] = state?.maxAttempts;
             resourceInputs["name"] = state?.name;
             resourceInputs["residentKeyRequirement"] = state?.residentKeyRequirement;
             resourceInputs["stageAuthenticatorWebauthnId"] = state?.stageAuthenticatorWebauthnId;
@@ -77,6 +79,7 @@ export class StageAuthenticatorWebauthn extends pulumi.CustomResource {
             resourceInputs["configureFlow"] = args?.configureFlow;
             resourceInputs["deviceTypeRestrictions"] = args?.deviceTypeRestrictions;
             resourceInputs["friendlyName"] = args?.friendlyName;
+            resourceInputs["maxAttempts"] = args?.maxAttempts;
             resourceInputs["name"] = args?.name;
             resourceInputs["residentKeyRequirement"] = args?.residentKeyRequirement;
             resourceInputs["stageAuthenticatorWebauthnId"] = args?.stageAuthenticatorWebauthnId;
@@ -98,6 +101,7 @@ export interface StageAuthenticatorWebauthnState {
     configureFlow?: pulumi.Input<string>;
     deviceTypeRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
     friendlyName?: pulumi.Input<string>;
+    maxAttempts?: pulumi.Input<number>;
     name?: pulumi.Input<string>;
     /**
      * Allowed values: - `discouraged` - `preferred` - `required` Defaults to `preferred`.
@@ -121,6 +125,7 @@ export interface StageAuthenticatorWebauthnArgs {
     configureFlow?: pulumi.Input<string>;
     deviceTypeRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
     friendlyName?: pulumi.Input<string>;
+    maxAttempts?: pulumi.Input<number>;
     name?: pulumi.Input<string>;
     /**
      * Allowed values: - `discouraged` - `preferred` - `required` Defaults to `preferred`.

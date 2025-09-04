@@ -35,7 +35,7 @@ export class StageAuthenticatorValidate extends pulumi.CustomResource {
     declare public readonly configurationStages: pulumi.Output<string[] | undefined>;
     declare public readonly deviceClasses: pulumi.Output<string[] | undefined>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     declare public readonly lastAuthThreshold: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -97,7 +97,7 @@ export interface StageAuthenticatorValidateState {
     configurationStages?: pulumi.Input<pulumi.Input<string>[]>;
     deviceClasses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     lastAuthThreshold?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -120,7 +120,7 @@ export interface StageAuthenticatorValidateArgs {
     configurationStages?: pulumi.Input<pulumi.Input<string>[]>;
     deviceClasses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     lastAuthThreshold?: pulumi.Input<string>;
     name?: pulumi.Input<string>;

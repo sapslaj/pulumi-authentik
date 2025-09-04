@@ -35,14 +35,14 @@ export class ProviderRac extends pulumi.CustomResource {
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
     declare public readonly authorizationFlow: pulumi.Output<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     declare public readonly connectionExpiry: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly providerRacId: pulumi.Output<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly settings: pulumi.Output<string | undefined>;
 
@@ -91,14 +91,14 @@ export interface ProviderRacState {
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     connectionExpiry?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerRacId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }
@@ -110,14 +110,14 @@ export interface ProviderRacArgs {
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow: pulumi.Input<string>;
     /**
-     * Defaults to `seconds=0`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
      */
     connectionExpiry?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerRacId?: pulumi.Input<string>;
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     settings?: pulumi.Input<string>;
 }

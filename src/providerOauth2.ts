@@ -33,16 +33,17 @@ export class ProviderOauth2 extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `minutes=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=1`.
      */
     declare public readonly accessCodeValidity: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     declare public readonly accessTokenValidity: pulumi.Output<string | undefined>;
     declare public readonly allowedRedirectUris: pulumi.Output<{[key: string]: string}[] | undefined>;
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
     declare public readonly authorizationFlow: pulumi.Output<string>;
+    declare public readonly backchannelLogoutUri: pulumi.Output<string | undefined>;
     declare public readonly clientId: pulumi.Output<string>;
     /**
      * Generated.
@@ -78,7 +79,7 @@ export class ProviderOauth2 extends pulumi.CustomResource {
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly providerOauth2Id: pulumi.Output<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     declare public readonly refreshTokenValidity: pulumi.Output<string | undefined>;
     declare public readonly signingKey: pulumi.Output<string | undefined>;
@@ -106,6 +107,7 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["allowedRedirectUris"] = state?.allowedRedirectUris;
             resourceInputs["authenticationFlow"] = state?.authenticationFlow;
             resourceInputs["authorizationFlow"] = state?.authorizationFlow;
+            resourceInputs["backchannelLogoutUri"] = state?.backchannelLogoutUri;
             resourceInputs["clientId"] = state?.clientId;
             resourceInputs["clientSecret"] = state?.clientSecret;
             resourceInputs["clientType"] = state?.clientType;
@@ -138,6 +140,7 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["allowedRedirectUris"] = args?.allowedRedirectUris;
             resourceInputs["authenticationFlow"] = args?.authenticationFlow;
             resourceInputs["authorizationFlow"] = args?.authorizationFlow;
+            resourceInputs["backchannelLogoutUri"] = args?.backchannelLogoutUri;
             resourceInputs["clientId"] = args?.clientId;
             resourceInputs["clientSecret"] = args?.clientSecret ? pulumi.secret(args.clientSecret) : undefined;
             resourceInputs["clientType"] = args?.clientType;
@@ -167,16 +170,17 @@ export class ProviderOauth2 extends pulumi.CustomResource {
  */
 export interface ProviderOauth2State {
     /**
-     * Defaults to `minutes=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=1`.
      */
     accessCodeValidity?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     accessTokenValidity?: pulumi.Input<string>;
     allowedRedirectUris?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow?: pulumi.Input<string>;
+    backchannelLogoutUri?: pulumi.Input<string>;
     clientId?: pulumi.Input<string>;
     /**
      * Generated.
@@ -212,7 +216,7 @@ export interface ProviderOauth2State {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerOauth2Id?: pulumi.Input<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     signingKey?: pulumi.Input<string>;
@@ -228,16 +232,17 @@ export interface ProviderOauth2State {
  */
 export interface ProviderOauth2Args {
     /**
-     * Defaults to `minutes=1`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=1`.
      */
     accessCodeValidity?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     accessTokenValidity?: pulumi.Input<string>;
     allowedRedirectUris?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow: pulumi.Input<string>;
+    backchannelLogoutUri?: pulumi.Input<string>;
     clientId: pulumi.Input<string>;
     /**
      * Generated.
@@ -273,7 +278,7 @@ export interface ProviderOauth2Args {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerOauth2Id?: pulumi.Input<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     signingKey?: pulumi.Input<string>;

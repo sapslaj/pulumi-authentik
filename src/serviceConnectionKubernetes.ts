@@ -33,7 +33,7 @@ export class ServiceConnectionKubernetes extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly kubeconfig: pulumi.Output<string | undefined>;
     /**
@@ -85,7 +85,7 @@ export class ServiceConnectionKubernetes extends pulumi.CustomResource {
  */
 export interface ServiceConnectionKubernetesState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     kubeconfig?: pulumi.Input<string>;
     /**
@@ -105,7 +105,7 @@ export interface ServiceConnectionKubernetesState {
  */
 export interface ServiceConnectionKubernetesArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     kubeconfig?: pulumi.Input<string>;
     /**

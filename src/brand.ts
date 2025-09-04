@@ -33,7 +33,7 @@ export class Brand extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     declare public readonly attributes: pulumi.Output<string | undefined>;
     declare public readonly brandId: pulumi.Output<string>;
@@ -128,7 +128,7 @@ export class Brand extends pulumi.CustomResource {
  */
 export interface BrandState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     brandId?: pulumi.Input<string>;
@@ -164,7 +164,7 @@ export interface BrandState {
  */
 export interface BrandArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Defaults to `{}`.
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
     attributes?: pulumi.Input<string>;
     brandId?: pulumi.Input<string>;

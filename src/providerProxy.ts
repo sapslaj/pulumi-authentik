@@ -33,7 +33,7 @@ export class ProviderProxy extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     declare public readonly accessTokenValidity: pulumi.Output<string | undefined>;
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
@@ -80,7 +80,7 @@ export class ProviderProxy extends pulumi.CustomResource {
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly providerProxyId: pulumi.Output<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     declare public readonly refreshTokenValidity: pulumi.Output<string | undefined>;
     declare public readonly skipPathRegex: pulumi.Output<string | undefined>;
@@ -164,7 +164,7 @@ export class ProviderProxy extends pulumi.CustomResource {
  */
 export interface ProviderProxyState {
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     accessTokenValidity?: pulumi.Input<string>;
     authenticationFlow?: pulumi.Input<string>;
@@ -211,7 +211,7 @@ export interface ProviderProxyState {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerProxyId?: pulumi.Input<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     skipPathRegex?: pulumi.Input<string>;
@@ -222,7 +222,7 @@ export interface ProviderProxyState {
  */
 export interface ProviderProxyArgs {
     /**
-     * Defaults to `minutes=10`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=10`.
      */
     accessTokenValidity?: pulumi.Input<string>;
     authenticationFlow?: pulumi.Input<string>;
@@ -265,7 +265,7 @@ export interface ProviderProxyArgs {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerProxyId?: pulumi.Input<string>;
     /**
-     * Defaults to `days=30`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     skipPathRegex?: pulumi.Input<string>;

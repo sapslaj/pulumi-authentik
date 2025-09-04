@@ -34,11 +34,11 @@ export class ProviderSaml extends pulumi.CustomResource {
 
     declare public readonly acsUrl: pulumi.Output<string>;
     /**
-     * Defaults to `minutes=-5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=-5`.
      */
     declare public readonly assertionValidNotBefore: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `minutes=5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
      */
     declare public readonly assertionValidNotOnOrAfter: pulumi.Output<string | undefined>;
     /**
@@ -69,7 +69,7 @@ export class ProviderSaml extends pulumi.CustomResource {
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly providerSamlId: pulumi.Output<string>;
     /**
-     * Defaults to `minutes=86400`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=86400`.
      */
     declare public readonly sessionValidNotOnOrAfter: pulumi.Output<string | undefined>;
     /**
@@ -207,11 +207,11 @@ export class ProviderSaml extends pulumi.CustomResource {
 export interface ProviderSamlState {
     acsUrl?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=-5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=-5`.
      */
     assertionValidNotBefore?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
      */
     assertionValidNotOnOrAfter?: pulumi.Input<string>;
     /**
@@ -242,7 +242,7 @@ export interface ProviderSamlState {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerSamlId?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=86400`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=86400`.
      */
     sessionValidNotOnOrAfter?: pulumi.Input<string>;
     /**
@@ -295,11 +295,11 @@ export interface ProviderSamlState {
 export interface ProviderSamlArgs {
     acsUrl: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=-5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=-5`.
      */
     assertionValidNotBefore?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=5`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=5`.
      */
     assertionValidNotOnOrAfter?: pulumi.Input<string>;
     /**
@@ -330,7 +330,7 @@ export interface ProviderSamlArgs {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerSamlId?: pulumi.Input<string>;
     /**
-     * Defaults to `minutes=86400`.
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=86400`.
      */
     sessionValidNotOnOrAfter?: pulumi.Input<string>;
     /**

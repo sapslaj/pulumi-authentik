@@ -87,8 +87,8 @@ export class SourceOauth extends pulumi.CustomResource {
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     /**
-     * Allowed values: - `apple` - `openidconnect` - `azuread` - `discord` - `facebook` - `github` - `gitlab` - `google` -
-     * `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
+     * Allowed values: - `apple` - `openidconnect` - `entraid` - `azuread` - `discord` - `facebook` - `github` - `gitlab` -
+     * `google` - `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
      */
     declare public readonly providerType: pulumi.Output<string>;
     /**
@@ -257,8 +257,8 @@ export interface SourceOauthState {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Allowed values: - `apple` - `openidconnect` - `azuread` - `discord` - `facebook` - `github` - `gitlab` - `google` -
-     * `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
+     * Allowed values: - `apple` - `openidconnect` - `entraid` - `azuread` - `discord` - `facebook` - `github` - `gitlab` -
+     * `google` - `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
      */
     providerType?: pulumi.Input<string>;
     /**
@@ -337,8 +337,8 @@ export interface SourceOauthArgs {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Allowed values: - `apple` - `openidconnect` - `azuread` - `discord` - `facebook` - `github` - `gitlab` - `google` -
-     * `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
+     * Allowed values: - `apple` - `openidconnect` - `entraid` - `azuread` - `discord` - `facebook` - `github` - `gitlab` -
+     * `google` - `mailcow` - `okta` - `patreon` - `reddit` - `twitch` - `twitter`
      */
     providerType: pulumi.Input<string>;
     /**

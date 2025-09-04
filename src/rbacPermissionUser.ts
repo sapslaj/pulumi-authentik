@@ -33,10 +33,14 @@ export class RbacPermissionUser extends pulumi.CustomResource {
     }
 
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -71,17 +75,15 @@ export class RbacPermissionUser extends pulumi.CustomResource {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     declare public readonly model: pulumi.Output<string | undefined>;
     declare public readonly objectId: pulumi.Output<string | undefined>;
@@ -131,10 +133,14 @@ export class RbacPermissionUser extends pulumi.CustomResource {
  */
 export interface RbacPermissionUserState {
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -169,17 +175,15 @@ export interface RbacPermissionUserState {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     model?: pulumi.Input<string>;
     objectId?: pulumi.Input<string>;
@@ -193,10 +197,14 @@ export interface RbacPermissionUserState {
  */
 export interface RbacPermissionUserArgs {
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -231,17 +239,15 @@ export interface RbacPermissionUserArgs {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     model?: pulumi.Input<string>;
     objectId?: pulumi.Input<string>;

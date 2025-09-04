@@ -33,7 +33,7 @@ export class Outpost extends pulumi.CustomResource {
     }
 
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Generated.
+     * JSON format expected. Use `jsonencode()` to pass objects. Generated.
      */
     declare public readonly config: pulumi.Output<string>;
     declare public readonly name: pulumi.Output<string>;
@@ -86,7 +86,7 @@ export class Outpost extends pulumi.CustomResource {
  */
 export interface OutpostState {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Generated.
+     * JSON format expected. Use `jsonencode()` to pass objects. Generated.
      */
     config?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -104,7 +104,7 @@ export interface OutpostState {
  */
 export interface OutpostArgs {
     /**
-     * JSON format expected. Use jsonencode() to pass objects. Generated.
+     * JSON format expected. Use `jsonencode()` to pass objects. Generated.
      */
     config?: pulumi.Input<string>;
     name?: pulumi.Input<string>;

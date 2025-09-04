@@ -34,8 +34,9 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
 
     declare public readonly action: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `authentik.tenants` - `authentik.admin` - `authentik.api` - `authentik.crypto` - `authentik.flows` -
-     * `authentik.outposts` - `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
+     * Allowed values: - `authentik.tenants` - `authentik.tasks` - `authentik.admin` - `authentik.api` - `authentik.core` -
+     * `authentik.crypto` - `authentik.enterprise` - `authentik.events` - `authentik.flows` - `authentik.outposts` -
+     * `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
      * `authentik.policies.expression` - `authentik.policies.geoip` - `authentik.policies.password` -
      * `authentik.policies.reputation` - `authentik.policies` - `authentik.providers.ldap` - `authentik.providers.oauth2` -
      * `authentik.providers.proxy` - `authentik.providers.rac` - `authentik.providers.radius` - `authentik.providers.saml` -
@@ -48,11 +49,12 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      * `authentik.stages.deny` - `authentik.stages.dummy` - `authentik.stages.email` - `authentik.stages.identification` -
      * `authentik.stages.invitation` - `authentik.stages.password` - `authentik.stages.prompt` - `authentik.stages.redirect` -
      * `authentik.stages.user_delete` - `authentik.stages.user_login` - `authentik.stages.user_logout` -
-     * `authentik.stages.user_write` - `authentik.brands` - `authentik.blueprints` - `authentik.core` - `authentik.enterprise`
-     * - `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
+     * `authentik.stages.user_write` - `authentik.tasks.schedules` - `authentik.brands` - `authentik.blueprints` -
+     * `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
      * `authentik.enterprise.providers.google_workspace` - `authentik.enterprise.providers.microsoft_entra` -
-     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.stages.authenticator_endpoint_gdtc` -
-     * `authentik.enterprise.stages.mtls` - `authentik.enterprise.stages.source` - `authentik.events`
+     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.search` -
+     * `authentik.enterprise.stages.authenticator_endpoint_gdtc` - `authentik.enterprise.stages.mtls` -
+     * `authentik.enterprise.stages.source`
      */
     declare public readonly app: pulumi.Output<string | undefined>;
     declare public readonly clientIp: pulumi.Output<string | undefined>;
@@ -61,10 +63,14 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      */
     declare public readonly executionLogging: pulumi.Output<boolean | undefined>;
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -99,17 +105,15 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     declare public readonly model: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -156,8 +160,9 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
 export interface PolicyEventMatcherState {
     action?: pulumi.Input<string>;
     /**
-     * Allowed values: - `authentik.tenants` - `authentik.admin` - `authentik.api` - `authentik.crypto` - `authentik.flows` -
-     * `authentik.outposts` - `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
+     * Allowed values: - `authentik.tenants` - `authentik.tasks` - `authentik.admin` - `authentik.api` - `authentik.core` -
+     * `authentik.crypto` - `authentik.enterprise` - `authentik.events` - `authentik.flows` - `authentik.outposts` -
+     * `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
      * `authentik.policies.expression` - `authentik.policies.geoip` - `authentik.policies.password` -
      * `authentik.policies.reputation` - `authentik.policies` - `authentik.providers.ldap` - `authentik.providers.oauth2` -
      * `authentik.providers.proxy` - `authentik.providers.rac` - `authentik.providers.radius` - `authentik.providers.saml` -
@@ -170,11 +175,12 @@ export interface PolicyEventMatcherState {
      * `authentik.stages.deny` - `authentik.stages.dummy` - `authentik.stages.email` - `authentik.stages.identification` -
      * `authentik.stages.invitation` - `authentik.stages.password` - `authentik.stages.prompt` - `authentik.stages.redirect` -
      * `authentik.stages.user_delete` - `authentik.stages.user_login` - `authentik.stages.user_logout` -
-     * `authentik.stages.user_write` - `authentik.brands` - `authentik.blueprints` - `authentik.core` - `authentik.enterprise`
-     * - `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
+     * `authentik.stages.user_write` - `authentik.tasks.schedules` - `authentik.brands` - `authentik.blueprints` -
+     * `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
      * `authentik.enterprise.providers.google_workspace` - `authentik.enterprise.providers.microsoft_entra` -
-     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.stages.authenticator_endpoint_gdtc` -
-     * `authentik.enterprise.stages.mtls` - `authentik.enterprise.stages.source` - `authentik.events`
+     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.search` -
+     * `authentik.enterprise.stages.authenticator_endpoint_gdtc` - `authentik.enterprise.stages.mtls` -
+     * `authentik.enterprise.stages.source`
      */
     app?: pulumi.Input<string>;
     clientIp?: pulumi.Input<string>;
@@ -183,10 +189,14 @@ export interface PolicyEventMatcherState {
      */
     executionLogging?: pulumi.Input<boolean>;
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -221,17 +231,15 @@ export interface PolicyEventMatcherState {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     model?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -244,8 +252,9 @@ export interface PolicyEventMatcherState {
 export interface PolicyEventMatcherArgs {
     action?: pulumi.Input<string>;
     /**
-     * Allowed values: - `authentik.tenants` - `authentik.admin` - `authentik.api` - `authentik.crypto` - `authentik.flows` -
-     * `authentik.outposts` - `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
+     * Allowed values: - `authentik.tenants` - `authentik.tasks` - `authentik.admin` - `authentik.api` - `authentik.core` -
+     * `authentik.crypto` - `authentik.enterprise` - `authentik.events` - `authentik.flows` - `authentik.outposts` -
+     * `authentik.policies.dummy` - `authentik.policies.event_matcher` - `authentik.policies.expiry` -
      * `authentik.policies.expression` - `authentik.policies.geoip` - `authentik.policies.password` -
      * `authentik.policies.reputation` - `authentik.policies` - `authentik.providers.ldap` - `authentik.providers.oauth2` -
      * `authentik.providers.proxy` - `authentik.providers.rac` - `authentik.providers.radius` - `authentik.providers.saml` -
@@ -258,11 +267,12 @@ export interface PolicyEventMatcherArgs {
      * `authentik.stages.deny` - `authentik.stages.dummy` - `authentik.stages.email` - `authentik.stages.identification` -
      * `authentik.stages.invitation` - `authentik.stages.password` - `authentik.stages.prompt` - `authentik.stages.redirect` -
      * `authentik.stages.user_delete` - `authentik.stages.user_login` - `authentik.stages.user_logout` -
-     * `authentik.stages.user_write` - `authentik.brands` - `authentik.blueprints` - `authentik.core` - `authentik.enterprise`
-     * - `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
+     * `authentik.stages.user_write` - `authentik.tasks.schedules` - `authentik.brands` - `authentik.blueprints` -
+     * `authentik.enterprise.audit` - `authentik.enterprise.policies.unique_password` -
      * `authentik.enterprise.providers.google_workspace` - `authentik.enterprise.providers.microsoft_entra` -
-     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.stages.authenticator_endpoint_gdtc` -
-     * `authentik.enterprise.stages.mtls` - `authentik.enterprise.stages.source` - `authentik.events`
+     * `authentik.enterprise.providers.ssf` - `authentik.enterprise.search` -
+     * `authentik.enterprise.stages.authenticator_endpoint_gdtc` - `authentik.enterprise.stages.mtls` -
+     * `authentik.enterprise.stages.source`
      */
     app?: pulumi.Input<string>;
     clientIp?: pulumi.Input<string>;
@@ -271,10 +281,14 @@ export interface PolicyEventMatcherArgs {
      */
     executionLogging?: pulumi.Input<boolean>;
     /**
-     * Allowed values: - `authentik_tenants.domain` - `authentik_crypto.certificatekeypair` - `authentik_flows.flow` -
-     * `authentik_flows.flowstagebinding` - `authentik_outposts.dockerserviceconnection` -
-     * `authentik_outposts.kubernetesserviceconnection` - `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy`
-     * - `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
+     * Allowed values: - `authentik_tenants.domain` - `authentik_core.group` - `authentik_core.user` -
+     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
+     * `authentik_crypto.certificatekeypair` - `authentik_enterprise.license` - `authentik_events.event` -
+     * `authentik_events.notificationtransport` - `authentik_events.notification` - `authentik_events.notificationrule` -
+     * `authentik_events.notificationwebhookmapping` - `authentik_flows.flow` - `authentik_flows.flowstagebinding` -
+     * `authentik_outposts.dockerserviceconnection` - `authentik_outposts.kubernetesserviceconnection` -
+     * `authentik_outposts.outpost` - `authentik_policies_dummy.dummypolicy` -
+     * `authentik_policies_event_matcher.eventmatcherpolicy` - `authentik_policies_expiry.passwordexpirypolicy` -
      * `authentik_policies_expression.expressionpolicy` - `authentik_policies_geoip.geoippolicy` -
      * `authentik_policies_password.passwordpolicy` - `authentik_policies_reputation.reputationpolicy` -
      * `authentik_policies.policybinding` - `authentik_providers_ldap.ldapprovider` - `authentik_providers_oauth2.scopemapping`
@@ -309,17 +323,15 @@ export interface PolicyEventMatcherArgs {
      * `authentik_stages_invitation.invitation` - `authentik_stages_password.passwordstage` - `authentik_stages_prompt.prompt`
      * - `authentik_stages_prompt.promptstage` - `authentik_stages_redirect.redirectstage` -
      * `authentik_stages_user_delete.userdeletestage` - `authentik_stages_user_login.userloginstage` -
-     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` - `authentik_brands.brand`
-     * - `authentik_blueprints.blueprintinstance` - `authentik_core.group` - `authentik_core.user` -
-     * `authentik_core.application` - `authentik_core.applicationentitlement` - `authentik_core.token` -
-     * `authentik_enterprise.license` - `authentik_policies_unique_password.uniquepasswordpolicy` -
+     * `authentik_stages_user_logout.userlogoutstage` - `authentik_stages_user_write.userwritestage` -
+     * `authentik_tasks_schedules.schedule` - `authentik_brands.brand` - `authentik_blueprints.blueprintinstance` -
+     * `authentik_policies_unique_password.uniquepasswordpolicy` -
      * `authentik_providers_google_workspace.googleworkspaceprovider` -
      * `authentik_providers_google_workspace.googleworkspaceprovidermapping` -
      * `authentik_providers_microsoft_entra.microsoftentraprovider` -
      * `authentik_providers_microsoft_entra.microsoftentraprovidermapping` - `authentik_providers_ssf.ssfprovider` -
      * `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage` - `authentik_stages_mtls.mutualtlsstage` -
-     * `authentik_stages_source.sourcestage` - `authentik_events.event` - `authentik_events.notificationtransport` -
-     * `authentik_events.notification` - `authentik_events.notificationrule` - `authentik_events.notificationwebhookmapping`
+     * `authentik_stages_source.sourcestage`
      */
     model?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
