@@ -1,0 +1,13 @@
+/test/
+/tsconfig.dev.json
+/src/
+!/lib/
+!/lib/**/*.js
+!/lib/**/*.d.ts
+dist
+/tsconfig.json
+/.github/
+generate.py
+docs
+scripts
+.publish

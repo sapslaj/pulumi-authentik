@@ -1,0 +1,43 @@
+name: provider-upgrade
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: 1 3 * * *
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v6
+        with:
+          pulumi-version: dev
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: npm ci
+        run: npm ci
+      - name: generate
+        id: generate
+        run: |
+          ./generate.py
+          if [ -f .publish ]; then
+            echo 'publishing new version'
+            echo 'publish=true' >> "$GITHUB_OUTPUT"
+            echo "version=v$(jq -r '.version' package.json)" >> "$GITHUB_OUTPUT"
+          else
+            echo 'no new version needed.'
+          fi
+      - if: steps.generate.outputs.publish
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ${{ steps.generate.outputs.version }}
+          tagging_message: ${{ steps.generate.outputs.version }}
+          create_branch: false
+      - if: steps.generate.outputs.publish
+        name: Trigger release
+        run: gh workflow run release
+        env:
+          GH_TOKEN: ${{ github.token }}
