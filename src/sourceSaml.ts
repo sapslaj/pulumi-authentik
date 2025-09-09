@@ -76,6 +76,8 @@ export class SourceSaml extends pulumi.CustomResource {
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
     declare public readonly preAuthenticationFlow: pulumi.Output<string>;
+    declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
+    declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     /**
      * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
      * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
@@ -135,6 +137,8 @@ export class SourceSaml extends pulumi.CustomResource {
             resourceInputs["nameIdPolicy"] = state?.nameIdPolicy;
             resourceInputs["policyEngineMode"] = state?.policyEngineMode;
             resourceInputs["preAuthenticationFlow"] = state?.preAuthenticationFlow;
+            resourceInputs["propertyMappings"] = state?.propertyMappings;
+            resourceInputs["propertyMappingsGroups"] = state?.propertyMappingsGroups;
             resourceInputs["signatureAlgorithm"] = state?.signatureAlgorithm;
             resourceInputs["signingKp"] = state?.signingKp;
             resourceInputs["sloUrl"] = state?.sloUrl;
@@ -170,6 +174,8 @@ export class SourceSaml extends pulumi.CustomResource {
             resourceInputs["nameIdPolicy"] = args?.nameIdPolicy;
             resourceInputs["policyEngineMode"] = args?.policyEngineMode;
             resourceInputs["preAuthenticationFlow"] = args?.preAuthenticationFlow;
+            resourceInputs["propertyMappings"] = args?.propertyMappings;
+            resourceInputs["propertyMappingsGroups"] = args?.propertyMappingsGroups;
             resourceInputs["signatureAlgorithm"] = args?.signatureAlgorithm;
             resourceInputs["signingKp"] = args?.signingKp;
             resourceInputs["sloUrl"] = args?.sloUrl;
@@ -236,6 +242,8 @@ export interface SourceSamlState {
      */
     policyEngineMode?: pulumi.Input<string>;
     preAuthenticationFlow?: pulumi.Input<string>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
      * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
@@ -313,6 +321,8 @@ export interface SourceSamlArgs {
      */
     policyEngineMode?: pulumi.Input<string>;
     preAuthenticationFlow: pulumi.Input<string>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
      * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
