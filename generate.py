@@ -22,7 +22,6 @@ def main():
 
     with not_found_ok():
         shutil.rmtree("src")
-        os.remove("package.json")
         os.remove("package-lock.json")
 
     with open("Pulumi.yaml", "w") as fp:
@@ -83,6 +82,7 @@ def main():
 
     with not_found_ok():
         os.remove("./src/tsconfig.json")
+        os.remove("./src/.gitignore")
         shutil.rmtree("./src/bin")
         shutil.rmtree("./src/scripts")
 
