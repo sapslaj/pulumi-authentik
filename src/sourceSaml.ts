@@ -33,28 +33,39 @@ export class SourceSaml extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly allowIdpInitiated: pulumi.Output<boolean | undefined>;
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `REDIRECT` - `POST` - `POST_AUTO` Defaults to `REDIRECT`.
+     * Allowed values:
+     *   - `REDIRECT`
+     *   - `POST`
+     *   - `POST_AUTO`
+     *  Defaults to `REDIRECT`.
      */
     declare public readonly bindingType: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#sha1` - `http://www.w3.org/2001/04/xmlenc#sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#sha384` - `http://www.w3.org/2001/04/xmlenc#sha512` Defaults to
-     * `http://www.w3.org/2001/04/xmlenc#sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#sha1`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#sha384`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha512`
+     *  Defaults to `http://www.w3.org/2001/04/xmlenc#sha256`.
      */
     declare public readonly digestAlgorithm: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly enabled: pulumi.Output<boolean | undefined>;
     declare public readonly encryptionKp: pulumi.Output<string | undefined>;
     declare public readonly enrollmentFlow: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `identifier` - `name_link` - `name_deny` Defaults to `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
+     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     declare public readonly groupMatchingMode: pulumi.Output<string | undefined>;
     declare public readonly issuer: pulumi.Output<string | undefined>;
@@ -64,26 +75,38 @@ export class SourceSaml extends pulumi.CustomResource {
     declare public /*out*/ readonly metadata: pulumi.Output<string>;
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
-     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * Allowed values:
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:transient`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`
+     *  Defaults to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     declare public readonly nameIdPolicy: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
     declare public readonly preAuthenticationFlow: pulumi.Output<string>;
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512` -
-     * `http://www.w3.org/2000/09/xmldsig#dsa-sha1` Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#rsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512`
+     *   - `http://www.w3.org/2000/09/xmldsig#dsa-sha1`
+     *  Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
      */
     declare public readonly signatureAlgorithm: pulumi.Output<string | undefined>;
     declare public readonly signingKp: pulumi.Output<string | undefined>;
@@ -96,8 +119,13 @@ export class SourceSaml extends pulumi.CustomResource {
      */
     declare public readonly temporaryUserDeleteAfter: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `identifier` - `email_link` - `email_deny` - `username_link` - `username_deny` Defaults to
-     * `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`emailLink`" pulumi-lang-dotnet="`EmailLink`" pulumi-lang-go="`emailLink`" pulumi-lang-python="`email_link`" pulumi-lang-yaml="`emailLink`" pulumi-lang-java="`emailLink`">`email_link`</span>
+     *   - <span pulumi-lang-nodejs="`emailDeny`" pulumi-lang-dotnet="`EmailDeny`" pulumi-lang-go="`emailDeny`" pulumi-lang-python="`email_deny`" pulumi-lang-yaml="`emailDeny`" pulumi-lang-java="`emailDeny`">`email_deny`</span>
+     *   - <span pulumi-lang-nodejs="`usernameLink`" pulumi-lang-dotnet="`UsernameLink`" pulumi-lang-go="`usernameLink`" pulumi-lang-python="`username_link`" pulumi-lang-yaml="`usernameLink`" pulumi-lang-java="`usernameLink`">`username_link`</span>
+     *   - <span pulumi-lang-nodejs="`usernameDeny`" pulumi-lang-dotnet="`UsernameDeny`" pulumi-lang-go="`usernameDeny`" pulumi-lang-python="`username_deny`" pulumi-lang-yaml="`usernameDeny`" pulumi-lang-java="`usernameDeny`">`username_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     declare public readonly userMatchingMode: pulumi.Output<string | undefined>;
     /**
@@ -199,28 +227,39 @@ export class SourceSaml extends pulumi.CustomResource {
  */
 export interface SourceSamlState {
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     allowIdpInitiated?: pulumi.Input<boolean>;
     authenticationFlow?: pulumi.Input<string>;
     /**
-     * Allowed values: - `REDIRECT` - `POST` - `POST_AUTO` Defaults to `REDIRECT`.
+     * Allowed values:
+     *   - `REDIRECT`
+     *   - `POST`
+     *   - `POST_AUTO`
+     *  Defaults to `REDIRECT`.
      */
     bindingType?: pulumi.Input<string>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#sha1` - `http://www.w3.org/2001/04/xmlenc#sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#sha384` - `http://www.w3.org/2001/04/xmlenc#sha512` Defaults to
-     * `http://www.w3.org/2001/04/xmlenc#sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#sha1`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#sha384`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha512`
+     *  Defaults to `http://www.w3.org/2001/04/xmlenc#sha256`.
      */
     digestAlgorithm?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     encryptionKp?: pulumi.Input<string>;
     enrollmentFlow?: pulumi.Input<string>;
     /**
-     * Allowed values: - `identifier` - `name_link` - `name_deny` Defaults to `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
+     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     groupMatchingMode?: pulumi.Input<string>;
     issuer?: pulumi.Input<string>;
@@ -230,26 +269,38 @@ export interface SourceSamlState {
     metadata?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
-     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * Allowed values:
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:transient`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`
+     *  Defaults to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     nameIdPolicy?: pulumi.Input<string>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
     preAuthenticationFlow?: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512` -
-     * `http://www.w3.org/2000/09/xmldsig#dsa-sha1` Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#rsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512`
+     *   - `http://www.w3.org/2000/09/xmldsig#dsa-sha1`
+     *  Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
      */
     signatureAlgorithm?: pulumi.Input<string>;
     signingKp?: pulumi.Input<string>;
@@ -262,8 +313,13 @@ export interface SourceSamlState {
      */
     temporaryUserDeleteAfter?: pulumi.Input<string>;
     /**
-     * Allowed values: - `identifier` - `email_link` - `email_deny` - `username_link` - `username_deny` Defaults to
-     * `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`emailLink`" pulumi-lang-dotnet="`EmailLink`" pulumi-lang-go="`emailLink`" pulumi-lang-python="`email_link`" pulumi-lang-yaml="`emailLink`" pulumi-lang-java="`emailLink`">`email_link`</span>
+     *   - <span pulumi-lang-nodejs="`emailDeny`" pulumi-lang-dotnet="`EmailDeny`" pulumi-lang-go="`emailDeny`" pulumi-lang-python="`email_deny`" pulumi-lang-yaml="`emailDeny`" pulumi-lang-java="`emailDeny`">`email_deny`</span>
+     *   - <span pulumi-lang-nodejs="`usernameLink`" pulumi-lang-dotnet="`UsernameLink`" pulumi-lang-go="`usernameLink`" pulumi-lang-python="`username_link`" pulumi-lang-yaml="`usernameLink`" pulumi-lang-java="`usernameLink`">`username_link`</span>
+     *   - <span pulumi-lang-nodejs="`usernameDeny`" pulumi-lang-dotnet="`UsernameDeny`" pulumi-lang-go="`usernameDeny`" pulumi-lang-python="`username_deny`" pulumi-lang-yaml="`usernameDeny`" pulumi-lang-java="`usernameDeny`">`username_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     userMatchingMode?: pulumi.Input<string>;
     /**
@@ -282,53 +338,76 @@ export interface SourceSamlState {
  */
 export interface SourceSamlArgs {
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     allowIdpInitiated?: pulumi.Input<boolean>;
     authenticationFlow?: pulumi.Input<string>;
     /**
-     * Allowed values: - `REDIRECT` - `POST` - `POST_AUTO` Defaults to `REDIRECT`.
+     * Allowed values:
+     *   - `REDIRECT`
+     *   - `POST`
+     *   - `POST_AUTO`
+     *  Defaults to `REDIRECT`.
      */
     bindingType?: pulumi.Input<string>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#sha1` - `http://www.w3.org/2001/04/xmlenc#sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#sha384` - `http://www.w3.org/2001/04/xmlenc#sha512` Defaults to
-     * `http://www.w3.org/2001/04/xmlenc#sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#sha1`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#sha384`
+     *   - `http://www.w3.org/2001/04/xmlenc#sha512`
+     *  Defaults to `http://www.w3.org/2001/04/xmlenc#sha256`.
      */
     digestAlgorithm?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     encryptionKp?: pulumi.Input<string>;
     enrollmentFlow?: pulumi.Input<string>;
     /**
-     * Allowed values: - `identifier` - `name_link` - `name_deny` Defaults to `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
+     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     groupMatchingMode?: pulumi.Input<string>;
     issuer?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent` - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName` -
-     * `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified` Defaults
-     * to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+     * Allowed values:
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:WindowsDomainQualifiedName`
+     *   - `urn:oasis:names:tc:SAML:2.0:nameid-format:transient`
+     *   - `urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`
+     *  Defaults to `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
      */
     nameIdPolicy?: pulumi.Input<string>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
     preAuthenticationFlow: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Allowed values: - `http://www.w3.org/2000/09/xmldsig#rsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256` -
-     * `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384` - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512` -
-     * `http://www.w3.org/2000/09/xmldsig#dsa-sha1` Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
+     * Allowed values:
+     *   - `http://www.w3.org/2000/09/xmldsig#rsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#rsa-sha512`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384`
+     *   - `http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512`
+     *   - `http://www.w3.org/2000/09/xmldsig#dsa-sha1`
+     *  Defaults to `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256`.
      */
     signatureAlgorithm?: pulumi.Input<string>;
     signingKp?: pulumi.Input<string>;
@@ -341,8 +420,13 @@ export interface SourceSamlArgs {
      */
     temporaryUserDeleteAfter?: pulumi.Input<string>;
     /**
-     * Allowed values: - `identifier` - `email_link` - `email_deny` - `username_link` - `username_deny` Defaults to
-     * `identifier`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
+     *   - <span pulumi-lang-nodejs="`emailLink`" pulumi-lang-dotnet="`EmailLink`" pulumi-lang-go="`emailLink`" pulumi-lang-python="`email_link`" pulumi-lang-yaml="`emailLink`" pulumi-lang-java="`emailLink`">`email_link`</span>
+     *   - <span pulumi-lang-nodejs="`emailDeny`" pulumi-lang-dotnet="`EmailDeny`" pulumi-lang-go="`emailDeny`" pulumi-lang-python="`email_deny`" pulumi-lang-yaml="`emailDeny`" pulumi-lang-java="`emailDeny`">`email_deny`</span>
+     *   - <span pulumi-lang-nodejs="`usernameLink`" pulumi-lang-dotnet="`UsernameLink`" pulumi-lang-go="`usernameLink`" pulumi-lang-python="`username_link`" pulumi-lang-yaml="`usernameLink`" pulumi-lang-java="`usernameLink`">`username_link`</span>
+     *   - <span pulumi-lang-nodejs="`usernameDeny`" pulumi-lang-dotnet="`UsernameDeny`" pulumi-lang-go="`usernameDeny`" pulumi-lang-python="`username_deny`" pulumi-lang-yaml="`usernameDeny`" pulumi-lang-java="`usernameDeny`">`username_deny`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
      */
     userMatchingMode?: pulumi.Input<string>;
     /**

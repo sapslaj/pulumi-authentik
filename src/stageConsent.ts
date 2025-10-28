@@ -37,7 +37,11 @@ export class StageConsent extends pulumi.CustomResource {
      */
     declare public readonly consentExpireIn: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `always_require` - `permanent` - `expiring` Defaults to `always_require`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>
+     *   - <span pulumi-lang-nodejs="`permanent`" pulumi-lang-dotnet="`Permanent`" pulumi-lang-go="`permanent`" pulumi-lang-python="`permanent`" pulumi-lang-yaml="`permanent`" pulumi-lang-java="`permanent`">`permanent`</span>
+     *   - <span pulumi-lang-nodejs="`expiring`" pulumi-lang-dotnet="`Expiring`" pulumi-lang-go="`expiring`" pulumi-lang-python="`expiring`" pulumi-lang-yaml="`expiring`" pulumi-lang-java="`expiring`">`expiring`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>.
      */
     declare public readonly mode: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -81,7 +85,11 @@ export interface StageConsentState {
      */
     consentExpireIn?: pulumi.Input<string>;
     /**
-     * Allowed values: - `always_require` - `permanent` - `expiring` Defaults to `always_require`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>
+     *   - <span pulumi-lang-nodejs="`permanent`" pulumi-lang-dotnet="`Permanent`" pulumi-lang-go="`permanent`" pulumi-lang-python="`permanent`" pulumi-lang-yaml="`permanent`" pulumi-lang-java="`permanent`">`permanent`</span>
+     *   - <span pulumi-lang-nodejs="`expiring`" pulumi-lang-dotnet="`Expiring`" pulumi-lang-go="`expiring`" pulumi-lang-python="`expiring`" pulumi-lang-yaml="`expiring`" pulumi-lang-java="`expiring`">`expiring`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>.
      */
     mode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -97,7 +105,11 @@ export interface StageConsentArgs {
      */
     consentExpireIn?: pulumi.Input<string>;
     /**
-     * Allowed values: - `always_require` - `permanent` - `expiring` Defaults to `always_require`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>
+     *   - <span pulumi-lang-nodejs="`permanent`" pulumi-lang-dotnet="`Permanent`" pulumi-lang-go="`permanent`" pulumi-lang-python="`permanent`" pulumi-lang-yaml="`permanent`" pulumi-lang-java="`permanent`">`permanent`</span>
+     *   - <span pulumi-lang-nodejs="`expiring`" pulumi-lang-dotnet="`Expiring`" pulumi-lang-go="`expiring`" pulumi-lang-python="`expiring`" pulumi-lang-yaml="`expiring`" pulumi-lang-java="`expiring`">`expiring`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`alwaysRequire`" pulumi-lang-dotnet="`AlwaysRequire`" pulumi-lang-go="`alwaysRequire`" pulumi-lang-python="`always_require`" pulumi-lang-yaml="`alwaysRequire`" pulumi-lang-java="`alwaysRequire`">`always_require`</span>.
      */
     mode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;

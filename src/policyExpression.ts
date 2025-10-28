@@ -33,7 +33,7 @@ export class PolicyExpression extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly executionLogging: pulumi.Output<boolean | undefined>;
     declare public readonly expression: pulumi.Output<string>;
@@ -77,7 +77,7 @@ export class PolicyExpression extends pulumi.CustomResource {
  */
 export interface PolicyExpressionState {
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     executionLogging?: pulumi.Input<boolean>;
     expression?: pulumi.Input<string>;
@@ -90,7 +90,7 @@ export interface PolicyExpressionState {
  */
 export interface PolicyExpressionArgs {
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     executionLogging?: pulumi.Input<boolean>;
     expression: pulumi.Input<string>;

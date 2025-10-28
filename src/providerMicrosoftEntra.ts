@@ -35,13 +35,16 @@ export class ProviderMicrosoftEntra extends pulumi.CustomResource {
     declare public readonly clientId: pulumi.Output<string>;
     declare public readonly clientSecret: pulumi.Output<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly dryRun: pulumi.Output<boolean | undefined>;
     declare public readonly excludeUsersServiceAccount: pulumi.Output<boolean | undefined>;
     declare public readonly filterGroup: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     declare public readonly groupDeleteAction: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -50,7 +53,10 @@ export class ProviderMicrosoftEntra extends pulumi.CustomResource {
     declare public readonly providerMicrosoftEntraId: pulumi.Output<string>;
     declare public readonly tenantId: pulumi.Output<string>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     declare public readonly userDeleteAction: pulumi.Output<string | undefined>;
 
@@ -117,13 +123,16 @@ export interface ProviderMicrosoftEntraState {
     clientId?: pulumi.Input<string>;
     clientSecret?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     dryRun?: pulumi.Input<boolean>;
     excludeUsersServiceAccount?: pulumi.Input<boolean>;
     filterGroup?: pulumi.Input<string>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     groupDeleteAction?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -132,7 +141,10 @@ export interface ProviderMicrosoftEntraState {
     providerMicrosoftEntraId?: pulumi.Input<string>;
     tenantId?: pulumi.Input<string>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     userDeleteAction?: pulumi.Input<string>;
 }
@@ -144,13 +156,16 @@ export interface ProviderMicrosoftEntraArgs {
     clientId: pulumi.Input<string>;
     clientSecret: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     dryRun?: pulumi.Input<boolean>;
     excludeUsersServiceAccount?: pulumi.Input<boolean>;
     filterGroup?: pulumi.Input<string>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     groupDeleteAction?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -159,7 +174,10 @@ export interface ProviderMicrosoftEntraArgs {
     providerMicrosoftEntraId?: pulumi.Input<string>;
     tenantId: pulumi.Input<string>;
     /**
-     * Allowed values: - `delete` - `do_nothing` Defaults to `delete`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
      */
     userDeleteAction?: pulumi.Input<string>;
 }

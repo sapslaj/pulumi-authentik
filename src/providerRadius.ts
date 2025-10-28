@@ -33,13 +33,14 @@ export class ProviderRadius extends pulumi.CustomResource {
     }
 
     declare public readonly authorizationFlow: pulumi.Output<string>;
+    declare public readonly certificate: pulumi.Output<string | undefined>;
     /**
      * Defaults to `0.0.0.0/0, ::/0`.
      */
     declare public readonly clientNetworks: pulumi.Output<string | undefined>;
     declare public readonly invalidationFlow: pulumi.Output<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly mfaSupport: pulumi.Output<boolean | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -61,6 +62,7 @@ export class ProviderRadius extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ProviderRadiusState | undefined;
             resourceInputs["authorizationFlow"] = state?.authorizationFlow;
+            resourceInputs["certificate"] = state?.certificate;
             resourceInputs["clientNetworks"] = state?.clientNetworks;
             resourceInputs["invalidationFlow"] = state?.invalidationFlow;
             resourceInputs["mfaSupport"] = state?.mfaSupport;
@@ -80,6 +82,7 @@ export class ProviderRadius extends pulumi.CustomResource {
                 throw new Error("Missing required property 'sharedSecret'");
             }
             resourceInputs["authorizationFlow"] = args?.authorizationFlow;
+            resourceInputs["certificate"] = args?.certificate;
             resourceInputs["clientNetworks"] = args?.clientNetworks;
             resourceInputs["invalidationFlow"] = args?.invalidationFlow;
             resourceInputs["mfaSupport"] = args?.mfaSupport;
@@ -100,13 +103,14 @@ export class ProviderRadius extends pulumi.CustomResource {
  */
 export interface ProviderRadiusState {
     authorizationFlow?: pulumi.Input<string>;
+    certificate?: pulumi.Input<string>;
     /**
      * Defaults to `0.0.0.0/0, ::/0`.
      */
     clientNetworks?: pulumi.Input<string>;
     invalidationFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     mfaSupport?: pulumi.Input<boolean>;
     name?: pulumi.Input<string>;
@@ -120,13 +124,14 @@ export interface ProviderRadiusState {
  */
 export interface ProviderRadiusArgs {
     authorizationFlow: pulumi.Input<string>;
+    certificate?: pulumi.Input<string>;
     /**
      * Defaults to `0.0.0.0/0, ::/0`.
      */
     clientNetworks?: pulumi.Input<string>;
     invalidationFlow: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     mfaSupport?: pulumi.Input<boolean>;
     name?: pulumi.Input<string>;

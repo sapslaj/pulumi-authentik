@@ -33,13 +33,22 @@ export class StageUserLogin extends pulumi.CustomResource {
     }
 
     /**
-     * Allowed values: - `no_binding` - `bind_continent` - `bind_continent_country` - `bind_continent_country_city` Defaults to
-     * `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinent`" pulumi-lang-dotnet="`BindContinent`" pulumi-lang-go="`bindContinent`" pulumi-lang-python="`bind_continent`" pulumi-lang-yaml="`bindContinent`" pulumi-lang-java="`bindContinent`">`bind_continent`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountry`" pulumi-lang-dotnet="`BindContinentCountry`" pulumi-lang-go="`bindContinentCountry`" pulumi-lang-python="`bind_continent_country`" pulumi-lang-yaml="`bindContinentCountry`" pulumi-lang-java="`bindContinentCountry`">`bind_continent_country`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountryCity`" pulumi-lang-dotnet="`BindContinentCountryCity`" pulumi-lang-go="`bindContinentCountryCity`" pulumi-lang-python="`bind_continent_country_city`" pulumi-lang-yaml="`bindContinentCountryCity`" pulumi-lang-java="`bindContinentCountryCity`">`bind_continent_country_city`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     declare public readonly geoipBinding: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Allowed values: - `no_binding` - `bind_asn` - `bind_asn_network` - `bind_asn_network_ip` Defaults to `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsn`" pulumi-lang-dotnet="`BindAsn`" pulumi-lang-go="`bindAsn`" pulumi-lang-python="`bind_asn`" pulumi-lang-yaml="`bindAsn`" pulumi-lang-java="`bindAsn`">`bind_asn`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetwork`" pulumi-lang-dotnet="`BindAsnNetwork`" pulumi-lang-go="`bindAsnNetwork`" pulumi-lang-python="`bind_asn_network`" pulumi-lang-yaml="`bindAsnNetwork`" pulumi-lang-java="`bindAsnNetwork`">`bind_asn_network`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetworkIp`" pulumi-lang-dotnet="`BindAsnNetworkIp`" pulumi-lang-go="`bindAsnNetworkIp`" pulumi-lang-python="`bind_asn_network_ip`" pulumi-lang-yaml="`bindAsnNetworkIp`" pulumi-lang-java="`bindAsnNetworkIp`">`bind_asn_network_ip`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     declare public readonly networkBinding: pulumi.Output<string | undefined>;
     /**
@@ -56,7 +65,7 @@ export class StageUserLogin extends pulumi.CustomResource {
     declare public readonly sessionDuration: pulumi.Output<string | undefined>;
     declare public readonly stageUserLoginId: pulumi.Output<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly terminateOtherSessions: pulumi.Output<boolean | undefined>;
 
@@ -102,13 +111,22 @@ export class StageUserLogin extends pulumi.CustomResource {
  */
 export interface StageUserLoginState {
     /**
-     * Allowed values: - `no_binding` - `bind_continent` - `bind_continent_country` - `bind_continent_country_city` Defaults to
-     * `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinent`" pulumi-lang-dotnet="`BindContinent`" pulumi-lang-go="`bindContinent`" pulumi-lang-python="`bind_continent`" pulumi-lang-yaml="`bindContinent`" pulumi-lang-java="`bindContinent`">`bind_continent`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountry`" pulumi-lang-dotnet="`BindContinentCountry`" pulumi-lang-go="`bindContinentCountry`" pulumi-lang-python="`bind_continent_country`" pulumi-lang-yaml="`bindContinentCountry`" pulumi-lang-java="`bindContinentCountry`">`bind_continent_country`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountryCity`" pulumi-lang-dotnet="`BindContinentCountryCity`" pulumi-lang-go="`bindContinentCountryCity`" pulumi-lang-python="`bind_continent_country_city`" pulumi-lang-yaml="`bindContinentCountryCity`" pulumi-lang-java="`bindContinentCountryCity`">`bind_continent_country_city`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     geoipBinding?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `no_binding` - `bind_asn` - `bind_asn_network` - `bind_asn_network_ip` Defaults to `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsn`" pulumi-lang-dotnet="`BindAsn`" pulumi-lang-go="`bindAsn`" pulumi-lang-python="`bind_asn`" pulumi-lang-yaml="`bindAsn`" pulumi-lang-java="`bindAsn`">`bind_asn`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetwork`" pulumi-lang-dotnet="`BindAsnNetwork`" pulumi-lang-go="`bindAsnNetwork`" pulumi-lang-python="`bind_asn_network`" pulumi-lang-yaml="`bindAsnNetwork`" pulumi-lang-java="`bindAsnNetwork`">`bind_asn_network`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetworkIp`" pulumi-lang-dotnet="`BindAsnNetworkIp`" pulumi-lang-go="`bindAsnNetworkIp`" pulumi-lang-python="`bind_asn_network_ip`" pulumi-lang-yaml="`bindAsnNetworkIp`" pulumi-lang-java="`bindAsnNetworkIp`">`bind_asn_network_ip`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     networkBinding?: pulumi.Input<string>;
     /**
@@ -125,7 +143,7 @@ export interface StageUserLoginState {
     sessionDuration?: pulumi.Input<string>;
     stageUserLoginId?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     terminateOtherSessions?: pulumi.Input<boolean>;
 }
@@ -135,13 +153,22 @@ export interface StageUserLoginState {
  */
 export interface StageUserLoginArgs {
     /**
-     * Allowed values: - `no_binding` - `bind_continent` - `bind_continent_country` - `bind_continent_country_city` Defaults to
-     * `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinent`" pulumi-lang-dotnet="`BindContinent`" pulumi-lang-go="`bindContinent`" pulumi-lang-python="`bind_continent`" pulumi-lang-yaml="`bindContinent`" pulumi-lang-java="`bindContinent`">`bind_continent`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountry`" pulumi-lang-dotnet="`BindContinentCountry`" pulumi-lang-go="`bindContinentCountry`" pulumi-lang-python="`bind_continent_country`" pulumi-lang-yaml="`bindContinentCountry`" pulumi-lang-java="`bindContinentCountry`">`bind_continent_country`</span>
+     *   - <span pulumi-lang-nodejs="`bindContinentCountryCity`" pulumi-lang-dotnet="`BindContinentCountryCity`" pulumi-lang-go="`bindContinentCountryCity`" pulumi-lang-python="`bind_continent_country_city`" pulumi-lang-yaml="`bindContinentCountryCity`" pulumi-lang-java="`bindContinentCountryCity`">`bind_continent_country_city`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     geoipBinding?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `no_binding` - `bind_asn` - `bind_asn_network` - `bind_asn_network_ip` Defaults to `no_binding`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsn`" pulumi-lang-dotnet="`BindAsn`" pulumi-lang-go="`bindAsn`" pulumi-lang-python="`bind_asn`" pulumi-lang-yaml="`bindAsn`" pulumi-lang-java="`bindAsn`">`bind_asn`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetwork`" pulumi-lang-dotnet="`BindAsnNetwork`" pulumi-lang-go="`bindAsnNetwork`" pulumi-lang-python="`bind_asn_network`" pulumi-lang-yaml="`bindAsnNetwork`" pulumi-lang-java="`bindAsnNetwork`">`bind_asn_network`</span>
+     *   - <span pulumi-lang-nodejs="`bindAsnNetworkIp`" pulumi-lang-dotnet="`BindAsnNetworkIp`" pulumi-lang-go="`bindAsnNetworkIp`" pulumi-lang-python="`bind_asn_network_ip`" pulumi-lang-yaml="`bindAsnNetworkIp`" pulumi-lang-java="`bindAsnNetworkIp`">`bind_asn_network_ip`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`noBinding`" pulumi-lang-dotnet="`NoBinding`" pulumi-lang-go="`noBinding`" pulumi-lang-python="`no_binding`" pulumi-lang-yaml="`noBinding`" pulumi-lang-java="`noBinding`">`no_binding`</span>.
      */
     networkBinding?: pulumi.Input<string>;
     /**
@@ -158,7 +185,7 @@ export interface StageUserLoginArgs {
     sessionDuration?: pulumi.Input<string>;
     stageUserLoginId?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     terminateOtherSessions?: pulumi.Input<boolean>;
 }

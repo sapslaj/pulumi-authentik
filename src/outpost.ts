@@ -41,7 +41,12 @@ export class Outpost extends pulumi.CustomResource {
     declare public readonly protocolProviders: pulumi.Output<number[]>;
     declare public readonly serviceConnection: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `proxy` - `ldap` - `radius` - `rac` Defaults to `proxy`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>
+     *   - <span pulumi-lang-nodejs="`ldap`" pulumi-lang-dotnet="`Ldap`" pulumi-lang-go="`ldap`" pulumi-lang-python="`ldap`" pulumi-lang-yaml="`ldap`" pulumi-lang-java="`ldap`">`ldap`</span>
+     *   - <span pulumi-lang-nodejs="`radius`" pulumi-lang-dotnet="`Radius`" pulumi-lang-go="`radius`" pulumi-lang-python="`radius`" pulumi-lang-yaml="`radius`" pulumi-lang-java="`radius`">`radius`</span>
+     *   - <span pulumi-lang-nodejs="`rac`" pulumi-lang-dotnet="`Rac`" pulumi-lang-go="`rac`" pulumi-lang-python="`rac`" pulumi-lang-yaml="`rac`" pulumi-lang-java="`rac`">`rac`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>.
      */
     declare public readonly type: pulumi.Output<string | undefined>;
 
@@ -94,7 +99,12 @@ export interface OutpostState {
     protocolProviders?: pulumi.Input<pulumi.Input<number>[]>;
     serviceConnection?: pulumi.Input<string>;
     /**
-     * Allowed values: - `proxy` - `ldap` - `radius` - `rac` Defaults to `proxy`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>
+     *   - <span pulumi-lang-nodejs="`ldap`" pulumi-lang-dotnet="`Ldap`" pulumi-lang-go="`ldap`" pulumi-lang-python="`ldap`" pulumi-lang-yaml="`ldap`" pulumi-lang-java="`ldap`">`ldap`</span>
+     *   - <span pulumi-lang-nodejs="`radius`" pulumi-lang-dotnet="`Radius`" pulumi-lang-go="`radius`" pulumi-lang-python="`radius`" pulumi-lang-yaml="`radius`" pulumi-lang-java="`radius`">`radius`</span>
+     *   - <span pulumi-lang-nodejs="`rac`" pulumi-lang-dotnet="`Rac`" pulumi-lang-go="`rac`" pulumi-lang-python="`rac`" pulumi-lang-yaml="`rac`" pulumi-lang-java="`rac`">`rac`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>.
      */
     type?: pulumi.Input<string>;
 }
@@ -112,7 +122,12 @@ export interface OutpostArgs {
     protocolProviders: pulumi.Input<pulumi.Input<number>[]>;
     serviceConnection?: pulumi.Input<string>;
     /**
-     * Allowed values: - `proxy` - `ldap` - `radius` - `rac` Defaults to `proxy`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>
+     *   - <span pulumi-lang-nodejs="`ldap`" pulumi-lang-dotnet="`Ldap`" pulumi-lang-go="`ldap`" pulumi-lang-python="`ldap`" pulumi-lang-yaml="`ldap`" pulumi-lang-java="`ldap`">`ldap`</span>
+     *   - <span pulumi-lang-nodejs="`radius`" pulumi-lang-dotnet="`Radius`" pulumi-lang-go="`radius`" pulumi-lang-python="`radius`" pulumi-lang-yaml="`radius`" pulumi-lang-java="`radius`">`radius`</span>
+     *   - <span pulumi-lang-nodejs="`rac`" pulumi-lang-dotnet="`Rac`" pulumi-lang-go="`rac`" pulumi-lang-python="`rac`" pulumi-lang-yaml="`rac`" pulumi-lang-java="`rac`">`rac`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`proxy`" pulumi-lang-dotnet="`Proxy`" pulumi-lang-go="`proxy`" pulumi-lang-python="`proxy`" pulumi-lang-yaml="`proxy`" pulumi-lang-java="`proxy`">`proxy`</span>.
      */
     type?: pulumi.Input<string>;
 }

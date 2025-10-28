@@ -36,41 +36,276 @@ export class PolicyGeoip extends pulumi.CustomResource {
     declare public readonly checkHistoryDistance: pulumi.Output<boolean | undefined>;
     declare public readonly checkImpossibleTravel: pulumi.Output<boolean | undefined>;
     /**
-     * Allowed values: - `AF` - `AX` - `AL` - `DZ` - `AS` - `AD` - `AO` - `AI` - `AQ` - `AG` - `AR` - `AM` - `AW` - `AU` - `AT`
-     * - `AZ` - `BS` - `BH` - `BD` - `BB` - `BY` - `BE` - `BZ` - `BJ` - `BM` - `BT` - `BO` - `BQ` - `BA` - `BW` - `BV` - `BR` -
-     * `IO` - `BN` - `BG` - `BF` - `BI` - `CV` - `KH` - `CM` - `CA` - `KY` - `CF` - `TD` - `CL` - `CN` - `CX` - `CC` - `CO` -
-     * `KM` - `CG` - `CD` - `CK` - `CR` - `CI` - `HR` - `CU` - `CW` - `CY` - `CZ` - `DK` - `DJ` - `DM` - `DO` - `EC` - `EG` -
-     * `SV` - `GQ` - `ER` - `EE` - `SZ` - `ET` - `FK` - `FO` - `FJ` - `FI` - `FR` - `GF` - `PF` - `TF` - `GA` - `GM` - `GE` -
-     * `DE` - `GH` - `GI` - `GR` - `GL` - `GD` - `GP` - `GU` - `GT` - `GG` - `GN` - `GW` - `GY` - `HT` - `HM` - `VA` - `HN` -
-     * `HK` - `HU` - `IS` - `IN` - `ID` - `IR` - `IQ` - `IE` - `IM` - `IL` - `IT` - `JM` - `JP` - `JE` - `JO` - `KZ` - `KE` -
-     * `KI` - `KW` - `KG` - `LA` - `LV` - `LB` - `LS` - `LR` - `LY` - `LI` - `LT` - `LU` - `MO` - `MG` - `MW` - `MY` - `MV` -
-     * `ML` - `MT` - `MH` - `MQ` - `MR` - `MU` - `YT` - `MX` - `FM` - `MD` - `MC` - `MN` - `ME` - `MS` - `MA` - `MZ` - `MM` -
-     * `NA` - `NR` - `NP` - `NL` - `NC` - `NZ` - `NI` - `NE` - `NG` - `NU` - `NF` - `KP` - `MK` - `MP` - `NO` - `OM` - `PK` -
-     * `PW` - `PS` - `PA` - `PG` - `PY` - `PE` - `PH` - `PN` - `PL` - `PT` - `PR` - `QA` - `RE` - `RO` - `RU` - `RW` - `BL` -
-     * `SH` - `KN` - `LC` - `MF` - `PM` - `VC` - `WS` - `SM` - `ST` - `SA` - `SN` - `RS` - `SC` - `SL` - `SG` - `SX` - `SK` -
-     * `SI` - `SB` - `SO` - `ZA` - `GS` - `KR` - `SS` - `ES` - `LK` - `SD` - `SR` - `SJ` - `SE` - `CH` - `SY` - `TW` - `TJ` -
-     * `TZ` - `TH` - `TL` - `TG` - `TK` - `TO` - `TT` - `TN` - `TR` - `TM` - `TC` - `TV` - `UG` - `UA` - `AE` - `GB` - `UM` -
-     * `US` - `UY` - `UZ` - `VU` - `VE` - `VN` - `VG` - `VI` - `WF` - `EH` - `YE` - `ZM` - `ZW`
+     * Allowed values:
+     *   - `AF`
+     *   - `AX`
+     *   - `AL`
+     *   - `DZ`
+     *   - `AS`
+     *   - `AD`
+     *   - `AO`
+     *   - `AI`
+     *   - `AQ`
+     *   - `AG`
+     *   - `AR`
+     *   - `AM`
+     *   - `AW`
+     *   - `AU`
+     *   - `AT`
+     *   - `AZ`
+     *   - `BS`
+     *   - `BH`
+     *   - `BD`
+     *   - `BB`
+     *   - `BY`
+     *   - `BE`
+     *   - `BZ`
+     *   - `BJ`
+     *   - `BM`
+     *   - `BT`
+     *   - `BO`
+     *   - `BQ`
+     *   - `BA`
+     *   - `BW`
+     *   - `BV`
+     *   - `BR`
+     *   - `IO`
+     *   - `BN`
+     *   - `BG`
+     *   - `BF`
+     *   - `BI`
+     *   - `CV`
+     *   - `KH`
+     *   - `CM`
+     *   - `CA`
+     *   - `KY`
+     *   - `CF`
+     *   - `TD`
+     *   - `CL`
+     *   - `CN`
+     *   - `CX`
+     *   - `CC`
+     *   - `CO`
+     *   - `KM`
+     *   - `CG`
+     *   - `CD`
+     *   - `CK`
+     *   - `CR`
+     *   - `CI`
+     *   - `HR`
+     *   - `CU`
+     *   - `CW`
+     *   - `CY`
+     *   - `CZ`
+     *   - `DK`
+     *   - `DJ`
+     *   - `DM`
+     *   - `DO`
+     *   - `EC`
+     *   - `EG`
+     *   - `SV`
+     *   - `GQ`
+     *   - `ER`
+     *   - `EE`
+     *   - `SZ`
+     *   - `ET`
+     *   - `FK`
+     *   - `FO`
+     *   - `FJ`
+     *   - `FI`
+     *   - `FR`
+     *   - `GF`
+     *   - `PF`
+     *   - `TF`
+     *   - `GA`
+     *   - `GM`
+     *   - `GE`
+     *   - `DE`
+     *   - `GH`
+     *   - `GI`
+     *   - `GR`
+     *   - `GL`
+     *   - `GD`
+     *   - `GP`
+     *   - `GU`
+     *   - `GT`
+     *   - `GG`
+     *   - `GN`
+     *   - `GW`
+     *   - `GY`
+     *   - `HT`
+     *   - `HM`
+     *   - `VA`
+     *   - `HN`
+     *   - `HK`
+     *   - `HU`
+     *   - `IS`
+     *   - `IN`
+     *   - `ID`
+     *   - `IR`
+     *   - `IQ`
+     *   - `IE`
+     *   - `IM`
+     *   - `IL`
+     *   - `IT`
+     *   - `JM`
+     *   - `JP`
+     *   - `JE`
+     *   - `JO`
+     *   - `KZ`
+     *   - `KE`
+     *   - `KI`
+     *   - `KW`
+     *   - `KG`
+     *   - `LA`
+     *   - `LV`
+     *   - `LB`
+     *   - `LS`
+     *   - `LR`
+     *   - `LY`
+     *   - `LI`
+     *   - `LT`
+     *   - `LU`
+     *   - `MO`
+     *   - `MG`
+     *   - `MW`
+     *   - `MY`
+     *   - `MV`
+     *   - `ML`
+     *   - `MT`
+     *   - `MH`
+     *   - `MQ`
+     *   - `MR`
+     *   - `MU`
+     *   - `YT`
+     *   - `MX`
+     *   - `FM`
+     *   - `MD`
+     *   - `MC`
+     *   - `MN`
+     *   - `ME`
+     *   - `MS`
+     *   - `MA`
+     *   - `MZ`
+     *   - `MM`
+     *   - `NA`
+     *   - `NR`
+     *   - `NP`
+     *   - `NL`
+     *   - `NC`
+     *   - `NZ`
+     *   - `NI`
+     *   - `NE`
+     *   - `NG`
+     *   - `NU`
+     *   - `NF`
+     *   - `KP`
+     *   - `MK`
+     *   - `MP`
+     *   - `NO`
+     *   - `OM`
+     *   - `PK`
+     *   - `PW`
+     *   - `PS`
+     *   - `PA`
+     *   - `PG`
+     *   - `PY`
+     *   - `PE`
+     *   - `PH`
+     *   - `PN`
+     *   - `PL`
+     *   - `PT`
+     *   - `PR`
+     *   - `QA`
+     *   - `RE`
+     *   - `RO`
+     *   - `RU`
+     *   - `RW`
+     *   - `BL`
+     *   - `SH`
+     *   - `KN`
+     *   - `LC`
+     *   - `MF`
+     *   - `PM`
+     *   - `VC`
+     *   - `WS`
+     *   - `SM`
+     *   - `ST`
+     *   - `SA`
+     *   - `SN`
+     *   - `RS`
+     *   - `SC`
+     *   - `SL`
+     *   - `SG`
+     *   - `SX`
+     *   - `SK`
+     *   - `SI`
+     *   - `SB`
+     *   - `SO`
+     *   - `ZA`
+     *   - `GS`
+     *   - `KR`
+     *   - `SS`
+     *   - `ES`
+     *   - `LK`
+     *   - `SD`
+     *   - `SR`
+     *   - `SJ`
+     *   - `SE`
+     *   - `CH`
+     *   - `SY`
+     *   - `TW`
+     *   - `TJ`
+     *   - `TZ`
+     *   - `TH`
+     *   - `TL`
+     *   - `TG`
+     *   - `TK`
+     *   - `TO`
+     *   - `TT`
+     *   - `TN`
+     *   - `TR`
+     *   - `TM`
+     *   - `TC`
+     *   - `TV`
+     *   - `UG`
+     *   - `UA`
+     *   - `AE`
+     *   - `GB`
+     *   - `UM`
+     *   - `US`
+     *   - `UY`
+     *   - `UZ`
+     *   - `VU`
+     *   - `VE`
+     *   - `VN`
+     *   - `VG`
+     *   - `VI`
+     *   - `WF`
+     *   - `EH`
+     *   - `YE`
+     *   - `ZM`
+     *   - `ZW`
      */
     declare public readonly countries: pulumi.Output<string[] | undefined>;
     /**
-     * Defaults to `50`.
+     * Defaults to <span pulumi-lang-nodejs="`50`" pulumi-lang-dotnet="`50`" pulumi-lang-go="`50`" pulumi-lang-python="`50`" pulumi-lang-yaml="`50`" pulumi-lang-java="`50`">`50`</span>.
      */
     declare public readonly distanceToleranceKm: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly executionLogging: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `5`.
+     * Defaults to <span pulumi-lang-nodejs="`5`" pulumi-lang-dotnet="`5`" pulumi-lang-go="`5`" pulumi-lang-python="`5`" pulumi-lang-yaml="`5`" pulumi-lang-java="`5`">`5`</span>.
      */
     declare public readonly historyLoginCount: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     declare public readonly historyMaxDistanceKm: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     declare public readonly impossibleToleranceKm: pulumi.Output<number | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -127,41 +362,276 @@ export interface PolicyGeoipState {
     checkHistoryDistance?: pulumi.Input<boolean>;
     checkImpossibleTravel?: pulumi.Input<boolean>;
     /**
-     * Allowed values: - `AF` - `AX` - `AL` - `DZ` - `AS` - `AD` - `AO` - `AI` - `AQ` - `AG` - `AR` - `AM` - `AW` - `AU` - `AT`
-     * - `AZ` - `BS` - `BH` - `BD` - `BB` - `BY` - `BE` - `BZ` - `BJ` - `BM` - `BT` - `BO` - `BQ` - `BA` - `BW` - `BV` - `BR` -
-     * `IO` - `BN` - `BG` - `BF` - `BI` - `CV` - `KH` - `CM` - `CA` - `KY` - `CF` - `TD` - `CL` - `CN` - `CX` - `CC` - `CO` -
-     * `KM` - `CG` - `CD` - `CK` - `CR` - `CI` - `HR` - `CU` - `CW` - `CY` - `CZ` - `DK` - `DJ` - `DM` - `DO` - `EC` - `EG` -
-     * `SV` - `GQ` - `ER` - `EE` - `SZ` - `ET` - `FK` - `FO` - `FJ` - `FI` - `FR` - `GF` - `PF` - `TF` - `GA` - `GM` - `GE` -
-     * `DE` - `GH` - `GI` - `GR` - `GL` - `GD` - `GP` - `GU` - `GT` - `GG` - `GN` - `GW` - `GY` - `HT` - `HM` - `VA` - `HN` -
-     * `HK` - `HU` - `IS` - `IN` - `ID` - `IR` - `IQ` - `IE` - `IM` - `IL` - `IT` - `JM` - `JP` - `JE` - `JO` - `KZ` - `KE` -
-     * `KI` - `KW` - `KG` - `LA` - `LV` - `LB` - `LS` - `LR` - `LY` - `LI` - `LT` - `LU` - `MO` - `MG` - `MW` - `MY` - `MV` -
-     * `ML` - `MT` - `MH` - `MQ` - `MR` - `MU` - `YT` - `MX` - `FM` - `MD` - `MC` - `MN` - `ME` - `MS` - `MA` - `MZ` - `MM` -
-     * `NA` - `NR` - `NP` - `NL` - `NC` - `NZ` - `NI` - `NE` - `NG` - `NU` - `NF` - `KP` - `MK` - `MP` - `NO` - `OM` - `PK` -
-     * `PW` - `PS` - `PA` - `PG` - `PY` - `PE` - `PH` - `PN` - `PL` - `PT` - `PR` - `QA` - `RE` - `RO` - `RU` - `RW` - `BL` -
-     * `SH` - `KN` - `LC` - `MF` - `PM` - `VC` - `WS` - `SM` - `ST` - `SA` - `SN` - `RS` - `SC` - `SL` - `SG` - `SX` - `SK` -
-     * `SI` - `SB` - `SO` - `ZA` - `GS` - `KR` - `SS` - `ES` - `LK` - `SD` - `SR` - `SJ` - `SE` - `CH` - `SY` - `TW` - `TJ` -
-     * `TZ` - `TH` - `TL` - `TG` - `TK` - `TO` - `TT` - `TN` - `TR` - `TM` - `TC` - `TV` - `UG` - `UA` - `AE` - `GB` - `UM` -
-     * `US` - `UY` - `UZ` - `VU` - `VE` - `VN` - `VG` - `VI` - `WF` - `EH` - `YE` - `ZM` - `ZW`
+     * Allowed values:
+     *   - `AF`
+     *   - `AX`
+     *   - `AL`
+     *   - `DZ`
+     *   - `AS`
+     *   - `AD`
+     *   - `AO`
+     *   - `AI`
+     *   - `AQ`
+     *   - `AG`
+     *   - `AR`
+     *   - `AM`
+     *   - `AW`
+     *   - `AU`
+     *   - `AT`
+     *   - `AZ`
+     *   - `BS`
+     *   - `BH`
+     *   - `BD`
+     *   - `BB`
+     *   - `BY`
+     *   - `BE`
+     *   - `BZ`
+     *   - `BJ`
+     *   - `BM`
+     *   - `BT`
+     *   - `BO`
+     *   - `BQ`
+     *   - `BA`
+     *   - `BW`
+     *   - `BV`
+     *   - `BR`
+     *   - `IO`
+     *   - `BN`
+     *   - `BG`
+     *   - `BF`
+     *   - `BI`
+     *   - `CV`
+     *   - `KH`
+     *   - `CM`
+     *   - `CA`
+     *   - `KY`
+     *   - `CF`
+     *   - `TD`
+     *   - `CL`
+     *   - `CN`
+     *   - `CX`
+     *   - `CC`
+     *   - `CO`
+     *   - `KM`
+     *   - `CG`
+     *   - `CD`
+     *   - `CK`
+     *   - `CR`
+     *   - `CI`
+     *   - `HR`
+     *   - `CU`
+     *   - `CW`
+     *   - `CY`
+     *   - `CZ`
+     *   - `DK`
+     *   - `DJ`
+     *   - `DM`
+     *   - `DO`
+     *   - `EC`
+     *   - `EG`
+     *   - `SV`
+     *   - `GQ`
+     *   - `ER`
+     *   - `EE`
+     *   - `SZ`
+     *   - `ET`
+     *   - `FK`
+     *   - `FO`
+     *   - `FJ`
+     *   - `FI`
+     *   - `FR`
+     *   - `GF`
+     *   - `PF`
+     *   - `TF`
+     *   - `GA`
+     *   - `GM`
+     *   - `GE`
+     *   - `DE`
+     *   - `GH`
+     *   - `GI`
+     *   - `GR`
+     *   - `GL`
+     *   - `GD`
+     *   - `GP`
+     *   - `GU`
+     *   - `GT`
+     *   - `GG`
+     *   - `GN`
+     *   - `GW`
+     *   - `GY`
+     *   - `HT`
+     *   - `HM`
+     *   - `VA`
+     *   - `HN`
+     *   - `HK`
+     *   - `HU`
+     *   - `IS`
+     *   - `IN`
+     *   - `ID`
+     *   - `IR`
+     *   - `IQ`
+     *   - `IE`
+     *   - `IM`
+     *   - `IL`
+     *   - `IT`
+     *   - `JM`
+     *   - `JP`
+     *   - `JE`
+     *   - `JO`
+     *   - `KZ`
+     *   - `KE`
+     *   - `KI`
+     *   - `KW`
+     *   - `KG`
+     *   - `LA`
+     *   - `LV`
+     *   - `LB`
+     *   - `LS`
+     *   - `LR`
+     *   - `LY`
+     *   - `LI`
+     *   - `LT`
+     *   - `LU`
+     *   - `MO`
+     *   - `MG`
+     *   - `MW`
+     *   - `MY`
+     *   - `MV`
+     *   - `ML`
+     *   - `MT`
+     *   - `MH`
+     *   - `MQ`
+     *   - `MR`
+     *   - `MU`
+     *   - `YT`
+     *   - `MX`
+     *   - `FM`
+     *   - `MD`
+     *   - `MC`
+     *   - `MN`
+     *   - `ME`
+     *   - `MS`
+     *   - `MA`
+     *   - `MZ`
+     *   - `MM`
+     *   - `NA`
+     *   - `NR`
+     *   - `NP`
+     *   - `NL`
+     *   - `NC`
+     *   - `NZ`
+     *   - `NI`
+     *   - `NE`
+     *   - `NG`
+     *   - `NU`
+     *   - `NF`
+     *   - `KP`
+     *   - `MK`
+     *   - `MP`
+     *   - `NO`
+     *   - `OM`
+     *   - `PK`
+     *   - `PW`
+     *   - `PS`
+     *   - `PA`
+     *   - `PG`
+     *   - `PY`
+     *   - `PE`
+     *   - `PH`
+     *   - `PN`
+     *   - `PL`
+     *   - `PT`
+     *   - `PR`
+     *   - `QA`
+     *   - `RE`
+     *   - `RO`
+     *   - `RU`
+     *   - `RW`
+     *   - `BL`
+     *   - `SH`
+     *   - `KN`
+     *   - `LC`
+     *   - `MF`
+     *   - `PM`
+     *   - `VC`
+     *   - `WS`
+     *   - `SM`
+     *   - `ST`
+     *   - `SA`
+     *   - `SN`
+     *   - `RS`
+     *   - `SC`
+     *   - `SL`
+     *   - `SG`
+     *   - `SX`
+     *   - `SK`
+     *   - `SI`
+     *   - `SB`
+     *   - `SO`
+     *   - `ZA`
+     *   - `GS`
+     *   - `KR`
+     *   - `SS`
+     *   - `ES`
+     *   - `LK`
+     *   - `SD`
+     *   - `SR`
+     *   - `SJ`
+     *   - `SE`
+     *   - `CH`
+     *   - `SY`
+     *   - `TW`
+     *   - `TJ`
+     *   - `TZ`
+     *   - `TH`
+     *   - `TL`
+     *   - `TG`
+     *   - `TK`
+     *   - `TO`
+     *   - `TT`
+     *   - `TN`
+     *   - `TR`
+     *   - `TM`
+     *   - `TC`
+     *   - `TV`
+     *   - `UG`
+     *   - `UA`
+     *   - `AE`
+     *   - `GB`
+     *   - `UM`
+     *   - `US`
+     *   - `UY`
+     *   - `UZ`
+     *   - `VU`
+     *   - `VE`
+     *   - `VN`
+     *   - `VG`
+     *   - `VI`
+     *   - `WF`
+     *   - `EH`
+     *   - `YE`
+     *   - `ZM`
+     *   - `ZW`
      */
     countries?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Defaults to `50`.
+     * Defaults to <span pulumi-lang-nodejs="`50`" pulumi-lang-dotnet="`50`" pulumi-lang-go="`50`" pulumi-lang-python="`50`" pulumi-lang-yaml="`50`" pulumi-lang-java="`50`">`50`</span>.
      */
     distanceToleranceKm?: pulumi.Input<number>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     executionLogging?: pulumi.Input<boolean>;
     /**
-     * Defaults to `5`.
+     * Defaults to <span pulumi-lang-nodejs="`5`" pulumi-lang-dotnet="`5`" pulumi-lang-go="`5`" pulumi-lang-python="`5`" pulumi-lang-yaml="`5`" pulumi-lang-java="`5`">`5`</span>.
      */
     historyLoginCount?: pulumi.Input<number>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     historyMaxDistanceKm?: pulumi.Input<number>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     impossibleToleranceKm?: pulumi.Input<number>;
     name?: pulumi.Input<string>;
@@ -176,41 +646,276 @@ export interface PolicyGeoipArgs {
     checkHistoryDistance?: pulumi.Input<boolean>;
     checkImpossibleTravel?: pulumi.Input<boolean>;
     /**
-     * Allowed values: - `AF` - `AX` - `AL` - `DZ` - `AS` - `AD` - `AO` - `AI` - `AQ` - `AG` - `AR` - `AM` - `AW` - `AU` - `AT`
-     * - `AZ` - `BS` - `BH` - `BD` - `BB` - `BY` - `BE` - `BZ` - `BJ` - `BM` - `BT` - `BO` - `BQ` - `BA` - `BW` - `BV` - `BR` -
-     * `IO` - `BN` - `BG` - `BF` - `BI` - `CV` - `KH` - `CM` - `CA` - `KY` - `CF` - `TD` - `CL` - `CN` - `CX` - `CC` - `CO` -
-     * `KM` - `CG` - `CD` - `CK` - `CR` - `CI` - `HR` - `CU` - `CW` - `CY` - `CZ` - `DK` - `DJ` - `DM` - `DO` - `EC` - `EG` -
-     * `SV` - `GQ` - `ER` - `EE` - `SZ` - `ET` - `FK` - `FO` - `FJ` - `FI` - `FR` - `GF` - `PF` - `TF` - `GA` - `GM` - `GE` -
-     * `DE` - `GH` - `GI` - `GR` - `GL` - `GD` - `GP` - `GU` - `GT` - `GG` - `GN` - `GW` - `GY` - `HT` - `HM` - `VA` - `HN` -
-     * `HK` - `HU` - `IS` - `IN` - `ID` - `IR` - `IQ` - `IE` - `IM` - `IL` - `IT` - `JM` - `JP` - `JE` - `JO` - `KZ` - `KE` -
-     * `KI` - `KW` - `KG` - `LA` - `LV` - `LB` - `LS` - `LR` - `LY` - `LI` - `LT` - `LU` - `MO` - `MG` - `MW` - `MY` - `MV` -
-     * `ML` - `MT` - `MH` - `MQ` - `MR` - `MU` - `YT` - `MX` - `FM` - `MD` - `MC` - `MN` - `ME` - `MS` - `MA` - `MZ` - `MM` -
-     * `NA` - `NR` - `NP` - `NL` - `NC` - `NZ` - `NI` - `NE` - `NG` - `NU` - `NF` - `KP` - `MK` - `MP` - `NO` - `OM` - `PK` -
-     * `PW` - `PS` - `PA` - `PG` - `PY` - `PE` - `PH` - `PN` - `PL` - `PT` - `PR` - `QA` - `RE` - `RO` - `RU` - `RW` - `BL` -
-     * `SH` - `KN` - `LC` - `MF` - `PM` - `VC` - `WS` - `SM` - `ST` - `SA` - `SN` - `RS` - `SC` - `SL` - `SG` - `SX` - `SK` -
-     * `SI` - `SB` - `SO` - `ZA` - `GS` - `KR` - `SS` - `ES` - `LK` - `SD` - `SR` - `SJ` - `SE` - `CH` - `SY` - `TW` - `TJ` -
-     * `TZ` - `TH` - `TL` - `TG` - `TK` - `TO` - `TT` - `TN` - `TR` - `TM` - `TC` - `TV` - `UG` - `UA` - `AE` - `GB` - `UM` -
-     * `US` - `UY` - `UZ` - `VU` - `VE` - `VN` - `VG` - `VI` - `WF` - `EH` - `YE` - `ZM` - `ZW`
+     * Allowed values:
+     *   - `AF`
+     *   - `AX`
+     *   - `AL`
+     *   - `DZ`
+     *   - `AS`
+     *   - `AD`
+     *   - `AO`
+     *   - `AI`
+     *   - `AQ`
+     *   - `AG`
+     *   - `AR`
+     *   - `AM`
+     *   - `AW`
+     *   - `AU`
+     *   - `AT`
+     *   - `AZ`
+     *   - `BS`
+     *   - `BH`
+     *   - `BD`
+     *   - `BB`
+     *   - `BY`
+     *   - `BE`
+     *   - `BZ`
+     *   - `BJ`
+     *   - `BM`
+     *   - `BT`
+     *   - `BO`
+     *   - `BQ`
+     *   - `BA`
+     *   - `BW`
+     *   - `BV`
+     *   - `BR`
+     *   - `IO`
+     *   - `BN`
+     *   - `BG`
+     *   - `BF`
+     *   - `BI`
+     *   - `CV`
+     *   - `KH`
+     *   - `CM`
+     *   - `CA`
+     *   - `KY`
+     *   - `CF`
+     *   - `TD`
+     *   - `CL`
+     *   - `CN`
+     *   - `CX`
+     *   - `CC`
+     *   - `CO`
+     *   - `KM`
+     *   - `CG`
+     *   - `CD`
+     *   - `CK`
+     *   - `CR`
+     *   - `CI`
+     *   - `HR`
+     *   - `CU`
+     *   - `CW`
+     *   - `CY`
+     *   - `CZ`
+     *   - `DK`
+     *   - `DJ`
+     *   - `DM`
+     *   - `DO`
+     *   - `EC`
+     *   - `EG`
+     *   - `SV`
+     *   - `GQ`
+     *   - `ER`
+     *   - `EE`
+     *   - `SZ`
+     *   - `ET`
+     *   - `FK`
+     *   - `FO`
+     *   - `FJ`
+     *   - `FI`
+     *   - `FR`
+     *   - `GF`
+     *   - `PF`
+     *   - `TF`
+     *   - `GA`
+     *   - `GM`
+     *   - `GE`
+     *   - `DE`
+     *   - `GH`
+     *   - `GI`
+     *   - `GR`
+     *   - `GL`
+     *   - `GD`
+     *   - `GP`
+     *   - `GU`
+     *   - `GT`
+     *   - `GG`
+     *   - `GN`
+     *   - `GW`
+     *   - `GY`
+     *   - `HT`
+     *   - `HM`
+     *   - `VA`
+     *   - `HN`
+     *   - `HK`
+     *   - `HU`
+     *   - `IS`
+     *   - `IN`
+     *   - `ID`
+     *   - `IR`
+     *   - `IQ`
+     *   - `IE`
+     *   - `IM`
+     *   - `IL`
+     *   - `IT`
+     *   - `JM`
+     *   - `JP`
+     *   - `JE`
+     *   - `JO`
+     *   - `KZ`
+     *   - `KE`
+     *   - `KI`
+     *   - `KW`
+     *   - `KG`
+     *   - `LA`
+     *   - `LV`
+     *   - `LB`
+     *   - `LS`
+     *   - `LR`
+     *   - `LY`
+     *   - `LI`
+     *   - `LT`
+     *   - `LU`
+     *   - `MO`
+     *   - `MG`
+     *   - `MW`
+     *   - `MY`
+     *   - `MV`
+     *   - `ML`
+     *   - `MT`
+     *   - `MH`
+     *   - `MQ`
+     *   - `MR`
+     *   - `MU`
+     *   - `YT`
+     *   - `MX`
+     *   - `FM`
+     *   - `MD`
+     *   - `MC`
+     *   - `MN`
+     *   - `ME`
+     *   - `MS`
+     *   - `MA`
+     *   - `MZ`
+     *   - `MM`
+     *   - `NA`
+     *   - `NR`
+     *   - `NP`
+     *   - `NL`
+     *   - `NC`
+     *   - `NZ`
+     *   - `NI`
+     *   - `NE`
+     *   - `NG`
+     *   - `NU`
+     *   - `NF`
+     *   - `KP`
+     *   - `MK`
+     *   - `MP`
+     *   - `NO`
+     *   - `OM`
+     *   - `PK`
+     *   - `PW`
+     *   - `PS`
+     *   - `PA`
+     *   - `PG`
+     *   - `PY`
+     *   - `PE`
+     *   - `PH`
+     *   - `PN`
+     *   - `PL`
+     *   - `PT`
+     *   - `PR`
+     *   - `QA`
+     *   - `RE`
+     *   - `RO`
+     *   - `RU`
+     *   - `RW`
+     *   - `BL`
+     *   - `SH`
+     *   - `KN`
+     *   - `LC`
+     *   - `MF`
+     *   - `PM`
+     *   - `VC`
+     *   - `WS`
+     *   - `SM`
+     *   - `ST`
+     *   - `SA`
+     *   - `SN`
+     *   - `RS`
+     *   - `SC`
+     *   - `SL`
+     *   - `SG`
+     *   - `SX`
+     *   - `SK`
+     *   - `SI`
+     *   - `SB`
+     *   - `SO`
+     *   - `ZA`
+     *   - `GS`
+     *   - `KR`
+     *   - `SS`
+     *   - `ES`
+     *   - `LK`
+     *   - `SD`
+     *   - `SR`
+     *   - `SJ`
+     *   - `SE`
+     *   - `CH`
+     *   - `SY`
+     *   - `TW`
+     *   - `TJ`
+     *   - `TZ`
+     *   - `TH`
+     *   - `TL`
+     *   - `TG`
+     *   - `TK`
+     *   - `TO`
+     *   - `TT`
+     *   - `TN`
+     *   - `TR`
+     *   - `TM`
+     *   - `TC`
+     *   - `TV`
+     *   - `UG`
+     *   - `UA`
+     *   - `AE`
+     *   - `GB`
+     *   - `UM`
+     *   - `US`
+     *   - `UY`
+     *   - `UZ`
+     *   - `VU`
+     *   - `VE`
+     *   - `VN`
+     *   - `VG`
+     *   - `VI`
+     *   - `WF`
+     *   - `EH`
+     *   - `YE`
+     *   - `ZM`
+     *   - `ZW`
      */
     countries?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Defaults to `50`.
+     * Defaults to <span pulumi-lang-nodejs="`50`" pulumi-lang-dotnet="`50`" pulumi-lang-go="`50`" pulumi-lang-python="`50`" pulumi-lang-yaml="`50`" pulumi-lang-java="`50`">`50`</span>.
      */
     distanceToleranceKm?: pulumi.Input<number>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     executionLogging?: pulumi.Input<boolean>;
     /**
-     * Defaults to `5`.
+     * Defaults to <span pulumi-lang-nodejs="`5`" pulumi-lang-dotnet="`5`" pulumi-lang-go="`5`" pulumi-lang-python="`5`" pulumi-lang-yaml="`5`" pulumi-lang-java="`5`">`5`</span>.
      */
     historyLoginCount?: pulumi.Input<number>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     historyMaxDistanceKm?: pulumi.Input<number>;
     /**
-     * Defaults to `100`.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
      */
     impossibleToleranceKm?: pulumi.Input<number>;
     name?: pulumi.Input<string>;

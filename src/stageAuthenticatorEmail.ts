@@ -33,24 +33,27 @@ export class StageAuthenticatorEmail extends pulumi.CustomResource {
     }
 
     declare public readonly configureFlow: pulumi.Output<string | undefined>;
+    /**
+     * Defaults to ``.
+     */
     declare public readonly friendlyName: pulumi.Output<string | undefined>;
     /**
      * Defaults to `system@authentik.local`.
      */
     declare public readonly fromAddress: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `localhost`.
+     * Defaults to <span pulumi-lang-nodejs="`localhost`" pulumi-lang-dotnet="`Localhost`" pulumi-lang-go="`localhost`" pulumi-lang-python="`localhost`" pulumi-lang-yaml="`localhost`" pulumi-lang-java="`localhost`">`localhost`</span>.
      */
     declare public readonly host: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly password: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `25`.
+     * Defaults to <span pulumi-lang-nodejs="`25`" pulumi-lang-dotnet="`25`" pulumi-lang-go="`25`" pulumi-lang-python="`25`" pulumi-lang-yaml="`25`" pulumi-lang-java="`25`">`25`</span>.
      */
     declare public readonly port: pulumi.Output<number | undefined>;
     declare public readonly stageAuthenticatorEmailId: pulumi.Output<string>;
     /**
-     * Defaults to `authentik`.
+     * Defaults to <span pulumi-lang-nodejs="`authentik`" pulumi-lang-dotnet="`Authentik`" pulumi-lang-go="`authentik`" pulumi-lang-python="`authentik`" pulumi-lang-yaml="`authentik`" pulumi-lang-java="`authentik`">`authentik`</span>.
      */
     declare public readonly subject: pulumi.Output<string | undefined>;
     /**
@@ -58,7 +61,7 @@ export class StageAuthenticatorEmail extends pulumi.CustomResource {
      */
     declare public readonly template: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
@@ -66,7 +69,7 @@ export class StageAuthenticatorEmail extends pulumi.CustomResource {
      */
     declare public readonly tokenExpiry: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly useGlobalSettings: pulumi.Output<boolean | undefined>;
     declare public readonly useSsl: pulumi.Output<boolean | undefined>;
@@ -133,24 +136,27 @@ export class StageAuthenticatorEmail extends pulumi.CustomResource {
  */
 export interface StageAuthenticatorEmailState {
     configureFlow?: pulumi.Input<string>;
+    /**
+     * Defaults to ``.
+     */
     friendlyName?: pulumi.Input<string>;
     /**
      * Defaults to `system@authentik.local`.
      */
     fromAddress?: pulumi.Input<string>;
     /**
-     * Defaults to `localhost`.
+     * Defaults to <span pulumi-lang-nodejs="`localhost`" pulumi-lang-dotnet="`Localhost`" pulumi-lang-go="`localhost`" pulumi-lang-python="`localhost`" pulumi-lang-yaml="`localhost`" pulumi-lang-java="`localhost`">`localhost`</span>.
      */
     host?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     password?: pulumi.Input<string>;
     /**
-     * Defaults to `25`.
+     * Defaults to <span pulumi-lang-nodejs="`25`" pulumi-lang-dotnet="`25`" pulumi-lang-go="`25`" pulumi-lang-python="`25`" pulumi-lang-yaml="`25`" pulumi-lang-java="`25`">`25`</span>.
      */
     port?: pulumi.Input<number>;
     stageAuthenticatorEmailId?: pulumi.Input<string>;
     /**
-     * Defaults to `authentik`.
+     * Defaults to <span pulumi-lang-nodejs="`authentik`" pulumi-lang-dotnet="`Authentik`" pulumi-lang-go="`authentik`" pulumi-lang-python="`authentik`" pulumi-lang-yaml="`authentik`" pulumi-lang-java="`authentik`">`authentik`</span>.
      */
     subject?: pulumi.Input<string>;
     /**
@@ -158,7 +164,7 @@ export interface StageAuthenticatorEmailState {
      */
     template?: pulumi.Input<string>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     timeout?: pulumi.Input<number>;
     /**
@@ -166,7 +172,7 @@ export interface StageAuthenticatorEmailState {
      */
     tokenExpiry?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     useGlobalSettings?: pulumi.Input<boolean>;
     useSsl?: pulumi.Input<boolean>;
@@ -179,24 +185,27 @@ export interface StageAuthenticatorEmailState {
  */
 export interface StageAuthenticatorEmailArgs {
     configureFlow?: pulumi.Input<string>;
+    /**
+     * Defaults to ``.
+     */
     friendlyName?: pulumi.Input<string>;
     /**
      * Defaults to `system@authentik.local`.
      */
     fromAddress?: pulumi.Input<string>;
     /**
-     * Defaults to `localhost`.
+     * Defaults to <span pulumi-lang-nodejs="`localhost`" pulumi-lang-dotnet="`Localhost`" pulumi-lang-go="`localhost`" pulumi-lang-python="`localhost`" pulumi-lang-yaml="`localhost`" pulumi-lang-java="`localhost`">`localhost`</span>.
      */
     host?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     password?: pulumi.Input<string>;
     /**
-     * Defaults to `25`.
+     * Defaults to <span pulumi-lang-nodejs="`25`" pulumi-lang-dotnet="`25`" pulumi-lang-go="`25`" pulumi-lang-python="`25`" pulumi-lang-yaml="`25`" pulumi-lang-java="`25`">`25`</span>.
      */
     port?: pulumi.Input<number>;
     stageAuthenticatorEmailId?: pulumi.Input<string>;
     /**
-     * Defaults to `authentik`.
+     * Defaults to <span pulumi-lang-nodejs="`authentik`" pulumi-lang-dotnet="`Authentik`" pulumi-lang-go="`authentik`" pulumi-lang-python="`authentik`" pulumi-lang-yaml="`authentik`" pulumi-lang-java="`authentik`">`authentik`</span>.
      */
     subject?: pulumi.Input<string>;
     /**
@@ -204,7 +213,7 @@ export interface StageAuthenticatorEmailArgs {
      */
     template?: pulumi.Input<string>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     timeout?: pulumi.Input<number>;
     /**
@@ -212,7 +221,7 @@ export interface StageAuthenticatorEmailArgs {
      */
     tokenExpiry?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     useGlobalSettings?: pulumi.Input<boolean>;
     useSsl?: pulumi.Input<boolean>;

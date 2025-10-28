@@ -33,7 +33,9 @@ export class RbacInitialPermissions extends pulumi.CustomResource {
     }
 
     /**
-     * Allowed values: - `user` - `role`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`user`" pulumi-lang-dotnet="`User`" pulumi-lang-go="`user`" pulumi-lang-python="`user`" pulumi-lang-yaml="`user`" pulumi-lang-java="`user`">`user`</span>
+     *   - <span pulumi-lang-nodejs="`role`" pulumi-lang-dotnet="`Role`" pulumi-lang-go="`role`" pulumi-lang-python="`role`" pulumi-lang-yaml="`role`" pulumi-lang-java="`role`">`role`</span>
      */
     declare public readonly mode: pulumi.Output<string>;
     declare public readonly name: pulumi.Output<string>;
@@ -86,7 +88,9 @@ export class RbacInitialPermissions extends pulumi.CustomResource {
  */
 export interface RbacInitialPermissionsState {
     /**
-     * Allowed values: - `user` - `role`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`user`" pulumi-lang-dotnet="`User`" pulumi-lang-go="`user`" pulumi-lang-python="`user`" pulumi-lang-yaml="`user`" pulumi-lang-java="`user`">`user`</span>
+     *   - <span pulumi-lang-nodejs="`role`" pulumi-lang-dotnet="`Role`" pulumi-lang-go="`role`" pulumi-lang-python="`role`" pulumi-lang-yaml="`role`" pulumi-lang-java="`role`">`role`</span>
      */
     mode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
@@ -100,7 +104,9 @@ export interface RbacInitialPermissionsState {
  */
 export interface RbacInitialPermissionsArgs {
     /**
-     * Allowed values: - `user` - `role`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`user`" pulumi-lang-dotnet="`User`" pulumi-lang-go="`user`" pulumi-lang-python="`user`" pulumi-lang-yaml="`user`" pulumi-lang-java="`user`">`user`</span>
+     *   - <span pulumi-lang-nodejs="`role`" pulumi-lang-dotnet="`Role`" pulumi-lang-go="`role`" pulumi-lang-python="`role`" pulumi-lang-yaml="`role`" pulumi-lang-java="`role`">`role`</span>
      */
     mode: pulumi.Input<string>;
     name?: pulumi.Input<string>;

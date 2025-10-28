@@ -33,7 +33,7 @@ export class EventRule extends pulumi.CustomResource {
     }
 
     /**
-     * Send notification to event user Defaults to `false`.
+     * Send notification to event user Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly destinationEventUser: pulumi.Output<boolean | undefined>;
     /**
@@ -43,7 +43,11 @@ export class EventRule extends pulumi.CustomResource {
     declare public readonly eventRuleId: pulumi.Output<string>;
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Allowed values: - `notice` - `warning` - `alert` Defaults to `warning`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`notice`" pulumi-lang-dotnet="`Notice`" pulumi-lang-go="`notice`" pulumi-lang-python="`notice`" pulumi-lang-yaml="`notice`" pulumi-lang-java="`notice`">`notice`</span>
+     *   - <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>
+     *   - <span pulumi-lang-nodejs="`alert`" pulumi-lang-dotnet="`Alert`" pulumi-lang-go="`alert`" pulumi-lang-python="`alert`" pulumi-lang-yaml="`alert`" pulumi-lang-java="`alert`">`alert`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>.
      */
     declare public readonly severity: pulumi.Output<string | undefined>;
     declare public readonly transports: pulumi.Output<string[]>;
@@ -89,7 +93,7 @@ export class EventRule extends pulumi.CustomResource {
  */
 export interface EventRuleState {
     /**
-     * Send notification to event user Defaults to `false`.
+     * Send notification to event user Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     destinationEventUser?: pulumi.Input<boolean>;
     /**
@@ -99,7 +103,11 @@ export interface EventRuleState {
     eventRuleId?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `notice` - `warning` - `alert` Defaults to `warning`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`notice`" pulumi-lang-dotnet="`Notice`" pulumi-lang-go="`notice`" pulumi-lang-python="`notice`" pulumi-lang-yaml="`notice`" pulumi-lang-java="`notice`">`notice`</span>
+     *   - <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>
+     *   - <span pulumi-lang-nodejs="`alert`" pulumi-lang-dotnet="`Alert`" pulumi-lang-go="`alert`" pulumi-lang-python="`alert`" pulumi-lang-yaml="`alert`" pulumi-lang-java="`alert`">`alert`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>.
      */
     severity?: pulumi.Input<string>;
     transports?: pulumi.Input<pulumi.Input<string>[]>;
@@ -110,7 +118,7 @@ export interface EventRuleState {
  */
 export interface EventRuleArgs {
     /**
-     * Send notification to event user Defaults to `false`.
+     * Send notification to event user Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     destinationEventUser?: pulumi.Input<boolean>;
     /**
@@ -120,7 +128,11 @@ export interface EventRuleArgs {
     eventRuleId?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Allowed values: - `notice` - `warning` - `alert` Defaults to `warning`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`notice`" pulumi-lang-dotnet="`Notice`" pulumi-lang-go="`notice`" pulumi-lang-python="`notice`" pulumi-lang-yaml="`notice`" pulumi-lang-java="`notice`">`notice`</span>
+     *   - <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>
+     *   - <span pulumi-lang-nodejs="`alert`" pulumi-lang-dotnet="`Alert`" pulumi-lang-go="`alert`" pulumi-lang-python="`alert`" pulumi-lang-yaml="`alert`" pulumi-lang-java="`alert`">`alert`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`warning`" pulumi-lang-dotnet="`Warning`" pulumi-lang-go="`warning`" pulumi-lang-python="`warning`" pulumi-lang-yaml="`warning`" pulumi-lang-java="`warning`">`warning`</span>.
      */
     severity?: pulumi.Input<string>;
     transports: pulumi.Input<pulumi.Input<string>[]>;

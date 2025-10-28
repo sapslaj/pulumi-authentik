@@ -43,28 +43,33 @@ export class ProviderOauth2 extends pulumi.CustomResource {
     declare public readonly allowedRedirectUris: pulumi.Output<{[key: string]: string}[] | undefined>;
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
     declare public readonly authorizationFlow: pulumi.Output<string>;
-    declare public readonly backchannelLogoutUri: pulumi.Output<string | undefined>;
     declare public readonly clientId: pulumi.Output<string>;
     /**
      * Generated.
      */
     declare public readonly clientSecret: pulumi.Output<string>;
     /**
-     * Allowed values: - `confidential` - `public` Defaults to `confidential`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>
+     *   - <span pulumi-lang-nodejs="`public`" pulumi-lang-dotnet="`Public`" pulumi-lang-go="`public`" pulumi-lang-python="`public`" pulumi-lang-yaml="`public`" pulumi-lang-java="`public`">`public`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>.
      */
     declare public readonly clientType: pulumi.Output<string | undefined>;
     declare public readonly encryptionKey: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly includeClaimsInIdToken: pulumi.Output<boolean | undefined>;
     declare public readonly invalidationFlow: pulumi.Output<string>;
     /**
-     * Allowed values: - `global` - `per_provider` Defaults to `per_provider`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`global`" pulumi-lang-dotnet="`Global`" pulumi-lang-go="`global`" pulumi-lang-python="`global`" pulumi-lang-yaml="`global`" pulumi-lang-java="`global`">`global`</span>
+     *   - <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>.
      */
     declare public readonly issuerMode: pulumi.Output<string | undefined>;
     /**
-     * Deprecated. Use `jwt_federation_sources` instead.
+     * Deprecated. Use <span pulumi-lang-nodejs="`jwtFederationSources`" pulumi-lang-dotnet="`JwtFederationSources`" pulumi-lang-go="`jwtFederationSources`" pulumi-lang-python="`jwt_federation_sources`" pulumi-lang-yaml="`jwtFederationSources`" pulumi-lang-java="`jwtFederationSources`">`jwt_federation_sources`</span> instead.
      */
     declare public readonly jwksSources: pulumi.Output<string[] | undefined>;
     /**
@@ -75,17 +80,35 @@ export class ProviderOauth2 extends pulumi.CustomResource {
      * JWTs issued by keys configured in any of the selected sources can be used to authenticate on behalf of this provider.
      */
     declare public readonly jwtFederationSources: pulumi.Output<string[] | undefined>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>
+     *   - <span pulumi-lang-nodejs="`frontchannel`" pulumi-lang-dotnet="`Frontchannel`" pulumi-lang-go="`frontchannel`" pulumi-lang-python="`frontchannel`" pulumi-lang-yaml="`frontchannel`" pulumi-lang-java="`frontchannel`">`frontchannel`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>.
+     */
+    declare public readonly logoutMethod: pulumi.Output<string | undefined>;
+    declare public readonly logoutUri: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly providerOauth2Id: pulumi.Output<string>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
+     */
+    declare public readonly refreshTokenThreshold: pulumi.Output<string | undefined>;
     /**
      * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     declare public readonly refreshTokenValidity: pulumi.Output<string | undefined>;
     declare public readonly signingKey: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `hashed_user_id` - `user_id` - `user_uuid` - `user_username` - `user_email` - `user_upn` Defaults to
-     * `hashed_user_id`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userId`" pulumi-lang-dotnet="`UserId`" pulumi-lang-go="`userId`" pulumi-lang-python="`user_id`" pulumi-lang-yaml="`userId`" pulumi-lang-java="`userId`">`user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userUuid`" pulumi-lang-dotnet="`UserUuid`" pulumi-lang-go="`userUuid`" pulumi-lang-python="`user_uuid`" pulumi-lang-yaml="`userUuid`" pulumi-lang-java="`userUuid`">`user_uuid`</span>
+     *   - <span pulumi-lang-nodejs="`userUsername`" pulumi-lang-dotnet="`UserUsername`" pulumi-lang-go="`userUsername`" pulumi-lang-python="`user_username`" pulumi-lang-yaml="`userUsername`" pulumi-lang-java="`userUsername`">`user_username`</span>
+     *   - <span pulumi-lang-nodejs="`userEmail`" pulumi-lang-dotnet="`UserEmail`" pulumi-lang-go="`userEmail`" pulumi-lang-python="`user_email`" pulumi-lang-yaml="`userEmail`" pulumi-lang-java="`userEmail`">`user_email`</span>
+     *   - <span pulumi-lang-nodejs="`userUpn`" pulumi-lang-dotnet="`UserUpn`" pulumi-lang-go="`userUpn`" pulumi-lang-python="`user_upn`" pulumi-lang-yaml="`userUpn`" pulumi-lang-java="`userUpn`">`user_upn`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>.
      */
     declare public readonly subMode: pulumi.Output<string | undefined>;
 
@@ -107,7 +130,6 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["allowedRedirectUris"] = state?.allowedRedirectUris;
             resourceInputs["authenticationFlow"] = state?.authenticationFlow;
             resourceInputs["authorizationFlow"] = state?.authorizationFlow;
-            resourceInputs["backchannelLogoutUri"] = state?.backchannelLogoutUri;
             resourceInputs["clientId"] = state?.clientId;
             resourceInputs["clientSecret"] = state?.clientSecret;
             resourceInputs["clientType"] = state?.clientType;
@@ -118,9 +140,12 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["jwksSources"] = state?.jwksSources;
             resourceInputs["jwtFederationProviders"] = state?.jwtFederationProviders;
             resourceInputs["jwtFederationSources"] = state?.jwtFederationSources;
+            resourceInputs["logoutMethod"] = state?.logoutMethod;
+            resourceInputs["logoutUri"] = state?.logoutUri;
             resourceInputs["name"] = state?.name;
             resourceInputs["propertyMappings"] = state?.propertyMappings;
             resourceInputs["providerOauth2Id"] = state?.providerOauth2Id;
+            resourceInputs["refreshTokenThreshold"] = state?.refreshTokenThreshold;
             resourceInputs["refreshTokenValidity"] = state?.refreshTokenValidity;
             resourceInputs["signingKey"] = state?.signingKey;
             resourceInputs["subMode"] = state?.subMode;
@@ -140,7 +165,6 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["allowedRedirectUris"] = args?.allowedRedirectUris;
             resourceInputs["authenticationFlow"] = args?.authenticationFlow;
             resourceInputs["authorizationFlow"] = args?.authorizationFlow;
-            resourceInputs["backchannelLogoutUri"] = args?.backchannelLogoutUri;
             resourceInputs["clientId"] = args?.clientId;
             resourceInputs["clientSecret"] = args?.clientSecret ? pulumi.secret(args.clientSecret) : undefined;
             resourceInputs["clientType"] = args?.clientType;
@@ -151,9 +175,12 @@ export class ProviderOauth2 extends pulumi.CustomResource {
             resourceInputs["jwksSources"] = args?.jwksSources;
             resourceInputs["jwtFederationProviders"] = args?.jwtFederationProviders;
             resourceInputs["jwtFederationSources"] = args?.jwtFederationSources;
+            resourceInputs["logoutMethod"] = args?.logoutMethod;
+            resourceInputs["logoutUri"] = args?.logoutUri;
             resourceInputs["name"] = args?.name;
             resourceInputs["propertyMappings"] = args?.propertyMappings;
             resourceInputs["providerOauth2Id"] = args?.providerOauth2Id;
+            resourceInputs["refreshTokenThreshold"] = args?.refreshTokenThreshold;
             resourceInputs["refreshTokenValidity"] = args?.refreshTokenValidity;
             resourceInputs["signingKey"] = args?.signingKey;
             resourceInputs["subMode"] = args?.subMode;
@@ -180,28 +207,33 @@ export interface ProviderOauth2State {
     allowedRedirectUris?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow?: pulumi.Input<string>;
-    backchannelLogoutUri?: pulumi.Input<string>;
     clientId?: pulumi.Input<string>;
     /**
      * Generated.
      */
     clientSecret?: pulumi.Input<string>;
     /**
-     * Allowed values: - `confidential` - `public` Defaults to `confidential`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>
+     *   - <span pulumi-lang-nodejs="`public`" pulumi-lang-dotnet="`Public`" pulumi-lang-go="`public`" pulumi-lang-python="`public`" pulumi-lang-yaml="`public`" pulumi-lang-java="`public`">`public`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>.
      */
     clientType?: pulumi.Input<string>;
     encryptionKey?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     includeClaimsInIdToken?: pulumi.Input<boolean>;
     invalidationFlow?: pulumi.Input<string>;
     /**
-     * Allowed values: - `global` - `per_provider` Defaults to `per_provider`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`global`" pulumi-lang-dotnet="`Global`" pulumi-lang-go="`global`" pulumi-lang-python="`global`" pulumi-lang-yaml="`global`" pulumi-lang-java="`global`">`global`</span>
+     *   - <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>.
      */
     issuerMode?: pulumi.Input<string>;
     /**
-     * Deprecated. Use `jwt_federation_sources` instead.
+     * Deprecated. Use <span pulumi-lang-nodejs="`jwtFederationSources`" pulumi-lang-dotnet="`JwtFederationSources`" pulumi-lang-go="`jwtFederationSources`" pulumi-lang-python="`jwt_federation_sources`" pulumi-lang-yaml="`jwtFederationSources`" pulumi-lang-java="`jwtFederationSources`">`jwt_federation_sources`</span> instead.
      */
     jwksSources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -212,17 +244,35 @@ export interface ProviderOauth2State {
      * JWTs issued by keys configured in any of the selected sources can be used to authenticate on behalf of this provider.
      */
     jwtFederationSources?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>
+     *   - <span pulumi-lang-nodejs="`frontchannel`" pulumi-lang-dotnet="`Frontchannel`" pulumi-lang-go="`frontchannel`" pulumi-lang-python="`frontchannel`" pulumi-lang-yaml="`frontchannel`" pulumi-lang-java="`frontchannel`">`frontchannel`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>.
+     */
+    logoutMethod?: pulumi.Input<string>;
+    logoutUri?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerOauth2Id?: pulumi.Input<string>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
+     */
+    refreshTokenThreshold?: pulumi.Input<string>;
     /**
      * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     signingKey?: pulumi.Input<string>;
     /**
-     * Allowed values: - `hashed_user_id` - `user_id` - `user_uuid` - `user_username` - `user_email` - `user_upn` Defaults to
-     * `hashed_user_id`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userId`" pulumi-lang-dotnet="`UserId`" pulumi-lang-go="`userId`" pulumi-lang-python="`user_id`" pulumi-lang-yaml="`userId`" pulumi-lang-java="`userId`">`user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userUuid`" pulumi-lang-dotnet="`UserUuid`" pulumi-lang-go="`userUuid`" pulumi-lang-python="`user_uuid`" pulumi-lang-yaml="`userUuid`" pulumi-lang-java="`userUuid`">`user_uuid`</span>
+     *   - <span pulumi-lang-nodejs="`userUsername`" pulumi-lang-dotnet="`UserUsername`" pulumi-lang-go="`userUsername`" pulumi-lang-python="`user_username`" pulumi-lang-yaml="`userUsername`" pulumi-lang-java="`userUsername`">`user_username`</span>
+     *   - <span pulumi-lang-nodejs="`userEmail`" pulumi-lang-dotnet="`UserEmail`" pulumi-lang-go="`userEmail`" pulumi-lang-python="`user_email`" pulumi-lang-yaml="`userEmail`" pulumi-lang-java="`userEmail`">`user_email`</span>
+     *   - <span pulumi-lang-nodejs="`userUpn`" pulumi-lang-dotnet="`UserUpn`" pulumi-lang-go="`userUpn`" pulumi-lang-python="`user_upn`" pulumi-lang-yaml="`userUpn`" pulumi-lang-java="`userUpn`">`user_upn`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>.
      */
     subMode?: pulumi.Input<string>;
 }
@@ -242,28 +292,33 @@ export interface ProviderOauth2Args {
     allowedRedirectUris?: pulumi.Input<pulumi.Input<{[key: string]: pulumi.Input<string>}>[]>;
     authenticationFlow?: pulumi.Input<string>;
     authorizationFlow: pulumi.Input<string>;
-    backchannelLogoutUri?: pulumi.Input<string>;
     clientId: pulumi.Input<string>;
     /**
      * Generated.
      */
     clientSecret?: pulumi.Input<string>;
     /**
-     * Allowed values: - `confidential` - `public` Defaults to `confidential`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>
+     *   - <span pulumi-lang-nodejs="`public`" pulumi-lang-dotnet="`Public`" pulumi-lang-go="`public`" pulumi-lang-python="`public`" pulumi-lang-yaml="`public`" pulumi-lang-java="`public`">`public`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`confidential`" pulumi-lang-dotnet="`Confidential`" pulumi-lang-go="`confidential`" pulumi-lang-python="`confidential`" pulumi-lang-yaml="`confidential`" pulumi-lang-java="`confidential`">`confidential`</span>.
      */
     clientType?: pulumi.Input<string>;
     encryptionKey?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     includeClaimsInIdToken?: pulumi.Input<boolean>;
     invalidationFlow: pulumi.Input<string>;
     /**
-     * Allowed values: - `global` - `per_provider` Defaults to `per_provider`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`global`" pulumi-lang-dotnet="`Global`" pulumi-lang-go="`global`" pulumi-lang-python="`global`" pulumi-lang-yaml="`global`" pulumi-lang-java="`global`">`global`</span>
+     *   - <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`perProvider`" pulumi-lang-dotnet="`PerProvider`" pulumi-lang-go="`perProvider`" pulumi-lang-python="`per_provider`" pulumi-lang-yaml="`perProvider`" pulumi-lang-java="`perProvider`">`per_provider`</span>.
      */
     issuerMode?: pulumi.Input<string>;
     /**
-     * Deprecated. Use `jwt_federation_sources` instead.
+     * Deprecated. Use <span pulumi-lang-nodejs="`jwtFederationSources`" pulumi-lang-dotnet="`JwtFederationSources`" pulumi-lang-go="`jwtFederationSources`" pulumi-lang-python="`jwt_federation_sources`" pulumi-lang-yaml="`jwtFederationSources`" pulumi-lang-java="`jwtFederationSources`">`jwt_federation_sources`</span> instead.
      */
     jwksSources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -274,17 +329,35 @@ export interface ProviderOauth2Args {
      * JWTs issued by keys configured in any of the selected sources can be used to authenticate on behalf of this provider.
      */
     jwtFederationSources?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>
+     *   - <span pulumi-lang-nodejs="`frontchannel`" pulumi-lang-dotnet="`Frontchannel`" pulumi-lang-go="`frontchannel`" pulumi-lang-python="`frontchannel`" pulumi-lang-yaml="`frontchannel`" pulumi-lang-java="`frontchannel`">`frontchannel`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`backchannel`" pulumi-lang-dotnet="`Backchannel`" pulumi-lang-go="`backchannel`" pulumi-lang-python="`backchannel`" pulumi-lang-yaml="`backchannel`" pulumi-lang-java="`backchannel`">`backchannel`</span>.
+     */
+    logoutMethod?: pulumi.Input<string>;
+    logoutUri?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     providerOauth2Id?: pulumi.Input<string>;
+    /**
+     * Format: hours=1;minutes=2;seconds=3. Defaults to `seconds=0`.
+     */
+    refreshTokenThreshold?: pulumi.Input<string>;
     /**
      * Format: hours=1;minutes=2;seconds=3. Defaults to `days=30`.
      */
     refreshTokenValidity?: pulumi.Input<string>;
     signingKey?: pulumi.Input<string>;
     /**
-     * Allowed values: - `hashed_user_id` - `user_id` - `user_uuid` - `user_username` - `user_email` - `user_upn` Defaults to
-     * `hashed_user_id`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userId`" pulumi-lang-dotnet="`UserId`" pulumi-lang-go="`userId`" pulumi-lang-python="`user_id`" pulumi-lang-yaml="`userId`" pulumi-lang-java="`userId`">`user_id`</span>
+     *   - <span pulumi-lang-nodejs="`userUuid`" pulumi-lang-dotnet="`UserUuid`" pulumi-lang-go="`userUuid`" pulumi-lang-python="`user_uuid`" pulumi-lang-yaml="`userUuid`" pulumi-lang-java="`userUuid`">`user_uuid`</span>
+     *   - <span pulumi-lang-nodejs="`userUsername`" pulumi-lang-dotnet="`UserUsername`" pulumi-lang-go="`userUsername`" pulumi-lang-python="`user_username`" pulumi-lang-yaml="`userUsername`" pulumi-lang-java="`userUsername`">`user_username`</span>
+     *   - <span pulumi-lang-nodejs="`userEmail`" pulumi-lang-dotnet="`UserEmail`" pulumi-lang-go="`userEmail`" pulumi-lang-python="`user_email`" pulumi-lang-yaml="`userEmail`" pulumi-lang-java="`userEmail`">`user_email`</span>
+     *   - <span pulumi-lang-nodejs="`userUpn`" pulumi-lang-dotnet="`UserUpn`" pulumi-lang-go="`userUpn`" pulumi-lang-python="`user_upn`" pulumi-lang-yaml="`userUpn`" pulumi-lang-java="`userUpn`">`user_upn`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`hashedUserId`" pulumi-lang-dotnet="`HashedUserId`" pulumi-lang-go="`hashedUserId`" pulumi-lang-python="`hashed_user_id`" pulumi-lang-yaml="`hashedUserId`" pulumi-lang-java="`hashedUserId`">`hashed_user_id`</span>.
      */
     subMode?: pulumi.Input<string>;
 }

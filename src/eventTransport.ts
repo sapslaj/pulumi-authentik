@@ -42,12 +42,16 @@ export class EventTransport extends pulumi.CustomResource {
     declare public readonly emailTemplate: pulumi.Output<string | undefined>;
     declare public readonly eventTransportId: pulumi.Output<string>;
     /**
-     * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`local`" pulumi-lang-dotnet="`Local`" pulumi-lang-go="`local`" pulumi-lang-python="`local`" pulumi-lang-yaml="`local`" pulumi-lang-java="`local`">`local`</span>
+     *   - <span pulumi-lang-nodejs="`webhook`" pulumi-lang-dotnet="`Webhook`" pulumi-lang-go="`webhook`" pulumi-lang-python="`webhook`" pulumi-lang-yaml="`webhook`" pulumi-lang-java="`webhook`">`webhook`</span>
+     *   - <span pulumi-lang-nodejs="`webhookSlack`" pulumi-lang-dotnet="`WebhookSlack`" pulumi-lang-go="`webhookSlack`" pulumi-lang-python="`webhook_slack`" pulumi-lang-yaml="`webhookSlack`" pulumi-lang-java="`webhookSlack`">`webhook_slack`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
      */
     declare public readonly mode: pulumi.Output<string>;
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly sendOnce: pulumi.Output<boolean | undefined>;
     declare public readonly webhookMappingBody: pulumi.Output<string | undefined>;
@@ -110,12 +114,16 @@ export interface EventTransportState {
     emailTemplate?: pulumi.Input<string>;
     eventTransportId?: pulumi.Input<string>;
     /**
-     * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`local`" pulumi-lang-dotnet="`Local`" pulumi-lang-go="`local`" pulumi-lang-python="`local`" pulumi-lang-yaml="`local`" pulumi-lang-java="`local`">`local`</span>
+     *   - <span pulumi-lang-nodejs="`webhook`" pulumi-lang-dotnet="`Webhook`" pulumi-lang-go="`webhook`" pulumi-lang-python="`webhook`" pulumi-lang-yaml="`webhook`" pulumi-lang-java="`webhook`">`webhook`</span>
+     *   - <span pulumi-lang-nodejs="`webhookSlack`" pulumi-lang-dotnet="`WebhookSlack`" pulumi-lang-go="`webhookSlack`" pulumi-lang-python="`webhook_slack`" pulumi-lang-yaml="`webhookSlack`" pulumi-lang-java="`webhookSlack`">`webhook_slack`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
      */
     mode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     sendOnce?: pulumi.Input<boolean>;
     webhookMappingBody?: pulumi.Input<string>;
@@ -137,12 +145,16 @@ export interface EventTransportArgs {
     emailTemplate?: pulumi.Input<string>;
     eventTransportId?: pulumi.Input<string>;
     /**
-     * Allowed values: - `local` - `webhook` - `webhook_slack` - `email`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`local`" pulumi-lang-dotnet="`Local`" pulumi-lang-go="`local`" pulumi-lang-python="`local`" pulumi-lang-yaml="`local`" pulumi-lang-java="`local`">`local`</span>
+     *   - <span pulumi-lang-nodejs="`webhook`" pulumi-lang-dotnet="`Webhook`" pulumi-lang-go="`webhook`" pulumi-lang-python="`webhook`" pulumi-lang-yaml="`webhook`" pulumi-lang-java="`webhook`">`webhook`</span>
+     *   - <span pulumi-lang-nodejs="`webhookSlack`" pulumi-lang-dotnet="`WebhookSlack`" pulumi-lang-go="`webhookSlack`" pulumi-lang-python="`webhook_slack`" pulumi-lang-yaml="`webhookSlack`" pulumi-lang-java="`webhookSlack`">`webhook_slack`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
      */
     mode: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     sendOnce?: pulumi.Input<boolean>;
     webhookMappingBody?: pulumi.Input<string>;

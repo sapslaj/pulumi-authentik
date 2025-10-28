@@ -33,11 +33,11 @@ export class PolicyBinding extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly enabled: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly failureResult: pulumi.Output<boolean | undefined>;
     /**
@@ -45,7 +45,7 @@ export class PolicyBinding extends pulumi.CustomResource {
      */
     declare public readonly group: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly negate: pulumi.Output<boolean | undefined>;
     declare public readonly order: pulumi.Output<number>;
@@ -59,7 +59,7 @@ export class PolicyBinding extends pulumi.CustomResource {
      */
     declare public readonly target: pulumi.Output<string>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
@@ -119,11 +119,11 @@ export class PolicyBinding extends pulumi.CustomResource {
  */
 export interface PolicyBindingState {
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     failureResult?: pulumi.Input<boolean>;
     /**
@@ -131,7 +131,7 @@ export interface PolicyBindingState {
      */
     group?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     negate?: pulumi.Input<boolean>;
     order?: pulumi.Input<number>;
@@ -145,7 +145,7 @@ export interface PolicyBindingState {
      */
     target?: pulumi.Input<string>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     timeout?: pulumi.Input<number>;
     /**
@@ -159,11 +159,11 @@ export interface PolicyBindingState {
  */
 export interface PolicyBindingArgs {
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     failureResult?: pulumi.Input<boolean>;
     /**
@@ -171,7 +171,7 @@ export interface PolicyBindingArgs {
      */
     group?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     negate?: pulumi.Input<boolean>;
     order: pulumi.Input<number>;
@@ -185,7 +185,7 @@ export interface PolicyBindingArgs {
      */
     target: pulumi.Input<string>;
     /**
-     * Defaults to `30`.
+     * Defaults to <span pulumi-lang-nodejs="`30`" pulumi-lang-dotnet="`30`" pulumi-lang-go="`30`" pulumi-lang-python="`30`" pulumi-lang-yaml="`30`" pulumi-lang-java="`30`">`30`</span>.
      */
     timeout?: pulumi.Input<number>;
     /**

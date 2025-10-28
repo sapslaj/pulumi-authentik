@@ -35,7 +35,7 @@ export class StagePromptField extends pulumi.CustomResource {
     declare public readonly fieldKey: pulumi.Output<string>;
     declare public readonly initialValue: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly initialValueExpression: pulumi.Output<boolean | undefined>;
     declare public readonly label: pulumi.Output<string>;
@@ -43,11 +43,11 @@ export class StagePromptField extends pulumi.CustomResource {
     declare public readonly order: pulumi.Output<number | undefined>;
     declare public readonly placeholder: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly placeholderExpression: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly required: pulumi.Output<boolean | undefined>;
     declare public readonly stagePromptFieldId: pulumi.Output<string>;
@@ -56,9 +56,25 @@ export class StagePromptField extends pulumi.CustomResource {
      */
     declare public readonly subText: pulumi.Output<string | undefined>;
     /**
-     * Allowed values: - `text` - `text_area` - `text_read_only` - `text_area_read_only` - `username` - `email` - `password` -
-     * `number` - `checkbox` - `radio-button-group` - `dropdown` - `date` - `date-time` - `file` - `separator` - `hidden` -
-     * `static` - `ak-locale`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`text`" pulumi-lang-dotnet="`Text`" pulumi-lang-go="`text`" pulumi-lang-python="`text`" pulumi-lang-yaml="`text`" pulumi-lang-java="`text`">`text`</span>
+     *   - <span pulumi-lang-nodejs="`textArea`" pulumi-lang-dotnet="`TextArea`" pulumi-lang-go="`textArea`" pulumi-lang-python="`text_area`" pulumi-lang-yaml="`textArea`" pulumi-lang-java="`textArea`">`text_area`</span>
+     *   - <span pulumi-lang-nodejs="`textReadOnly`" pulumi-lang-dotnet="`TextReadOnly`" pulumi-lang-go="`textReadOnly`" pulumi-lang-python="`text_read_only`" pulumi-lang-yaml="`textReadOnly`" pulumi-lang-java="`textReadOnly`">`text_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`textAreaReadOnly`" pulumi-lang-dotnet="`TextAreaReadOnly`" pulumi-lang-go="`textAreaReadOnly`" pulumi-lang-python="`text_area_read_only`" pulumi-lang-yaml="`textAreaReadOnly`" pulumi-lang-java="`textAreaReadOnly`">`text_area_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`username`" pulumi-lang-dotnet="`Username`" pulumi-lang-go="`username`" pulumi-lang-python="`username`" pulumi-lang-yaml="`username`" pulumi-lang-java="`username`">`username`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
+     *   - <span pulumi-lang-nodejs="`password`" pulumi-lang-dotnet="`Password`" pulumi-lang-go="`password`" pulumi-lang-python="`password`" pulumi-lang-yaml="`password`" pulumi-lang-java="`password`">`password`</span>
+     *   - <span pulumi-lang-nodejs="`number`" pulumi-lang-dotnet="`Number`" pulumi-lang-go="`number`" pulumi-lang-python="`number`" pulumi-lang-yaml="`number`" pulumi-lang-java="`number`">`number`</span>
+     *   - <span pulumi-lang-nodejs="`checkbox`" pulumi-lang-dotnet="`Checkbox`" pulumi-lang-go="`checkbox`" pulumi-lang-python="`checkbox`" pulumi-lang-yaml="`checkbox`" pulumi-lang-java="`checkbox`">`checkbox`</span>
+     *   - `radio-button-group`
+     *   - <span pulumi-lang-nodejs="`dropdown`" pulumi-lang-dotnet="`Dropdown`" pulumi-lang-go="`dropdown`" pulumi-lang-python="`dropdown`" pulumi-lang-yaml="`dropdown`" pulumi-lang-java="`dropdown`">`dropdown`</span>
+     *   - <span pulumi-lang-nodejs="`date`" pulumi-lang-dotnet="`Date`" pulumi-lang-go="`date`" pulumi-lang-python="`date`" pulumi-lang-yaml="`date`" pulumi-lang-java="`date`">`date`</span>
+     *   - `date-time`
+     *   - <span pulumi-lang-nodejs="`file`" pulumi-lang-dotnet="`File`" pulumi-lang-go="`file`" pulumi-lang-python="`file`" pulumi-lang-yaml="`file`" pulumi-lang-java="`file`">`file`</span>
+     *   - <span pulumi-lang-nodejs="`separator`" pulumi-lang-dotnet="`Separator`" pulumi-lang-go="`separator`" pulumi-lang-python="`separator`" pulumi-lang-yaml="`separator`" pulumi-lang-java="`separator`">`separator`</span>
+     *   - <span pulumi-lang-nodejs="`hidden`" pulumi-lang-dotnet="`Hidden`" pulumi-lang-go="`hidden`" pulumi-lang-python="`hidden`" pulumi-lang-yaml="`hidden`" pulumi-lang-java="`hidden`">`hidden`</span>
+     *   - <span pulumi-lang-nodejs="`static`" pulumi-lang-dotnet="`Static`" pulumi-lang-go="`static`" pulumi-lang-python="`static`" pulumi-lang-yaml="`static`" pulumi-lang-java="`static`">`static`</span>
+     *   - `ak-locale`
      */
     declare public readonly type: pulumi.Output<string>;
 
@@ -123,7 +139,7 @@ export interface StagePromptFieldState {
     fieldKey?: pulumi.Input<string>;
     initialValue?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     initialValueExpression?: pulumi.Input<boolean>;
     label?: pulumi.Input<string>;
@@ -131,11 +147,11 @@ export interface StagePromptFieldState {
     order?: pulumi.Input<number>;
     placeholder?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     placeholderExpression?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     required?: pulumi.Input<boolean>;
     stagePromptFieldId?: pulumi.Input<string>;
@@ -144,9 +160,25 @@ export interface StagePromptFieldState {
      */
     subText?: pulumi.Input<string>;
     /**
-     * Allowed values: - `text` - `text_area` - `text_read_only` - `text_area_read_only` - `username` - `email` - `password` -
-     * `number` - `checkbox` - `radio-button-group` - `dropdown` - `date` - `date-time` - `file` - `separator` - `hidden` -
-     * `static` - `ak-locale`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`text`" pulumi-lang-dotnet="`Text`" pulumi-lang-go="`text`" pulumi-lang-python="`text`" pulumi-lang-yaml="`text`" pulumi-lang-java="`text`">`text`</span>
+     *   - <span pulumi-lang-nodejs="`textArea`" pulumi-lang-dotnet="`TextArea`" pulumi-lang-go="`textArea`" pulumi-lang-python="`text_area`" pulumi-lang-yaml="`textArea`" pulumi-lang-java="`textArea`">`text_area`</span>
+     *   - <span pulumi-lang-nodejs="`textReadOnly`" pulumi-lang-dotnet="`TextReadOnly`" pulumi-lang-go="`textReadOnly`" pulumi-lang-python="`text_read_only`" pulumi-lang-yaml="`textReadOnly`" pulumi-lang-java="`textReadOnly`">`text_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`textAreaReadOnly`" pulumi-lang-dotnet="`TextAreaReadOnly`" pulumi-lang-go="`textAreaReadOnly`" pulumi-lang-python="`text_area_read_only`" pulumi-lang-yaml="`textAreaReadOnly`" pulumi-lang-java="`textAreaReadOnly`">`text_area_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`username`" pulumi-lang-dotnet="`Username`" pulumi-lang-go="`username`" pulumi-lang-python="`username`" pulumi-lang-yaml="`username`" pulumi-lang-java="`username`">`username`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
+     *   - <span pulumi-lang-nodejs="`password`" pulumi-lang-dotnet="`Password`" pulumi-lang-go="`password`" pulumi-lang-python="`password`" pulumi-lang-yaml="`password`" pulumi-lang-java="`password`">`password`</span>
+     *   - <span pulumi-lang-nodejs="`number`" pulumi-lang-dotnet="`Number`" pulumi-lang-go="`number`" pulumi-lang-python="`number`" pulumi-lang-yaml="`number`" pulumi-lang-java="`number`">`number`</span>
+     *   - <span pulumi-lang-nodejs="`checkbox`" pulumi-lang-dotnet="`Checkbox`" pulumi-lang-go="`checkbox`" pulumi-lang-python="`checkbox`" pulumi-lang-yaml="`checkbox`" pulumi-lang-java="`checkbox`">`checkbox`</span>
+     *   - `radio-button-group`
+     *   - <span pulumi-lang-nodejs="`dropdown`" pulumi-lang-dotnet="`Dropdown`" pulumi-lang-go="`dropdown`" pulumi-lang-python="`dropdown`" pulumi-lang-yaml="`dropdown`" pulumi-lang-java="`dropdown`">`dropdown`</span>
+     *   - <span pulumi-lang-nodejs="`date`" pulumi-lang-dotnet="`Date`" pulumi-lang-go="`date`" pulumi-lang-python="`date`" pulumi-lang-yaml="`date`" pulumi-lang-java="`date`">`date`</span>
+     *   - `date-time`
+     *   - <span pulumi-lang-nodejs="`file`" pulumi-lang-dotnet="`File`" pulumi-lang-go="`file`" pulumi-lang-python="`file`" pulumi-lang-yaml="`file`" pulumi-lang-java="`file`">`file`</span>
+     *   - <span pulumi-lang-nodejs="`separator`" pulumi-lang-dotnet="`Separator`" pulumi-lang-go="`separator`" pulumi-lang-python="`separator`" pulumi-lang-yaml="`separator`" pulumi-lang-java="`separator`">`separator`</span>
+     *   - <span pulumi-lang-nodejs="`hidden`" pulumi-lang-dotnet="`Hidden`" pulumi-lang-go="`hidden`" pulumi-lang-python="`hidden`" pulumi-lang-yaml="`hidden`" pulumi-lang-java="`hidden`">`hidden`</span>
+     *   - <span pulumi-lang-nodejs="`static`" pulumi-lang-dotnet="`Static`" pulumi-lang-go="`static`" pulumi-lang-python="`static`" pulumi-lang-yaml="`static`" pulumi-lang-java="`static`">`static`</span>
+     *   - `ak-locale`
      */
     type?: pulumi.Input<string>;
 }
@@ -158,7 +190,7 @@ export interface StagePromptFieldArgs {
     fieldKey: pulumi.Input<string>;
     initialValue?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     initialValueExpression?: pulumi.Input<boolean>;
     label: pulumi.Input<string>;
@@ -166,11 +198,11 @@ export interface StagePromptFieldArgs {
     order?: pulumi.Input<number>;
     placeholder?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     placeholderExpression?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     required?: pulumi.Input<boolean>;
     stagePromptFieldId?: pulumi.Input<string>;
@@ -179,9 +211,25 @@ export interface StagePromptFieldArgs {
      */
     subText?: pulumi.Input<string>;
     /**
-     * Allowed values: - `text` - `text_area` - `text_read_only` - `text_area_read_only` - `username` - `email` - `password` -
-     * `number` - `checkbox` - `radio-button-group` - `dropdown` - `date` - `date-time` - `file` - `separator` - `hidden` -
-     * `static` - `ak-locale`
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`text`" pulumi-lang-dotnet="`Text`" pulumi-lang-go="`text`" pulumi-lang-python="`text`" pulumi-lang-yaml="`text`" pulumi-lang-java="`text`">`text`</span>
+     *   - <span pulumi-lang-nodejs="`textArea`" pulumi-lang-dotnet="`TextArea`" pulumi-lang-go="`textArea`" pulumi-lang-python="`text_area`" pulumi-lang-yaml="`textArea`" pulumi-lang-java="`textArea`">`text_area`</span>
+     *   - <span pulumi-lang-nodejs="`textReadOnly`" pulumi-lang-dotnet="`TextReadOnly`" pulumi-lang-go="`textReadOnly`" pulumi-lang-python="`text_read_only`" pulumi-lang-yaml="`textReadOnly`" pulumi-lang-java="`textReadOnly`">`text_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`textAreaReadOnly`" pulumi-lang-dotnet="`TextAreaReadOnly`" pulumi-lang-go="`textAreaReadOnly`" pulumi-lang-python="`text_area_read_only`" pulumi-lang-yaml="`textAreaReadOnly`" pulumi-lang-java="`textAreaReadOnly`">`text_area_read_only`</span>
+     *   - <span pulumi-lang-nodejs="`username`" pulumi-lang-dotnet="`Username`" pulumi-lang-go="`username`" pulumi-lang-python="`username`" pulumi-lang-yaml="`username`" pulumi-lang-java="`username`">`username`</span>
+     *   - <span pulumi-lang-nodejs="`email`" pulumi-lang-dotnet="`Email`" pulumi-lang-go="`email`" pulumi-lang-python="`email`" pulumi-lang-yaml="`email`" pulumi-lang-java="`email`">`email`</span>
+     *   - <span pulumi-lang-nodejs="`password`" pulumi-lang-dotnet="`Password`" pulumi-lang-go="`password`" pulumi-lang-python="`password`" pulumi-lang-yaml="`password`" pulumi-lang-java="`password`">`password`</span>
+     *   - <span pulumi-lang-nodejs="`number`" pulumi-lang-dotnet="`Number`" pulumi-lang-go="`number`" pulumi-lang-python="`number`" pulumi-lang-yaml="`number`" pulumi-lang-java="`number`">`number`</span>
+     *   - <span pulumi-lang-nodejs="`checkbox`" pulumi-lang-dotnet="`Checkbox`" pulumi-lang-go="`checkbox`" pulumi-lang-python="`checkbox`" pulumi-lang-yaml="`checkbox`" pulumi-lang-java="`checkbox`">`checkbox`</span>
+     *   - `radio-button-group`
+     *   - <span pulumi-lang-nodejs="`dropdown`" pulumi-lang-dotnet="`Dropdown`" pulumi-lang-go="`dropdown`" pulumi-lang-python="`dropdown`" pulumi-lang-yaml="`dropdown`" pulumi-lang-java="`dropdown`">`dropdown`</span>
+     *   - <span pulumi-lang-nodejs="`date`" pulumi-lang-dotnet="`Date`" pulumi-lang-go="`date`" pulumi-lang-python="`date`" pulumi-lang-yaml="`date`" pulumi-lang-java="`date`">`date`</span>
+     *   - `date-time`
+     *   - <span pulumi-lang-nodejs="`file`" pulumi-lang-dotnet="`File`" pulumi-lang-go="`file`" pulumi-lang-python="`file`" pulumi-lang-yaml="`file`" pulumi-lang-java="`file`">`file`</span>
+     *   - <span pulumi-lang-nodejs="`separator`" pulumi-lang-dotnet="`Separator`" pulumi-lang-go="`separator`" pulumi-lang-python="`separator`" pulumi-lang-yaml="`separator`" pulumi-lang-java="`separator`">`separator`</span>
+     *   - <span pulumi-lang-nodejs="`hidden`" pulumi-lang-dotnet="`Hidden`" pulumi-lang-go="`hidden`" pulumi-lang-python="`hidden`" pulumi-lang-yaml="`hidden`" pulumi-lang-java="`hidden`">`hidden`</span>
+     *   - <span pulumi-lang-nodejs="`static`" pulumi-lang-dotnet="`Static`" pulumi-lang-go="`static`" pulumi-lang-python="`static`" pulumi-lang-yaml="`static`" pulumi-lang-java="`static`">`static`</span>
+     *   - `ak-locale`
      */
     type: pulumi.Input<string>;
 }

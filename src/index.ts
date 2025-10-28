@@ -433,6 +433,16 @@ export type SourceSaml = import("./sourceSaml").SourceSaml;
 export const SourceSaml: typeof import("./sourceSaml").SourceSaml = null as any;
 utilities.lazyLoad(exports, ["SourceSaml"], () => require("./sourceSaml"));
 
+export { SourceScimArgs, SourceScimState } from "./sourceScim";
+export type SourceScim = import("./sourceScim").SourceScim;
+export const SourceScim: typeof import("./sourceScim").SourceScim = null as any;
+utilities.lazyLoad(exports, ["SourceScim"], () => require("./sourceScim"));
+
+export { SourceTelegramArgs, SourceTelegramState } from "./sourceTelegram";
+export type SourceTelegram = import("./sourceTelegram").SourceTelegram;
+export const SourceTelegram: typeof import("./sourceTelegram").SourceTelegram = null as any;
+utilities.lazyLoad(exports, ["SourceTelegram"], () => require("./sourceTelegram"));
+
 export { StageAuthenticatorDuoArgs, StageAuthenticatorDuoState } from "./stageAuthenticatorDuo";
 export type StageAuthenticatorDuo = import("./stageAuthenticatorDuo").StageAuthenticatorDuo;
 export const StageAuthenticatorDuo: typeof import("./stageAuthenticatorDuo").StageAuthenticatorDuo = null as any;
@@ -717,6 +727,10 @@ const _module = {
                 return new SourcePlex(name, <any>undefined, { urn })
             case "authentik:index/sourceSaml:SourceSaml":
                 return new SourceSaml(name, <any>undefined, { urn })
+            case "authentik:index/sourceScim:SourceScim":
+                return new SourceScim(name, <any>undefined, { urn })
+            case "authentik:index/sourceTelegram:SourceTelegram":
+                return new SourceTelegram(name, <any>undefined, { urn })
             case "authentik:index/stageAuthenticatorDuo:StageAuthenticatorDuo":
                 return new StageAuthenticatorDuo(name, <any>undefined, { urn })
             case "authentik:index/stageAuthenticatorEmail:StageAuthenticatorEmail":
@@ -843,6 +857,8 @@ pulumi.runtime.registerResourceModule("authentik", "index/sourceLdap", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceOauth", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourcePlex", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceSaml", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/sourceScim", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/sourceTelegram", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorDuo", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorEmail", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorEndpointGdtc", _module)

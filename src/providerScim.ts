@@ -33,11 +33,31 @@ export class ProviderScim extends pulumi.CustomResource {
     }
 
     /**
-     * Allowed values: - `default` - `aws` - `slack` Defaults to `default`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>
+     *   - <span pulumi-lang-nodejs="`oauth`" pulumi-lang-dotnet="`Oauth`" pulumi-lang-go="`oauth`" pulumi-lang-python="`oauth`" pulumi-lang-yaml="`oauth`" pulumi-lang-java="`oauth`">`oauth`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>.
+     */
+    declare public readonly authMode: pulumi.Output<string | undefined>;
+    /**
+     * Slug of an OAuth source used for authentication
+     */
+    declare public readonly authOauth: pulumi.Output<string | undefined>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
+     */
+    declare public readonly authOauthParams: pulumi.Output<string | undefined>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>
+     *   - <span pulumi-lang-nodejs="`aws`" pulumi-lang-dotnet="`Aws`" pulumi-lang-go="`aws`" pulumi-lang-python="`aws`" pulumi-lang-yaml="`aws`" pulumi-lang-java="`aws`">`aws`</span>
+     *   - <span pulumi-lang-nodejs="`slack`" pulumi-lang-dotnet="`Slack`" pulumi-lang-go="`slack`" pulumi-lang-python="`slack`" pulumi-lang-yaml="`slack`" pulumi-lang-java="`slack`">`slack`</span>
+     *   - <span pulumi-lang-nodejs="`sfdc`" pulumi-lang-dotnet="`Sfdc`" pulumi-lang-go="`sfdc`" pulumi-lang-python="`sfdc`" pulumi-lang-yaml="`sfdc`" pulumi-lang-java="`sfdc`">`sfdc`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>.
      */
     declare public readonly compatibilityMode: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly dryRun: pulumi.Output<boolean | undefined>;
     declare public readonly excludeUsersServiceAccount: pulumi.Output<boolean | undefined>;
@@ -46,7 +66,7 @@ export class ProviderScim extends pulumi.CustomResource {
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     declare public readonly providerScimId: pulumi.Output<string>;
-    declare public readonly token: pulumi.Output<string>;
+    declare public readonly token: pulumi.Output<string | undefined>;
     declare public readonly url: pulumi.Output<string>;
 
     /**
@@ -62,6 +82,9 @@ export class ProviderScim extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ProviderScimState | undefined;
+            resourceInputs["authMode"] = state?.authMode;
+            resourceInputs["authOauth"] = state?.authOauth;
+            resourceInputs["authOauthParams"] = state?.authOauthParams;
             resourceInputs["compatibilityMode"] = state?.compatibilityMode;
             resourceInputs["dryRun"] = state?.dryRun;
             resourceInputs["excludeUsersServiceAccount"] = state?.excludeUsersServiceAccount;
@@ -74,12 +97,12 @@ export class ProviderScim extends pulumi.CustomResource {
             resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as ProviderScimArgs | undefined;
-            if (args?.token === undefined && !opts.urn) {
-                throw new Error("Missing required property 'token'");
-            }
             if (args?.url === undefined && !opts.urn) {
                 throw new Error("Missing required property 'url'");
             }
+            resourceInputs["authMode"] = args?.authMode;
+            resourceInputs["authOauth"] = args?.authOauth;
+            resourceInputs["authOauthParams"] = args?.authOauthParams;
             resourceInputs["compatibilityMode"] = args?.compatibilityMode;
             resourceInputs["dryRun"] = args?.dryRun;
             resourceInputs["excludeUsersServiceAccount"] = args?.excludeUsersServiceAccount;
@@ -103,11 +126,31 @@ export class ProviderScim extends pulumi.CustomResource {
  */
 export interface ProviderScimState {
     /**
-     * Allowed values: - `default` - `aws` - `slack` Defaults to `default`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>
+     *   - <span pulumi-lang-nodejs="`oauth`" pulumi-lang-dotnet="`Oauth`" pulumi-lang-go="`oauth`" pulumi-lang-python="`oauth`" pulumi-lang-yaml="`oauth`" pulumi-lang-java="`oauth`">`oauth`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>.
+     */
+    authMode?: pulumi.Input<string>;
+    /**
+     * Slug of an OAuth source used for authentication
+     */
+    authOauth?: pulumi.Input<string>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
+     */
+    authOauthParams?: pulumi.Input<string>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>
+     *   - <span pulumi-lang-nodejs="`aws`" pulumi-lang-dotnet="`Aws`" pulumi-lang-go="`aws`" pulumi-lang-python="`aws`" pulumi-lang-yaml="`aws`" pulumi-lang-java="`aws`">`aws`</span>
+     *   - <span pulumi-lang-nodejs="`slack`" pulumi-lang-dotnet="`Slack`" pulumi-lang-go="`slack`" pulumi-lang-python="`slack`" pulumi-lang-yaml="`slack`" pulumi-lang-java="`slack`">`slack`</span>
+     *   - <span pulumi-lang-nodejs="`sfdc`" pulumi-lang-dotnet="`Sfdc`" pulumi-lang-go="`sfdc`" pulumi-lang-python="`sfdc`" pulumi-lang-yaml="`sfdc`" pulumi-lang-java="`sfdc`">`sfdc`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>.
      */
     compatibilityMode?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     dryRun?: pulumi.Input<boolean>;
     excludeUsersServiceAccount?: pulumi.Input<boolean>;
@@ -125,11 +168,31 @@ export interface ProviderScimState {
  */
 export interface ProviderScimArgs {
     /**
-     * Allowed values: - `default` - `aws` - `slack` Defaults to `default`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>
+     *   - <span pulumi-lang-nodejs="`oauth`" pulumi-lang-dotnet="`Oauth`" pulumi-lang-go="`oauth`" pulumi-lang-python="`oauth`" pulumi-lang-yaml="`oauth`" pulumi-lang-java="`oauth`">`oauth`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`token`" pulumi-lang-dotnet="`Token`" pulumi-lang-go="`token`" pulumi-lang-python="`token`" pulumi-lang-yaml="`token`" pulumi-lang-java="`token`">`token`</span>.
+     */
+    authMode?: pulumi.Input<string>;
+    /**
+     * Slug of an OAuth source used for authentication
+     */
+    authOauth?: pulumi.Input<string>;
+    /**
+     * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
+     */
+    authOauthParams?: pulumi.Input<string>;
+    /**
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>
+     *   - <span pulumi-lang-nodejs="`aws`" pulumi-lang-dotnet="`Aws`" pulumi-lang-go="`aws`" pulumi-lang-python="`aws`" pulumi-lang-yaml="`aws`" pulumi-lang-java="`aws`">`aws`</span>
+     *   - <span pulumi-lang-nodejs="`slack`" pulumi-lang-dotnet="`Slack`" pulumi-lang-go="`slack`" pulumi-lang-python="`slack`" pulumi-lang-yaml="`slack`" pulumi-lang-java="`slack`">`slack`</span>
+     *   - <span pulumi-lang-nodejs="`sfdc`" pulumi-lang-dotnet="`Sfdc`" pulumi-lang-go="`sfdc`" pulumi-lang-python="`sfdc`" pulumi-lang-yaml="`sfdc`" pulumi-lang-java="`sfdc`">`sfdc`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`default`" pulumi-lang-dotnet="`Default`" pulumi-lang-go="`default`" pulumi-lang-python="`default`" pulumi-lang-yaml="`default`" pulumi-lang-java="`default`">`default`</span>.
      */
     compatibilityMode?: pulumi.Input<string>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     dryRun?: pulumi.Input<boolean>;
     excludeUsersServiceAccount?: pulumi.Input<boolean>;
@@ -138,6 +201,6 @@ export interface ProviderScimArgs {
     propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
     providerScimId?: pulumi.Input<string>;
-    token: pulumi.Input<string>;
+    token?: pulumi.Input<string>;
     url: pulumi.Input<string>;
 }

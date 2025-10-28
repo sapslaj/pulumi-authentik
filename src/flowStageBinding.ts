@@ -33,21 +33,28 @@ export class FlowStageBinding extends pulumi.CustomResource {
     }
 
     /**
-     * Evaluate policies during the Flow planning process. Defaults to `true`.
+     * Evaluate policies during the Flow planning process. Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly evaluateOnPlan: pulumi.Output<boolean | undefined>;
     declare public readonly flowStageBindingId: pulumi.Output<string>;
     /**
-     * Allowed values: - `retry` - `restart` - `restart_with_context` Defaults to `retry`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>
+     *   - <span pulumi-lang-nodejs="`restart`" pulumi-lang-dotnet="`Restart`" pulumi-lang-go="`restart`" pulumi-lang-python="`restart`" pulumi-lang-yaml="`restart`" pulumi-lang-java="`restart`">`restart`</span>
+     *   - <span pulumi-lang-nodejs="`restartWithContext`" pulumi-lang-dotnet="`RestartWithContext`" pulumi-lang-go="`restartWithContext`" pulumi-lang-python="`restart_with_context`" pulumi-lang-yaml="`restartWithContext`" pulumi-lang-java="`restartWithContext`">`restart_with_context`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>.
      */
     declare public readonly invalidResponseAction: pulumi.Output<string | undefined>;
     declare public readonly order: pulumi.Output<number>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
     /**
-     * Evaluate policies when the Stage is present to the user. Defaults to `false`.
+     * Evaluate policies when the Stage is present to the user. Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly reEvaluatePolicies: pulumi.Output<boolean | undefined>;
     declare public readonly stage: pulumi.Output<string>;
@@ -104,21 +111,28 @@ export class FlowStageBinding extends pulumi.CustomResource {
  */
 export interface FlowStageBindingState {
     /**
-     * Evaluate policies during the Flow planning process. Defaults to `true`.
+     * Evaluate policies during the Flow planning process. Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     evaluateOnPlan?: pulumi.Input<boolean>;
     flowStageBindingId?: pulumi.Input<string>;
     /**
-     * Allowed values: - `retry` - `restart` - `restart_with_context` Defaults to `retry`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>
+     *   - <span pulumi-lang-nodejs="`restart`" pulumi-lang-dotnet="`Restart`" pulumi-lang-go="`restart`" pulumi-lang-python="`restart`" pulumi-lang-yaml="`restart`" pulumi-lang-java="`restart`">`restart`</span>
+     *   - <span pulumi-lang-nodejs="`restartWithContext`" pulumi-lang-dotnet="`RestartWithContext`" pulumi-lang-go="`restartWithContext`" pulumi-lang-python="`restart_with_context`" pulumi-lang-yaml="`restartWithContext`" pulumi-lang-java="`restartWithContext`">`restart_with_context`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>.
      */
     invalidResponseAction?: pulumi.Input<string>;
     order?: pulumi.Input<number>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
     /**
-     * Evaluate policies when the Stage is present to the user. Defaults to `false`.
+     * Evaluate policies when the Stage is present to the user. Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     reEvaluatePolicies?: pulumi.Input<boolean>;
     stage?: pulumi.Input<string>;
@@ -130,21 +144,28 @@ export interface FlowStageBindingState {
  */
 export interface FlowStageBindingArgs {
     /**
-     * Evaluate policies during the Flow planning process. Defaults to `true`.
+     * Evaluate policies during the Flow planning process. Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     evaluateOnPlan?: pulumi.Input<boolean>;
     flowStageBindingId?: pulumi.Input<string>;
     /**
-     * Allowed values: - `retry` - `restart` - `restart_with_context` Defaults to `retry`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>
+     *   - <span pulumi-lang-nodejs="`restart`" pulumi-lang-dotnet="`Restart`" pulumi-lang-go="`restart`" pulumi-lang-python="`restart`" pulumi-lang-yaml="`restart`" pulumi-lang-java="`restart`">`restart`</span>
+     *   - <span pulumi-lang-nodejs="`restartWithContext`" pulumi-lang-dotnet="`RestartWithContext`" pulumi-lang-go="`restartWithContext`" pulumi-lang-python="`restart_with_context`" pulumi-lang-yaml="`restartWithContext`" pulumi-lang-java="`restartWithContext`">`restart_with_context`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`retry`" pulumi-lang-dotnet="`Retry`" pulumi-lang-go="`retry`" pulumi-lang-python="`retry`" pulumi-lang-yaml="`retry`" pulumi-lang-java="`retry`">`retry`</span>.
      */
     invalidResponseAction?: pulumi.Input<string>;
     order: pulumi.Input<number>;
     /**
-     * Allowed values: - `all` - `any` Defaults to `any`.
+     * Allowed values:
+     *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
+     *   - <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>
+     *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
     /**
-     * Evaluate policies when the Stage is present to the user. Defaults to `false`.
+     * Evaluate policies when the Stage is present to the user. Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     reEvaluatePolicies?: pulumi.Input<boolean>;
     stage: pulumi.Input<string>;

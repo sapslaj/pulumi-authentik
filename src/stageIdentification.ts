@@ -35,7 +35,7 @@ export class StageIdentification extends pulumi.CustomResource {
     declare public readonly captchaStage: pulumi.Output<string | undefined>;
     declare public readonly caseInsensitiveMatching: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly enableRememberMe: pulumi.Output<boolean | undefined>;
     declare public readonly enrollmentFlow: pulumi.Output<string | undefined>;
@@ -43,16 +43,16 @@ export class StageIdentification extends pulumi.CustomResource {
     declare public readonly passwordStage: pulumi.Output<string | undefined>;
     declare public readonly passwordlessFlow: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly pretendUserExists: pulumi.Output<boolean | undefined>;
     declare public readonly recoveryFlow: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly showMatchedUser: pulumi.Output<boolean | undefined>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     declare public readonly showSourceLabels: pulumi.Output<boolean | undefined>;
     declare public readonly sources: pulumi.Output<string[] | undefined>;
@@ -115,7 +115,7 @@ export interface StageIdentificationState {
     captchaStage?: pulumi.Input<string>;
     caseInsensitiveMatching?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     enableRememberMe?: pulumi.Input<boolean>;
     enrollmentFlow?: pulumi.Input<string>;
@@ -123,16 +123,16 @@ export interface StageIdentificationState {
     passwordStage?: pulumi.Input<string>;
     passwordlessFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     pretendUserExists?: pulumi.Input<boolean>;
     recoveryFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     showMatchedUser?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     showSourceLabels?: pulumi.Input<boolean>;
     sources?: pulumi.Input<pulumi.Input<string>[]>;
@@ -147,7 +147,7 @@ export interface StageIdentificationArgs {
     captchaStage?: pulumi.Input<string>;
     caseInsensitiveMatching?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     enableRememberMe?: pulumi.Input<boolean>;
     enrollmentFlow?: pulumi.Input<string>;
@@ -155,16 +155,16 @@ export interface StageIdentificationArgs {
     passwordStage?: pulumi.Input<string>;
     passwordlessFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     pretendUserExists?: pulumi.Input<boolean>;
     recoveryFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     showMatchedUser?: pulumi.Input<boolean>;
     /**
-     * Defaults to `false`.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
      */
     showSourceLabels?: pulumi.Input<boolean>;
     sources?: pulumi.Input<pulumi.Input<string>[]>;

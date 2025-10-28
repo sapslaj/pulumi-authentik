@@ -35,27 +35,27 @@ export class ProviderLdap extends pulumi.CustomResource {
     declare public readonly baseDn: pulumi.Output<string>;
     declare public readonly bindFlow: pulumi.Output<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     declare public readonly bindMode: pulumi.Output<string | undefined>;
     declare public readonly certificate: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `4000`.
+     * Defaults to <span pulumi-lang-nodejs="`4000`" pulumi-lang-dotnet="`4000`" pulumi-lang-go="`4000`" pulumi-lang-python="`4000`" pulumi-lang-yaml="`4000`" pulumi-lang-java="`4000`">`4000`</span>.
      */
     declare public readonly gidStartNumber: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly mfaSupport: pulumi.Output<boolean | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly providerLdapId: pulumi.Output<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     declare public readonly searchMode: pulumi.Output<string | undefined>;
     declare public readonly tlsServerName: pulumi.Output<string | undefined>;
     /**
-     * Defaults to `2000`.
+     * Defaults to <span pulumi-lang-nodejs="`2000`" pulumi-lang-dotnet="`2000`" pulumi-lang-go="`2000`" pulumi-lang-python="`2000`" pulumi-lang-yaml="`2000`" pulumi-lang-java="`2000`">`2000`</span>.
      */
     declare public readonly uidStartNumber: pulumi.Output<number | undefined>;
     declare public readonly unbindFlow: pulumi.Output<string>;
@@ -121,27 +121,27 @@ export interface ProviderLdapState {
     baseDn?: pulumi.Input<string>;
     bindFlow?: pulumi.Input<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     bindMode?: pulumi.Input<string>;
     certificate?: pulumi.Input<string>;
     /**
-     * Defaults to `4000`.
+     * Defaults to <span pulumi-lang-nodejs="`4000`" pulumi-lang-dotnet="`4000`" pulumi-lang-go="`4000`" pulumi-lang-python="`4000`" pulumi-lang-yaml="`4000`" pulumi-lang-java="`4000`">`4000`</span>.
      */
     gidStartNumber?: pulumi.Input<number>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     mfaSupport?: pulumi.Input<boolean>;
     name?: pulumi.Input<string>;
     providerLdapId?: pulumi.Input<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     searchMode?: pulumi.Input<string>;
     tlsServerName?: pulumi.Input<string>;
     /**
-     * Defaults to `2000`.
+     * Defaults to <span pulumi-lang-nodejs="`2000`" pulumi-lang-dotnet="`2000`" pulumi-lang-go="`2000`" pulumi-lang-python="`2000`" pulumi-lang-yaml="`2000`" pulumi-lang-java="`2000`">`2000`</span>.
      */
     uidStartNumber?: pulumi.Input<number>;
     unbindFlow?: pulumi.Input<string>;
@@ -154,27 +154,27 @@ export interface ProviderLdapArgs {
     baseDn: pulumi.Input<string>;
     bindFlow: pulumi.Input<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     bindMode?: pulumi.Input<string>;
     certificate?: pulumi.Input<string>;
     /**
-     * Defaults to `4000`.
+     * Defaults to <span pulumi-lang-nodejs="`4000`" pulumi-lang-dotnet="`4000`" pulumi-lang-go="`4000`" pulumi-lang-python="`4000`" pulumi-lang-yaml="`4000`" pulumi-lang-java="`4000`">`4000`</span>.
      */
     gidStartNumber?: pulumi.Input<number>;
     /**
-     * Defaults to `true`.
+     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     mfaSupport?: pulumi.Input<boolean>;
     name?: pulumi.Input<string>;
     providerLdapId?: pulumi.Input<string>;
     /**
-     * Defaults to `direct`.
+     * Defaults to <span pulumi-lang-nodejs="`direct`" pulumi-lang-dotnet="`Direct`" pulumi-lang-go="`direct`" pulumi-lang-python="`direct`" pulumi-lang-yaml="`direct`" pulumi-lang-java="`direct`">`direct`</span>.
      */
     searchMode?: pulumi.Input<string>;
     tlsServerName?: pulumi.Input<string>;
     /**
-     * Defaults to `2000`.
+     * Defaults to <span pulumi-lang-nodejs="`2000`" pulumi-lang-dotnet="`2000`" pulumi-lang-go="`2000`" pulumi-lang-python="`2000`" pulumi-lang-yaml="`2000`" pulumi-lang-java="`2000`">`2000`</span>.
      */
     uidStartNumber?: pulumi.Input<number>;
     unbindFlow: pulumi.Input<string>;

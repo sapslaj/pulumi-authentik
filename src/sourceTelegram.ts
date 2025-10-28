@@ -4,9 +4,9 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
-export class SourcePlex extends pulumi.CustomResource {
+export class SourceTelegram extends pulumi.CustomResource {
     /**
-     * Get an existing SourcePlex resource's state with the given name, ID, and optional extra
+     * Get an existing SourceTelegram resource's state with the given name, ID, and optional extra
      * properties used to qualify the lookup.
      *
      * @param name The _unique_ name of the resulting resource.
@@ -14,46 +14,33 @@ export class SourcePlex extends pulumi.CustomResource {
      * @param state Any extra arguments used during the lookup.
      * @param opts Optional settings to control the behavior of the CustomResource.
      */
-    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SourcePlexState, opts?: pulumi.CustomResourceOptions): SourcePlex {
-        return new SourcePlex(name, <any>state, { ...opts, id: id });
+    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SourceTelegramState, opts?: pulumi.CustomResourceOptions): SourceTelegram {
+        return new SourceTelegram(name, <any>state, { ...opts, id: id });
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'authentik:index/sourcePlex:SourcePlex';
+    public static readonly __pulumiType = 'authentik:index/sourceTelegram:SourceTelegram';
 
     /**
-     * Returns true if the given object is an instance of SourcePlex.  This is designed to work even
+     * Returns true if the given object is an instance of SourceTelegram.  This is designed to work even
      * when multiple copies of the Pulumi SDK have been loaded into the same process.
      */
-    public static isInstance(obj: any): obj is SourcePlex {
+    public static isInstance(obj: any): obj is SourceTelegram {
         if (obj === undefined || obj === null) {
             return false;
         }
-        return obj['__pulumiType'] === SourcePlex.__pulumiType;
+        return obj['__pulumiType'] === SourceTelegram.__pulumiType;
     }
 
-    /**
-     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
-     */
-    declare public readonly allowFriends: pulumi.Output<boolean | undefined>;
-    declare public readonly allowedServers: pulumi.Output<string[] | undefined>;
     declare public readonly authenticationFlow: pulumi.Output<string | undefined>;
-    declare public readonly clientId: pulumi.Output<string>;
+    declare public readonly botToken: pulumi.Output<string>;
+    declare public readonly botUsername: pulumi.Output<string>;
     /**
      * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     declare public readonly enabled: pulumi.Output<boolean | undefined>;
     declare public readonly enrollmentFlow: pulumi.Output<string | undefined>;
-    /**
-     * Allowed values:
-     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
-     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
-     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
-     */
-    declare public readonly groupMatchingMode: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
-    declare public readonly plexToken: pulumi.Output<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
@@ -61,8 +48,15 @@ export class SourcePlex extends pulumi.CustomResource {
      *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
+    declare public readonly preAuthenticationFlow: pulumi.Output<string>;
+    declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
+    declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     */
+    declare public readonly requestMessageAccess: pulumi.Output<boolean | undefined>;
     declare public readonly slug: pulumi.Output<string>;
-    declare public readonly sourcePlexId: pulumi.Output<string>;
+    declare public readonly sourceTelegramId: pulumi.Output<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
@@ -83,93 +77,83 @@ export class SourcePlex extends pulumi.CustomResource {
     declare public readonly uuid: pulumi.Output<string>;
 
     /**
-     * Create a SourcePlex resource with the given unique name, arguments, and options.
+     * Create a SourceTelegram resource with the given unique name, arguments, and options.
      *
      * @param name The _unique_ name of the resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: SourcePlexArgs, opts?: pulumi.CustomResourceOptions)
-    constructor(name: string, argsOrState?: SourcePlexArgs | SourcePlexState, opts?: pulumi.CustomResourceOptions) {
+    constructor(name: string, args: SourceTelegramArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, argsOrState?: SourceTelegramArgs | SourceTelegramState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         if (opts.id) {
-            const state = argsOrState as SourcePlexState | undefined;
-            resourceInputs["allowFriends"] = state?.allowFriends;
-            resourceInputs["allowedServers"] = state?.allowedServers;
+            const state = argsOrState as SourceTelegramState | undefined;
             resourceInputs["authenticationFlow"] = state?.authenticationFlow;
-            resourceInputs["clientId"] = state?.clientId;
+            resourceInputs["botToken"] = state?.botToken;
+            resourceInputs["botUsername"] = state?.botUsername;
             resourceInputs["enabled"] = state?.enabled;
             resourceInputs["enrollmentFlow"] = state?.enrollmentFlow;
-            resourceInputs["groupMatchingMode"] = state?.groupMatchingMode;
             resourceInputs["name"] = state?.name;
-            resourceInputs["plexToken"] = state?.plexToken;
             resourceInputs["policyEngineMode"] = state?.policyEngineMode;
+            resourceInputs["preAuthenticationFlow"] = state?.preAuthenticationFlow;
+            resourceInputs["propertyMappings"] = state?.propertyMappings;
+            resourceInputs["propertyMappingsGroups"] = state?.propertyMappingsGroups;
+            resourceInputs["requestMessageAccess"] = state?.requestMessageAccess;
             resourceInputs["slug"] = state?.slug;
-            resourceInputs["sourcePlexId"] = state?.sourcePlexId;
+            resourceInputs["sourceTelegramId"] = state?.sourceTelegramId;
             resourceInputs["userMatchingMode"] = state?.userMatchingMode;
             resourceInputs["userPathTemplate"] = state?.userPathTemplate;
             resourceInputs["uuid"] = state?.uuid;
         } else {
-            const args = argsOrState as SourcePlexArgs | undefined;
-            if (args?.clientId === undefined && !opts.urn) {
-                throw new Error("Missing required property 'clientId'");
+            const args = argsOrState as SourceTelegramArgs | undefined;
+            if (args?.botToken === undefined && !opts.urn) {
+                throw new Error("Missing required property 'botToken'");
             }
-            if (args?.plexToken === undefined && !opts.urn) {
-                throw new Error("Missing required property 'plexToken'");
+            if (args?.botUsername === undefined && !opts.urn) {
+                throw new Error("Missing required property 'botUsername'");
+            }
+            if (args?.preAuthenticationFlow === undefined && !opts.urn) {
+                throw new Error("Missing required property 'preAuthenticationFlow'");
             }
             if (args?.slug === undefined && !opts.urn) {
                 throw new Error("Missing required property 'slug'");
             }
-            resourceInputs["allowFriends"] = args?.allowFriends;
-            resourceInputs["allowedServers"] = args?.allowedServers;
             resourceInputs["authenticationFlow"] = args?.authenticationFlow;
-            resourceInputs["clientId"] = args?.clientId;
+            resourceInputs["botToken"] = args?.botToken;
+            resourceInputs["botUsername"] = args?.botUsername;
             resourceInputs["enabled"] = args?.enabled;
             resourceInputs["enrollmentFlow"] = args?.enrollmentFlow;
-            resourceInputs["groupMatchingMode"] = args?.groupMatchingMode;
             resourceInputs["name"] = args?.name;
-            resourceInputs["plexToken"] = args?.plexToken ? pulumi.secret(args.plexToken) : undefined;
             resourceInputs["policyEngineMode"] = args?.policyEngineMode;
+            resourceInputs["preAuthenticationFlow"] = args?.preAuthenticationFlow;
+            resourceInputs["propertyMappings"] = args?.propertyMappings;
+            resourceInputs["propertyMappingsGroups"] = args?.propertyMappingsGroups;
+            resourceInputs["requestMessageAccess"] = args?.requestMessageAccess;
             resourceInputs["slug"] = args?.slug;
-            resourceInputs["sourcePlexId"] = args?.sourcePlexId;
+            resourceInputs["sourceTelegramId"] = args?.sourceTelegramId;
             resourceInputs["userMatchingMode"] = args?.userMatchingMode;
             resourceInputs["userPathTemplate"] = args?.userPathTemplate;
             resourceInputs["uuid"] = args?.uuid;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["plexToken"] };
-        opts = pulumi.mergeOptions(opts, secretOpts);
-        super(SourcePlex.__pulumiType, name, resourceInputs, opts, false /*dependency*/, utilities.getPackage());
+        super(SourceTelegram.__pulumiType, name, resourceInputs, opts, false /*dependency*/, utilities.getPackage());
     }
 }
 
 /**
- * Input properties used for looking up and filtering SourcePlex resources.
+ * Input properties used for looking up and filtering SourceTelegram resources.
  */
-export interface SourcePlexState {
-    /**
-     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
-     */
-    allowFriends?: pulumi.Input<boolean>;
-    allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
+export interface SourceTelegramState {
     authenticationFlow?: pulumi.Input<string>;
-    clientId?: pulumi.Input<string>;
+    botToken?: pulumi.Input<string>;
+    botUsername?: pulumi.Input<string>;
     /**
      * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     enrollmentFlow?: pulumi.Input<string>;
-    /**
-     * Allowed values:
-     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
-     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
-     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
-     */
-    groupMatchingMode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
-    plexToken?: pulumi.Input<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
@@ -177,8 +161,15 @@ export interface SourcePlexState {
      *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
+    preAuthenticationFlow?: pulumi.Input<string>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     */
+    requestMessageAccess?: pulumi.Input<boolean>;
     slug?: pulumi.Input<string>;
-    sourcePlexId?: pulumi.Input<string>;
+    sourceTelegramId?: pulumi.Input<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
@@ -200,31 +191,18 @@ export interface SourcePlexState {
 }
 
 /**
- * The set of arguments for constructing a SourcePlex resource.
+ * The set of arguments for constructing a SourceTelegram resource.
  */
-export interface SourcePlexArgs {
-    /**
-     * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
-     */
-    allowFriends?: pulumi.Input<boolean>;
-    allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
+export interface SourceTelegramArgs {
     authenticationFlow?: pulumi.Input<string>;
-    clientId: pulumi.Input<string>;
+    botToken: pulumi.Input<string>;
+    botUsername: pulumi.Input<string>;
     /**
      * Defaults to <span pulumi-lang-nodejs="`true`" pulumi-lang-dotnet="`True`" pulumi-lang-go="`true`" pulumi-lang-python="`true`" pulumi-lang-yaml="`true`" pulumi-lang-java="`true`">`true`</span>.
      */
     enabled?: pulumi.Input<boolean>;
     enrollmentFlow?: pulumi.Input<string>;
-    /**
-     * Allowed values:
-     *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>
-     *   - <span pulumi-lang-nodejs="`nameLink`" pulumi-lang-dotnet="`NameLink`" pulumi-lang-go="`nameLink`" pulumi-lang-python="`name_link`" pulumi-lang-yaml="`nameLink`" pulumi-lang-java="`nameLink`">`name_link`</span>
-     *   - <span pulumi-lang-nodejs="`nameDeny`" pulumi-lang-dotnet="`NameDeny`" pulumi-lang-go="`nameDeny`" pulumi-lang-python="`name_deny`" pulumi-lang-yaml="`nameDeny`" pulumi-lang-java="`nameDeny`">`name_deny`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>.
-     */
-    groupMatchingMode?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
-    plexToken: pulumi.Input<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`all`" pulumi-lang-dotnet="`All`" pulumi-lang-go="`all`" pulumi-lang-python="`all`" pulumi-lang-yaml="`all`" pulumi-lang-java="`all`">`all`</span>
@@ -232,8 +210,15 @@ export interface SourcePlexArgs {
      *  Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string>;
+    preAuthenticationFlow: pulumi.Input<string>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     */
+    requestMessageAccess?: pulumi.Input<boolean>;
     slug: pulumi.Input<string>;
-    sourcePlexId?: pulumi.Input<string>;
+    sourceTelegramId?: pulumi.Input<string>;
     /**
      * Allowed values:
      *   - <span pulumi-lang-nodejs="`identifier`" pulumi-lang-dotnet="`Identifier`" pulumi-lang-go="`identifier`" pulumi-lang-python="`identifier`" pulumi-lang-yaml="`identifier`" pulumi-lang-java="`identifier`">`identifier`</span>

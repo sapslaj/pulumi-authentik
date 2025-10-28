@@ -1,6 +1,6 @@
 {
   "name": "@sapslaj/pulumi-authentik",
-  "version": "2025.8.1",
+  "version": "2025.10.0",
   "description": "A Pulumi provider dynamically bridged from authentik.",
   "repository": "https://github.com/sapslaj/pulumi-authentik",
   "main": "dist/index.js",
@@ -16,11 +16,11 @@
   "pulumi": {
     "resource": true,
     "name": "terraform-provider",
-    "version": "0.13.0",
+    "version": "1.0.1",
     "parameterization": {
       "name": "authentik",
-      "version": "2025.8.1",
-      "value": "eyJyZW1vdGUiOnsidXJsIjoicmVnaXN0cnkub3BlbnRvZnUub3JnL2dvYXV0aGVudGlrL2F1dGhlbnRpayIsInZlcnNpb24iOiIyMDI1LjguMSJ9fQ=="
+      "version": "2025.10.0",
+      "value": "eyJyZW1vdGUiOnsidXJsIjoicmVnaXN0cnkub3BlbnRvZnUub3JnL2dvYXV0aGVudGlrL2F1dGhlbnRpayIsInZlcnNpb24iOiIyMDI1LjEwLjAifX0="
     }
   },
   "types": "dist/index.d.ts"

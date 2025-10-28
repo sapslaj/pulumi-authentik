@@ -33,15 +33,18 @@ export class StageAuthenticatorStatic extends pulumi.CustomResource {
     }
 
     declare public readonly configureFlow: pulumi.Output<string | undefined>;
+    /**
+     * Defaults to ``.
+     */
     declare public readonly friendlyName: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly stageAuthenticatorStaticId: pulumi.Output<string>;
     /**
-     * Defaults to `6`.
+     * Defaults to <span pulumi-lang-nodejs="`6`" pulumi-lang-dotnet="`6`" pulumi-lang-go="`6`" pulumi-lang-python="`6`" pulumi-lang-yaml="`6`" pulumi-lang-java="`6`">`6`</span>.
      */
     declare public readonly tokenCount: pulumi.Output<number | undefined>;
     /**
-     * Defaults to `12`.
+     * Defaults to <span pulumi-lang-nodejs="`12`" pulumi-lang-dotnet="`12`" pulumi-lang-go="`12`" pulumi-lang-python="`12`" pulumi-lang-yaml="`12`" pulumi-lang-java="`12`">`12`</span>.
      */
     declare public readonly tokenLength: pulumi.Output<number | undefined>;
 
@@ -83,15 +86,18 @@ export class StageAuthenticatorStatic extends pulumi.CustomResource {
  */
 export interface StageAuthenticatorStaticState {
     configureFlow?: pulumi.Input<string>;
+    /**
+     * Defaults to ``.
+     */
     friendlyName?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     stageAuthenticatorStaticId?: pulumi.Input<string>;
     /**
-     * Defaults to `6`.
+     * Defaults to <span pulumi-lang-nodejs="`6`" pulumi-lang-dotnet="`6`" pulumi-lang-go="`6`" pulumi-lang-python="`6`" pulumi-lang-yaml="`6`" pulumi-lang-java="`6`">`6`</span>.
      */
     tokenCount?: pulumi.Input<number>;
     /**
-     * Defaults to `12`.
+     * Defaults to <span pulumi-lang-nodejs="`12`" pulumi-lang-dotnet="`12`" pulumi-lang-go="`12`" pulumi-lang-python="`12`" pulumi-lang-yaml="`12`" pulumi-lang-java="`12`">`12`</span>.
      */
     tokenLength?: pulumi.Input<number>;
 }
@@ -101,15 +107,18 @@ export interface StageAuthenticatorStaticState {
  */
 export interface StageAuthenticatorStaticArgs {
     configureFlow?: pulumi.Input<string>;
+    /**
+     * Defaults to ``.
+     */
     friendlyName?: pulumi.Input<string>;
     name?: pulumi.Input<string>;
     stageAuthenticatorStaticId?: pulumi.Input<string>;
     /**
-     * Defaults to `6`.
+     * Defaults to <span pulumi-lang-nodejs="`6`" pulumi-lang-dotnet="`6`" pulumi-lang-go="`6`" pulumi-lang-python="`6`" pulumi-lang-yaml="`6`" pulumi-lang-java="`6`">`6`</span>.
      */
     tokenCount?: pulumi.Input<number>;
     /**
-     * Defaults to `12`.
+     * Defaults to <span pulumi-lang-nodejs="`12`" pulumi-lang-dotnet="`12`" pulumi-lang-go="`12`" pulumi-lang-python="`12`" pulumi-lang-yaml="`12`" pulumi-lang-java="`12`">`12`</span>.
      */
     tokenLength?: pulumi.Input<number>;
 }
