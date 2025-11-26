@@ -41,6 +41,11 @@ export class RbacPermissionUser extends pulumi.CustomResource {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`
@@ -199,6 +204,11 @@ export interface RbacPermissionUserState {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`
@@ -321,6 +331,11 @@ export interface RbacPermissionUserArgs {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`

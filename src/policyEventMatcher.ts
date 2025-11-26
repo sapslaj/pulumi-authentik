@@ -42,6 +42,8 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      *   - `authentik.api`
      *   - `authentik.core`
      *   - `authentik.crypto`
+     *   - `authentik.endpoints`
+     *   - `authentik.endpoints.connectors.agent`
      *   - `authentik.enterprise`
      *   - `authentik.events`
      *   - `authentik.flows`
@@ -96,6 +98,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      *   - `authentik.brands`
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
+     *   - `authentik.enterprise.endpoints.connectors.agent`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
@@ -122,6 +125,11 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`
@@ -277,6 +285,8 @@ export interface PolicyEventMatcherState {
      *   - `authentik.api`
      *   - `authentik.core`
      *   - `authentik.crypto`
+     *   - `authentik.endpoints`
+     *   - `authentik.endpoints.connectors.agent`
      *   - `authentik.enterprise`
      *   - `authentik.events`
      *   - `authentik.flows`
@@ -331,6 +341,7 @@ export interface PolicyEventMatcherState {
      *   - `authentik.brands`
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
+     *   - `authentik.enterprise.endpoints.connectors.agent`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
@@ -357,6 +368,11 @@ export interface PolicyEventMatcherState {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`
@@ -478,6 +494,8 @@ export interface PolicyEventMatcherArgs {
      *   - `authentik.api`
      *   - `authentik.core`
      *   - `authentik.crypto`
+     *   - `authentik.endpoints`
+     *   - `authentik.endpoints.connectors.agent`
      *   - `authentik.enterprise`
      *   - `authentik.events`
      *   - `authentik.flows`
@@ -532,6 +550,7 @@ export interface PolicyEventMatcherArgs {
      *   - `authentik.brands`
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
+     *   - `authentik.enterprise.endpoints.connectors.agent`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
@@ -558,6 +577,11 @@ export interface PolicyEventMatcherArgs {
      *   - `authentik_core.applicationentitlement`
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
+     *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.endpointstage`
+     *   - `authentik_endpoints_connectors_agent.agentconnector`
+     *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
+     *   - `authentik_endpoints_connectors_agent.enrollmenttoken`
      *   - `authentik_enterprise.license`
      *   - `authentik_events.event`
      *   - `authentik_events.notificationtransport`

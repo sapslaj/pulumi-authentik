@@ -80,6 +80,11 @@ export const getGroups: typeof import("./getGroups").getGroups = null as any;
 export const getGroupsOutput: typeof import("./getGroups").getGroupsOutput = null as any;
 utilities.lazyLoad(exports, ["getGroups","getGroupsOutput"], () => require("./getGroups"));
 
+export { GetOutpostArgs, GetOutpostResult, GetOutpostOutputArgs } from "./getOutpost";
+export const getOutpost: typeof import("./getOutpost").getOutpost = null as any;
+export const getOutpostOutput: typeof import("./getOutpost").getOutpostOutput = null as any;
+utilities.lazyLoad(exports, ["getOutpost","getOutpostOutput"], () => require("./getOutpost"));
+
 export { GetPropertyMappingProviderRacArgs, GetPropertyMappingProviderRacResult, GetPropertyMappingProviderRacOutputArgs } from "./getPropertyMappingProviderRac";
 export const getPropertyMappingProviderRac: typeof import("./getPropertyMappingProviderRac").getPropertyMappingProviderRac = null as any;
 export const getPropertyMappingProviderRacOutput: typeof import("./getPropertyMappingProviderRac").getPropertyMappingProviderRacOutput = null as any;
@@ -164,6 +169,11 @@ export { OutpostArgs, OutpostState } from "./outpost";
 export type Outpost = import("./outpost").Outpost;
 export const Outpost: typeof import("./outpost").Outpost = null as any;
 utilities.lazyLoad(exports, ["Outpost"], () => require("./outpost"));
+
+export { OutpostProviderAttachmentArgs, OutpostProviderAttachmentState } from "./outpostProviderAttachment";
+export type OutpostProviderAttachment = import("./outpostProviderAttachment").OutpostProviderAttachment;
+export const OutpostProviderAttachment: typeof import("./outpostProviderAttachment").OutpostProviderAttachment = null as any;
+utilities.lazyLoad(exports, ["OutpostProviderAttachment"], () => require("./outpostProviderAttachment"));
 
 export { PolicyBindingArgs, PolicyBindingState } from "./policyBinding";
 export type PolicyBinding = import("./policyBinding").PolicyBinding;
@@ -621,6 +631,8 @@ const _module = {
                 return new Group(name, <any>undefined, { urn })
             case "authentik:index/outpost:Outpost":
                 return new Outpost(name, <any>undefined, { urn })
+            case "authentik:index/outpostProviderAttachment:OutpostProviderAttachment":
+                return new OutpostProviderAttachment(name, <any>undefined, { urn })
             case "authentik:index/policyBinding:PolicyBinding":
                 return new PolicyBinding(name, <any>undefined, { urn })
             case "authentik:index/policyDummy:PolicyDummy":
@@ -804,6 +816,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/flow", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/flowStageBinding", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/group", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/outpost", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/outpostProviderAttachment", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/policyBinding", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/policyDummy", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/policyEventMatcher", _module)
