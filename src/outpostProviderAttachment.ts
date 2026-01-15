@@ -32,8 +32,14 @@ export class OutpostProviderAttachment extends pulumi.CustomResource {
         return obj['__pulumiType'] === OutpostProviderAttachment.__pulumiType;
     }
 
+    /**
+     * The ID of the outpost.
+     */
     declare public readonly outpost: pulumi.Output<string>;
     declare public readonly outpostProviderAttachmentId: pulumi.Output<string>;
+    /**
+     * The ID of the provider.
+     */
     declare public readonly protocolProvider: pulumi.Output<number>;
 
     /**
@@ -73,8 +79,14 @@ export class OutpostProviderAttachment extends pulumi.CustomResource {
  * Input properties used for looking up and filtering OutpostProviderAttachment resources.
  */
 export interface OutpostProviderAttachmentState {
+    /**
+     * The ID of the outpost.
+     */
     outpost?: pulumi.Input<string>;
     outpostProviderAttachmentId?: pulumi.Input<string>;
+    /**
+     * The ID of the provider.
+     */
     protocolProvider?: pulumi.Input<number>;
 }
 
@@ -82,7 +94,13 @@ export interface OutpostProviderAttachmentState {
  * The set of arguments for constructing a OutpostProviderAttachment resource.
  */
 export interface OutpostProviderAttachmentArgs {
+    /**
+     * The ID of the outpost.
+     */
     outpost: pulumi.Input<string>;
     outpostProviderAttachmentId?: pulumi.Input<string>;
+    /**
+     * The ID of the provider.
+     */
     protocolProvider: pulumi.Input<number>;
 }

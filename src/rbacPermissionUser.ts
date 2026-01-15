@@ -42,6 +42,7 @@ export class RbacPermissionUser extends pulumi.CustomResource {
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
      *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.deviceaccessgroup`
      *   - `authentik_endpoints.endpointstage`
      *   - `authentik_endpoints_connectors_agent.agentconnector`
      *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
@@ -144,6 +145,7 @@ export class RbacPermissionUser extends pulumi.CustomResource {
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_reports.dataexport`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
@@ -205,6 +207,7 @@ export interface RbacPermissionUserState {
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
      *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.deviceaccessgroup`
      *   - `authentik_endpoints.endpointstage`
      *   - `authentik_endpoints_connectors_agent.agentconnector`
      *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
@@ -307,6 +310,7 @@ export interface RbacPermissionUserState {
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_reports.dataexport`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
@@ -332,6 +336,7 @@ export interface RbacPermissionUserArgs {
      *   - `authentik_core.token`
      *   - `authentik_crypto.certificatekeypair`
      *   - `authentik_endpoints.deviceuserbinding`
+     *   - `authentik_endpoints.deviceaccessgroup`
      *   - `authentik_endpoints.endpointstage`
      *   - `authentik_endpoints_connectors_agent.agentconnector`
      *   - `authentik_endpoints_connectors_agent.agentdeviceuserbinding`
@@ -434,6 +439,7 @@ export interface RbacPermissionUserArgs {
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_reports.dataexport`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
