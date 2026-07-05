@@ -64,14 +64,14 @@ export class EndpointsDeviceAccessGroup extends pulumi.CustomResource {
  * Input properties used for looking up and filtering EndpointsDeviceAccessGroup resources.
  */
 export interface EndpointsDeviceAccessGroupState {
-    endpointsDeviceAccessGroupId?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
+    endpointsDeviceAccessGroupId?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
  * The set of arguments for constructing a EndpointsDeviceAccessGroup resource.
  */
 export interface EndpointsDeviceAccessGroupArgs {
-    endpointsDeviceAccessGroupId?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
+    endpointsDeviceAccessGroupId?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
 }

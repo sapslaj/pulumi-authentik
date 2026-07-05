@@ -33,7 +33,7 @@ export class PolicyExpression extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
     declare public readonly executionLogging: pulumi.Output<boolean | undefined>;
     declare public readonly expression: pulumi.Output<string>;
@@ -77,12 +77,12 @@ export class PolicyExpression extends pulumi.CustomResource {
  */
 export interface PolicyExpressionState {
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    executionLogging?: pulumi.Input<boolean>;
-    expression?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    policyExpressionId?: pulumi.Input<string>;
+    executionLogging?: pulumi.Input<boolean | undefined>;
+    expression?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    policyExpressionId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -90,10 +90,10 @@ export interface PolicyExpressionState {
  */
 export interface PolicyExpressionArgs {
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    executionLogging?: pulumi.Input<boolean>;
+    executionLogging?: pulumi.Input<boolean | undefined>;
     expression: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    policyExpressionId?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
+    policyExpressionId?: pulumi.Input<string | undefined>;
 }

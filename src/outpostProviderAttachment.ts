@@ -82,12 +82,12 @@ export interface OutpostProviderAttachmentState {
     /**
      * The ID of the outpost.
      */
-    outpost?: pulumi.Input<string>;
-    outpostProviderAttachmentId?: pulumi.Input<string>;
+    outpost?: pulumi.Input<string | undefined>;
+    outpostProviderAttachmentId?: pulumi.Input<string | undefined>;
     /**
      * The ID of the provider.
      */
-    protocolProvider?: pulumi.Input<number>;
+    protocolProvider?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -98,7 +98,7 @@ export interface OutpostProviderAttachmentArgs {
      * The ID of the outpost.
      */
     outpost: pulumi.Input<string>;
-    outpostProviderAttachmentId?: pulumi.Input<string>;
+    outpostProviderAttachmentId?: pulumi.Input<string | undefined>;
     /**
      * The ID of the provider.
      */

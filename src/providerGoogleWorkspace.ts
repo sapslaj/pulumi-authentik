@@ -39,16 +39,16 @@ export class ProviderGoogleWorkspace extends pulumi.CustomResource {
     declare public readonly defaultGroupEmailDomain: pulumi.Output<string>;
     declare public readonly delegatedSubject: pulumi.Output<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
     declare public readonly dryRun: pulumi.Output<boolean | undefined>;
     declare public readonly excludeUsersServiceAccount: pulumi.Output<boolean | undefined>;
     declare public readonly filterGroup: pulumi.Output<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
     declare public readonly groupDeleteAction: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -56,7 +56,7 @@ export class ProviderGoogleWorkspace extends pulumi.CustomResource {
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     declare public readonly providerGoogleWorkspaceId: pulumi.Output<string>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`" pulumi-lang-hcl="`100`">`100`</span>.
      */
     declare public readonly syncPageSize: pulumi.Output<number | undefined>;
     /**
@@ -65,10 +65,10 @@ export class ProviderGoogleWorkspace extends pulumi.CustomResource {
     declare public readonly syncPageTimeout: pulumi.Output<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`">`suspend`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`" pulumi-lang-hcl="`suspend`">`suspend`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
     declare public readonly userDeleteAction: pulumi.Output<string | undefined>;
 
@@ -131,42 +131,42 @@ export interface ProviderGoogleWorkspaceState {
     /**
      * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
-    credentials?: pulumi.Input<string>;
-    defaultGroupEmailDomain?: pulumi.Input<string>;
-    delegatedSubject?: pulumi.Input<string>;
+    credentials?: pulumi.Input<string | undefined>;
+    defaultGroupEmailDomain?: pulumi.Input<string | undefined>;
+    delegatedSubject?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    dryRun?: pulumi.Input<boolean>;
-    excludeUsersServiceAccount?: pulumi.Input<boolean>;
-    filterGroup?: pulumi.Input<string>;
+    dryRun?: pulumi.Input<boolean | undefined>;
+    excludeUsersServiceAccount?: pulumi.Input<boolean | undefined>;
+    filterGroup?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
-    groupDeleteAction?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
-    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
-    providerGoogleWorkspaceId?: pulumi.Input<string>;
+    groupDeleteAction?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    providerGoogleWorkspaceId?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`" pulumi-lang-hcl="`100`">`100`</span>.
      */
-    syncPageSize?: pulumi.Input<number>;
+    syncPageSize?: pulumi.Input<number | undefined>;
     /**
      * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
-    syncPageTimeout?: pulumi.Input<string>;
+    syncPageTimeout?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`">`suspend`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`" pulumi-lang-hcl="`suspend`">`suspend`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
-    userDeleteAction?: pulumi.Input<string>;
+    userDeleteAction?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -176,40 +176,40 @@ export interface ProviderGoogleWorkspaceArgs {
     /**
      * JSON format expected. Use `jsonencode()` to pass objects. Defaults to `{}`.
      */
-    credentials?: pulumi.Input<string>;
+    credentials?: pulumi.Input<string | undefined>;
     defaultGroupEmailDomain: pulumi.Input<string>;
-    delegatedSubject?: pulumi.Input<string>;
+    delegatedSubject?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    dryRun?: pulumi.Input<boolean>;
-    excludeUsersServiceAccount?: pulumi.Input<boolean>;
-    filterGroup?: pulumi.Input<string>;
+    dryRun?: pulumi.Input<boolean | undefined>;
+    excludeUsersServiceAccount?: pulumi.Input<boolean | undefined>;
+    filterGroup?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
-    groupDeleteAction?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    propertyMappings?: pulumi.Input<pulumi.Input<string>[]>;
-    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[]>;
-    providerGoogleWorkspaceId?: pulumi.Input<string>;
+    groupDeleteAction?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    propertyMappings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    providerGoogleWorkspaceId?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`">`100`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`100`" pulumi-lang-dotnet="`100`" pulumi-lang-go="`100`" pulumi-lang-python="`100`" pulumi-lang-yaml="`100`" pulumi-lang-java="`100`" pulumi-lang-hcl="`100`">`100`</span>.
      */
-    syncPageSize?: pulumi.Input<number>;
+    syncPageSize?: pulumi.Input<number | undefined>;
     /**
      * Format: hours=1;minutes=2;seconds=3. Defaults to `minutes=30`.
      */
-    syncPageTimeout?: pulumi.Input<string>;
+    syncPageTimeout?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`">`do_nothing`</span>
-     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>
-     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`">`suspend`</span>
-     *  Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`">`delete`</span>.
+     *   - <span pulumi-lang-nodejs="`doNothing`" pulumi-lang-dotnet="`DoNothing`" pulumi-lang-go="`doNothing`" pulumi-lang-python="`do_nothing`" pulumi-lang-yaml="`doNothing`" pulumi-lang-java="`doNothing`" pulumi-lang-hcl="`do_nothing`">`doNothing`</span>
+     *   - <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>
+     *   - <span pulumi-lang-nodejs="`suspend`" pulumi-lang-dotnet="`Suspend`" pulumi-lang-go="`suspend`" pulumi-lang-python="`suspend`" pulumi-lang-yaml="`suspend`" pulumi-lang-java="`suspend`" pulumi-lang-hcl="`suspend`">`suspend`</span>
+     *      Defaults to <span pulumi-lang-nodejs="`delete`" pulumi-lang-dotnet="`Delete`" pulumi-lang-go="`delete`" pulumi-lang-python="`delete`" pulumi-lang-yaml="`delete`" pulumi-lang-java="`delete`" pulumi-lang-hcl="`delete`">`delete`</span>.
      */
-    userDeleteAction?: pulumi.Input<string>;
+    userDeleteAction?: pulumi.Input<string | undefined>;
 }

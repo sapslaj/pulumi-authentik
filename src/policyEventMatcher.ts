@@ -100,14 +100,18 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
      *   - `authentik.enterprise.endpoints.connectors.agent`
+     *   - `authentik.enterprise.endpoints.connectors.fleet`
+     *   - `authentik.enterprise.endpoints.connectors.google_chrome`
+     *   - `authentik.enterprise.lifecycle`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
      *   - `authentik.enterprise.providers.radius`
      *   - `authentik.enterprise.providers.scim`
      *   - `authentik.enterprise.providers.ssf`
+     *   - `authentik.enterprise.providers.ws_federation`
      *   - `authentik.enterprise.reports`
-     *   - `authentik.enterprise.search`
+     *   - `authentik.enterprise.stages.account_lockdown`
      *   - `authentik.enterprise.stages.authenticator_endpoint_gdtc`
      *   - `authentik.enterprise.stages.mtls`
      *   - `authentik.enterprise.stages.source`
@@ -115,7 +119,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
     declare public readonly app: pulumi.Output<string | undefined>;
     declare public readonly clientIp: pulumi.Output<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
     declare public readonly executionLogging: pulumi.Output<boolean | undefined>;
     /**
@@ -225,13 +229,20 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
      *   - `authentik_tasks_schedules.schedule`
      *   - `authentik_brands.brand`
      *   - `authentik_blueprints.blueprintinstance`
+     *   - `authentik_endpoints_connectors_fleet.fleetconnector`
+     *   - `authentik_endpoints_connectors_google_chrome.googlechromeconnector`
+     *   - `authentik_lifecycle.lifecyclerule`
+     *   - `authentik_lifecycle.lifecycleiteration`
+     *   - `authentik_lifecycle.review`
      *   - `authentik_policies_unique_password.uniquepasswordpolicy`
      *   - `authentik_providers_google_workspace.googleworkspaceprovider`
      *   - `authentik_providers_google_workspace.googleworkspaceprovidermapping`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_providers_ws_federation.wsfederationprovider`
      *   - `authentik_reports.dataexport`
+     *   - `authentik_stages_account_lockdown.accountlockdownstage`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
@@ -239,6 +250,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
     declare public readonly model: pulumi.Output<string | undefined>;
     declare public readonly name: pulumi.Output<string>;
     declare public readonly policyEventMatcherId: pulumi.Output<string>;
+    declare public readonly query: pulumi.Output<string | undefined>;
 
     /**
      * Create a PolicyEventMatcher resource with the given unique name, arguments, and options.
@@ -260,6 +272,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
             resourceInputs["model"] = state?.model;
             resourceInputs["name"] = state?.name;
             resourceInputs["policyEventMatcherId"] = state?.policyEventMatcherId;
+            resourceInputs["query"] = state?.query;
         } else {
             const args = argsOrState as PolicyEventMatcherArgs | undefined;
             resourceInputs["action"] = args?.action;
@@ -269,6 +282,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
             resourceInputs["model"] = args?.model;
             resourceInputs["name"] = args?.name;
             resourceInputs["policyEventMatcherId"] = args?.policyEventMatcherId;
+            resourceInputs["query"] = args?.query;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PolicyEventMatcher.__pulumiType, name, resourceInputs, opts, false /*dependency*/, utilities.getPackage());
@@ -279,7 +293,7 @@ export class PolicyEventMatcher extends pulumi.CustomResource {
  * Input properties used for looking up and filtering PolicyEventMatcher resources.
  */
 export interface PolicyEventMatcherState {
-    action?: pulumi.Input<string>;
+    action?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
      *   - `authentik.commands`
@@ -347,24 +361,28 @@ export interface PolicyEventMatcherState {
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
      *   - `authentik.enterprise.endpoints.connectors.agent`
+     *   - `authentik.enterprise.endpoints.connectors.fleet`
+     *   - `authentik.enterprise.endpoints.connectors.google_chrome`
+     *   - `authentik.enterprise.lifecycle`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
      *   - `authentik.enterprise.providers.radius`
      *   - `authentik.enterprise.providers.scim`
      *   - `authentik.enterprise.providers.ssf`
+     *   - `authentik.enterprise.providers.ws_federation`
      *   - `authentik.enterprise.reports`
-     *   - `authentik.enterprise.search`
+     *   - `authentik.enterprise.stages.account_lockdown`
      *   - `authentik.enterprise.stages.authenticator_endpoint_gdtc`
      *   - `authentik.enterprise.stages.mtls`
      *   - `authentik.enterprise.stages.source`
      */
-    app?: pulumi.Input<string>;
-    clientIp?: pulumi.Input<string>;
+    app?: pulumi.Input<string | undefined>;
+    clientIp?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    executionLogging?: pulumi.Input<boolean>;
+    executionLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Allowed values:
      *   - `authentik_tenants.domain`
@@ -472,27 +490,35 @@ export interface PolicyEventMatcherState {
      *   - `authentik_tasks_schedules.schedule`
      *   - `authentik_brands.brand`
      *   - `authentik_blueprints.blueprintinstance`
+     *   - `authentik_endpoints_connectors_fleet.fleetconnector`
+     *   - `authentik_endpoints_connectors_google_chrome.googlechromeconnector`
+     *   - `authentik_lifecycle.lifecyclerule`
+     *   - `authentik_lifecycle.lifecycleiteration`
+     *   - `authentik_lifecycle.review`
      *   - `authentik_policies_unique_password.uniquepasswordpolicy`
      *   - `authentik_providers_google_workspace.googleworkspaceprovider`
      *   - `authentik_providers_google_workspace.googleworkspaceprovidermapping`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_providers_ws_federation.wsfederationprovider`
      *   - `authentik_reports.dataexport`
+     *   - `authentik_stages_account_lockdown.accountlockdownstage`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
      */
-    model?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    policyEventMatcherId?: pulumi.Input<string>;
+    model?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    policyEventMatcherId?: pulumi.Input<string | undefined>;
+    query?: pulumi.Input<string | undefined>;
 }
 
 /**
  * The set of arguments for constructing a PolicyEventMatcher resource.
  */
 export interface PolicyEventMatcherArgs {
-    action?: pulumi.Input<string>;
+    action?: pulumi.Input<string | undefined>;
     /**
      * Allowed values:
      *   - `authentik.commands`
@@ -560,24 +586,28 @@ export interface PolicyEventMatcherArgs {
      *   - `authentik.blueprints`
      *   - `authentik.enterprise.audit`
      *   - `authentik.enterprise.endpoints.connectors.agent`
+     *   - `authentik.enterprise.endpoints.connectors.fleet`
+     *   - `authentik.enterprise.endpoints.connectors.google_chrome`
+     *   - `authentik.enterprise.lifecycle`
      *   - `authentik.enterprise.policies.unique_password`
      *   - `authentik.enterprise.providers.google_workspace`
      *   - `authentik.enterprise.providers.microsoft_entra`
      *   - `authentik.enterprise.providers.radius`
      *   - `authentik.enterprise.providers.scim`
      *   - `authentik.enterprise.providers.ssf`
+     *   - `authentik.enterprise.providers.ws_federation`
      *   - `authentik.enterprise.reports`
-     *   - `authentik.enterprise.search`
+     *   - `authentik.enterprise.stages.account_lockdown`
      *   - `authentik.enterprise.stages.authenticator_endpoint_gdtc`
      *   - `authentik.enterprise.stages.mtls`
      *   - `authentik.enterprise.stages.source`
      */
-    app?: pulumi.Input<string>;
-    clientIp?: pulumi.Input<string>;
+    app?: pulumi.Input<string | undefined>;
+    clientIp?: pulumi.Input<string | undefined>;
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    executionLogging?: pulumi.Input<boolean>;
+    executionLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Allowed values:
      *   - `authentik_tenants.domain`
@@ -685,18 +715,26 @@ export interface PolicyEventMatcherArgs {
      *   - `authentik_tasks_schedules.schedule`
      *   - `authentik_brands.brand`
      *   - `authentik_blueprints.blueprintinstance`
+     *   - `authentik_endpoints_connectors_fleet.fleetconnector`
+     *   - `authentik_endpoints_connectors_google_chrome.googlechromeconnector`
+     *   - `authentik_lifecycle.lifecyclerule`
+     *   - `authentik_lifecycle.lifecycleiteration`
+     *   - `authentik_lifecycle.review`
      *   - `authentik_policies_unique_password.uniquepasswordpolicy`
      *   - `authentik_providers_google_workspace.googleworkspaceprovider`
      *   - `authentik_providers_google_workspace.googleworkspaceprovidermapping`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovider`
      *   - `authentik_providers_microsoft_entra.microsoftentraprovidermapping`
      *   - `authentik_providers_ssf.ssfprovider`
+     *   - `authentik_providers_ws_federation.wsfederationprovider`
      *   - `authentik_reports.dataexport`
+     *   - `authentik_stages_account_lockdown.accountlockdownstage`
      *   - `authentik_stages_authenticator_endpoint_gdtc.authenticatorendpointgdtcstage`
      *   - `authentik_stages_mtls.mutualtlsstage`
      *   - `authentik_stages_source.sourcestage`
      */
-    model?: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    policyEventMatcherId?: pulumi.Input<string>;
+    model?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    policyEventMatcherId?: pulumi.Input<string | undefined>;
+    query?: pulumi.Input<string | undefined>;
 }

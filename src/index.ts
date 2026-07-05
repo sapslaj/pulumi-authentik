@@ -45,6 +45,11 @@ export type EndpointsDeviceAccessGroup = import("./endpointsDeviceAccessGroup").
 export const EndpointsDeviceAccessGroup: typeof import("./endpointsDeviceAccessGroup").EndpointsDeviceAccessGroup = null as any;
 utilities.lazyLoad(exports, ["EndpointsDeviceAccessGroup"], () => require("./endpointsDeviceAccessGroup"));
 
+export { EndpointsGoogleChromeConnectorArgs, EndpointsGoogleChromeConnectorState } from "./endpointsGoogleChromeConnector";
+export type EndpointsGoogleChromeConnector = import("./endpointsGoogleChromeConnector").EndpointsGoogleChromeConnector;
+export const EndpointsGoogleChromeConnector: typeof import("./endpointsGoogleChromeConnector").EndpointsGoogleChromeConnector = null as any;
+utilities.lazyLoad(exports, ["EndpointsGoogleChromeConnector"], () => require("./endpointsGoogleChromeConnector"));
+
 export { EnterpriseLicenseArgs, EnterpriseLicenseState } from "./enterpriseLicense";
 export type EnterpriseLicense = import("./enterpriseLicense").EnterpriseLicense;
 export const EnterpriseLicense: typeof import("./enterpriseLicense").EnterpriseLicense = null as any;
@@ -358,6 +363,11 @@ export type ProviderSsf = import("./providerSsf").ProviderSsf;
 export const ProviderSsf: typeof import("./providerSsf").ProviderSsf = null as any;
 utilities.lazyLoad(exports, ["ProviderSsf"], () => require("./providerSsf"));
 
+export { ProviderWsFederationArgs, ProviderWsFederationState } from "./providerWsFederation";
+export type ProviderWsFederation = import("./providerWsFederation").ProviderWsFederation;
+export const ProviderWsFederation: typeof import("./providerWsFederation").ProviderWsFederation = null as any;
+utilities.lazyLoad(exports, ["ProviderWsFederation"], () => require("./providerWsFederation"));
+
 export { RacEndpointArgs, RacEndpointState } from "./racEndpoint";
 export type RacEndpoint = import("./racEndpoint").RacEndpoint;
 export const RacEndpoint: typeof import("./racEndpoint").RacEndpoint = null as any;
@@ -427,6 +437,11 @@ export { SourceTelegramArgs, SourceTelegramState } from "./sourceTelegram";
 export type SourceTelegram = import("./sourceTelegram").SourceTelegram;
 export const SourceTelegram: typeof import("./sourceTelegram").SourceTelegram = null as any;
 utilities.lazyLoad(exports, ["SourceTelegram"], () => require("./sourceTelegram"));
+
+export { StageAccountLockdownArgs, StageAccountLockdownState } from "./stageAccountLockdown";
+export type StageAccountLockdown = import("./stageAccountLockdown").StageAccountLockdown;
+export const StageAccountLockdown: typeof import("./stageAccountLockdown").StageAccountLockdown = null as any;
+utilities.lazyLoad(exports, ["StageAccountLockdown"], () => require("./stageAccountLockdown"));
 
 export { StageAuthenticatorDuoArgs, StageAuthenticatorDuoState } from "./stageAuthenticatorDuo";
 export type StageAuthenticatorDuo = import("./stageAuthenticatorDuo").StageAuthenticatorDuo;
@@ -608,6 +623,8 @@ const _module = {
                 return new EndpointsConnectorAgentEnrollmentToken(name, <any>undefined, { urn })
             case "authentik:index/endpointsDeviceAccessGroup:EndpointsDeviceAccessGroup":
                 return new EndpointsDeviceAccessGroup(name, <any>undefined, { urn })
+            case "authentik:index/endpointsGoogleChromeConnector:EndpointsGoogleChromeConnector":
+                return new EndpointsGoogleChromeConnector(name, <any>undefined, { urn })
             case "authentik:index/enterpriseLicense:EnterpriseLicense":
                 return new EnterpriseLicense(name, <any>undefined, { urn })
             case "authentik:index/eventRule:EventRule":
@@ -690,6 +707,8 @@ const _module = {
                 return new ProviderScim(name, <any>undefined, { urn })
             case "authentik:index/providerSsf:ProviderSsf":
                 return new ProviderSsf(name, <any>undefined, { urn })
+            case "authentik:index/providerWsFederation:ProviderWsFederation":
+                return new ProviderWsFederation(name, <any>undefined, { urn })
             case "authentik:index/racEndpoint:RacEndpoint":
                 return new RacEndpoint(name, <any>undefined, { urn })
             case "authentik:index/rbacInitialPermissions:RbacInitialPermissions":
@@ -718,6 +737,8 @@ const _module = {
                 return new SourceScim(name, <any>undefined, { urn })
             case "authentik:index/sourceTelegram:SourceTelegram":
                 return new SourceTelegram(name, <any>undefined, { urn })
+            case "authentik:index/stageAccountLockdown:StageAccountLockdown":
+                return new StageAccountLockdown(name, <any>undefined, { urn })
             case "authentik:index/stageAuthenticatorDuo:StageAuthenticatorDuo":
                 return new StageAuthenticatorDuo(name, <any>undefined, { urn })
             case "authentik:index/stageAuthenticatorEmail:StageAuthenticatorEmail":
@@ -791,6 +812,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/certificateKeyPair", _
 pulumi.runtime.registerResourceModule("authentik", "index/endpointsConnectorAgent", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/endpointsConnectorAgentEnrollmentToken", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/endpointsDeviceAccessGroup", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/endpointsGoogleChromeConnector", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/enterpriseLicense", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/eventRule", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/eventTransport", _module)
@@ -832,6 +854,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/providerRadius", _modu
 pulumi.runtime.registerResourceModule("authentik", "index/providerSaml", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerScim", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerSsf", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/providerWsFederation", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/racEndpoint", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/rbacInitialPermissions", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/rbacPermissionRole", _module)
@@ -846,6 +869,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/sourcePlex", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceSaml", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceScim", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceTelegram", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/stageAccountLockdown", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorDuo", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorEmail", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/stageAuthenticatorEndpointGdtc", _module)

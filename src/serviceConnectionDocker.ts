@@ -33,7 +33,7 @@ export class ServiceConnectionDocker extends pulumi.CustomResource {
     }
 
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
     declare public readonly local: pulumi.Output<boolean | undefined>;
     declare public readonly name: pulumi.Output<string>;
@@ -83,17 +83,17 @@ export class ServiceConnectionDocker extends pulumi.CustomResource {
  */
 export interface ServiceConnectionDockerState {
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    local?: pulumi.Input<boolean>;
-    name?: pulumi.Input<string>;
-    serviceConnectionDockerId?: pulumi.Input<string>;
-    tlsAuthentication?: pulumi.Input<string>;
-    tlsVerification?: pulumi.Input<string>;
+    local?: pulumi.Input<boolean | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    serviceConnectionDockerId?: pulumi.Input<string | undefined>;
+    tlsAuthentication?: pulumi.Input<string | undefined>;
+    tlsVerification?: pulumi.Input<string | undefined>;
     /**
      * Defaults to `http+unix:///var/run/docker.sock`.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -101,15 +101,15 @@ export interface ServiceConnectionDockerState {
  */
 export interface ServiceConnectionDockerArgs {
     /**
-     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`">`false`</span>.
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
      */
-    local?: pulumi.Input<boolean>;
-    name?: pulumi.Input<string>;
-    serviceConnectionDockerId?: pulumi.Input<string>;
-    tlsAuthentication?: pulumi.Input<string>;
-    tlsVerification?: pulumi.Input<string>;
+    local?: pulumi.Input<boolean | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    serviceConnectionDockerId?: pulumi.Input<string | undefined>;
+    tlsAuthentication?: pulumi.Input<string | undefined>;
+    tlsVerification?: pulumi.Input<string | undefined>;
     /**
      * Defaults to `http+unix:///var/run/docker.sock`.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }

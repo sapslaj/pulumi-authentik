@@ -76,18 +76,18 @@ export class RbacInitialPermissions extends pulumi.CustomResource {
  * Input properties used for looking up and filtering RbacInitialPermissions resources.
  */
 export interface RbacInitialPermissionsState {
-    name?: pulumi.Input<string>;
-    permissions?: pulumi.Input<pulumi.Input<number>[]>;
-    rbacInitialPermissionsId?: pulumi.Input<string>;
-    role?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
+    permissions?: pulumi.Input<pulumi.Input<number>[] | undefined>;
+    rbacInitialPermissionsId?: pulumi.Input<string | undefined>;
+    role?: pulumi.Input<string | undefined>;
 }
 
 /**
  * The set of arguments for constructing a RbacInitialPermissions resource.
  */
 export interface RbacInitialPermissionsArgs {
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     permissions: pulumi.Input<pulumi.Input<number>[]>;
-    rbacInitialPermissionsId?: pulumi.Input<string>;
+    rbacInitialPermissionsId?: pulumi.Input<string | undefined>;
     role: pulumi.Input<string>;
 }

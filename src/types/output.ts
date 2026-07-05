@@ -6,54 +6,54 @@ import * as inputs from "../types/input";
 import * as outputs from "../types/output";
 
 export interface GetGroupUsersObj {
-    attributes: string;
-    email: string;
-    isActive: boolean;
-    lastLogin: string;
-    name: string;
-    pk: number;
-    uid: string;
-    username: string;
+    attributes?: string;
+    email?: string;
+    isActive?: boolean;
+    lastLogin?: string;
+    name?: string;
+    pk?: number;
+    uid?: string;
+    username?: string;
 }
 
 export interface GetGroupsGroup {
-    attributes: string;
-    isSuperuser: boolean;
-    name: string;
-    numPk: number;
-    parentName: string;
-    parents: string[];
-    pk: string;
-    users: number[];
-    usersObjs: outputs.GetGroupsGroupUsersObj[];
+    attributes?: string;
+    isSuperuser?: boolean;
+    name?: string;
+    numPk?: number;
+    parentName?: string;
+    parents?: string[];
+    pk?: string;
+    users?: number[];
+    usersObjs?: outputs.GetGroupsGroupUsersObj[];
 }
 
 export interface GetGroupsGroupUsersObj {
-    attributes: string;
-    email: string;
-    isActive: boolean;
-    lastLogin: string;
-    name: string;
-    pk: number;
-    uid: string;
-    username: string;
+    attributes?: string;
+    email?: string;
+    isActive?: boolean;
+    lastLogin?: string;
+    name?: string;
+    pk?: number;
+    uid?: string;
+    username?: string;
 }
 
 export interface GetUsersUser {
-    attributes: string;
-    avatar: string;
-    dateJoined: string;
-    email: string;
-    groups: string[];
-    isActive: boolean;
-    isSuperuser: boolean;
-    lastLogin: string;
-    name: string;
-    path: string;
-    pk: number;
-    type: string;
-    uid: string;
-    username: string;
-    uuid: string;
+    attributes?: string;
+    avatar?: string;
+    dateJoined?: string;
+    email?: string;
+    groups?: string[];
+    isActive?: boolean;
+    isSuperuser?: boolean;
+    lastLogin?: string;
+    name?: string;
+    path?: string;
+    pk?: number;
+    type?: string;
+    uid?: string;
+    username?: string;
+    uuid?: string;
 }
 
