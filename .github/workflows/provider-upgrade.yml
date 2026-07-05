@@ -16,7 +16,7 @@ jobs:
           pulumi-version: dev
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
       - name: npm ci
         run: npm ci
       - name: generate
