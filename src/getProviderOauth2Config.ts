@@ -28,6 +28,7 @@ export interface GetProviderOauth2ConfigArgs {
  */
 export interface GetProviderOauth2ConfigResult {
     readonly authorizeUrl: string;
+    readonly clientId: string;
     readonly id: string;
     readonly issuerUrl: string;
     readonly jwksUrl: string;

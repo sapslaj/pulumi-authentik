@@ -75,6 +75,11 @@ export type FlowStageBinding = import("./flowStageBinding").FlowStageBinding;
 export const FlowStageBinding: typeof import("./flowStageBinding").FlowStageBinding = null as any;
 utilities.lazyLoad(exports, ["FlowStageBinding"], () => require("./flowStageBinding"));
 
+export { GetApplicationEntitlementArgs, GetApplicationEntitlementResult, GetApplicationEntitlementOutputArgs } from "./getApplicationEntitlement";
+export const getApplicationEntitlement: typeof import("./getApplicationEntitlement").getApplicationEntitlement = null as any;
+export const getApplicationEntitlementOutput: typeof import("./getApplicationEntitlement").getApplicationEntitlementOutput = null as any;
+utilities.lazyLoad(exports, ["getApplicationEntitlement","getApplicationEntitlementOutput"], () => require("./getApplicationEntitlement"));
+
 export { GetBrandArgs, GetBrandResult, GetBrandOutputArgs } from "./getBrand";
 export const getBrand: typeof import("./getBrand").getBrand = null as any;
 export const getBrandOutput: typeof import("./getBrand").getBrandOutput = null as any;
@@ -104,6 +109,16 @@ export { GetOutpostArgs, GetOutpostResult, GetOutpostOutputArgs } from "./getOut
 export const getOutpost: typeof import("./getOutpost").getOutpost = null as any;
 export const getOutpostOutput: typeof import("./getOutpost").getOutpostOutput = null as any;
 utilities.lazyLoad(exports, ["getOutpost","getOutpostOutput"], () => require("./getOutpost"));
+
+export { GetPolicyBindingArgs, GetPolicyBindingResult, GetPolicyBindingOutputArgs } from "./getPolicyBinding";
+export const getPolicyBinding: typeof import("./getPolicyBinding").getPolicyBinding = null as any;
+export const getPolicyBindingOutput: typeof import("./getPolicyBinding").getPolicyBindingOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyBinding","getPolicyBindingOutput"], () => require("./getPolicyBinding"));
+
+export { GetPolicyExpressionArgs, GetPolicyExpressionResult, GetPolicyExpressionOutputArgs } from "./getPolicyExpression";
+export const getPolicyExpression: typeof import("./getPolicyExpression").getPolicyExpression = null as any;
+export const getPolicyExpressionOutput: typeof import("./getPolicyExpression").getPolicyExpressionOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyExpression","getPolicyExpressionOutput"], () => require("./getPolicyExpression"));
 
 export { GetPropertyMappingProviderRacArgs, GetPropertyMappingProviderRacResult, GetPropertyMappingProviderRacOutputArgs } from "./getPropertyMappingProviderRac";
 export const getPropertyMappingProviderRac: typeof import("./getPropertyMappingProviderRac").getPropertyMappingProviderRac = null as any;
@@ -164,6 +179,11 @@ export { GetStageArgs, GetStageResult, GetStageOutputArgs } from "./getStage";
 export const getStage: typeof import("./getStage").getStage = null as any;
 export const getStageOutput: typeof import("./getStage").getStageOutput = null as any;
 utilities.lazyLoad(exports, ["getStage","getStageOutput"], () => require("./getStage"));
+
+export { GetStagePromptFieldArgs, GetStagePromptFieldResult, GetStagePromptFieldOutputArgs } from "./getStagePromptField";
+export const getStagePromptField: typeof import("./getStagePromptField").getStagePromptField = null as any;
+export const getStagePromptFieldOutput: typeof import("./getStagePromptField").getStagePromptFieldOutput = null as any;
+utilities.lazyLoad(exports, ["getStagePromptField","getStagePromptFieldOutput"], () => require("./getStagePromptField"));
 
 export { GetUserArgs, GetUserResult, GetUserOutputArgs } from "./getUser";
 export const getUser: typeof import("./getUser").getUser = null as any;
