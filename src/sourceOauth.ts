@@ -108,11 +108,10 @@ export class SourceOauth extends pulumi.CustomResource {
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`openidconnect`" pulumi-lang-dotnet="`Openidconnect`" pulumi-lang-go="`openidconnect`" pulumi-lang-python="`openidconnect`" pulumi-lang-yaml="`openidconnect`" pulumi-lang-java="`openidconnect`" pulumi-lang-hcl="`openidconnect`">`openidconnect`</span>
-     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
-     *   - <span pulumi-lang-nodejs="`azuread`" pulumi-lang-dotnet="`Azuread`" pulumi-lang-go="`azuread`" pulumi-lang-python="`azuread`" pulumi-lang-yaml="`azuread`" pulumi-lang-java="`azuread`" pulumi-lang-hcl="`azuread`">`azuread`</span>
+     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`discord`" pulumi-lang-dotnet="`Discord`" pulumi-lang-go="`discord`" pulumi-lang-python="`discord`" pulumi-lang-yaml="`discord`" pulumi-lang-java="`discord`" pulumi-lang-hcl="`discord`">`discord`</span>
+     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
      *   - <span pulumi-lang-nodejs="`facebook`" pulumi-lang-dotnet="`Facebook`" pulumi-lang-go="`facebook`" pulumi-lang-python="`facebook`" pulumi-lang-yaml="`facebook`" pulumi-lang-java="`facebook`" pulumi-lang-hcl="`facebook`">`facebook`</span>
      *   - <span pulumi-lang-nodejs="`github`" pulumi-lang-dotnet="`Github`" pulumi-lang-go="`github`" pulumi-lang-python="`github`" pulumi-lang-yaml="`github`" pulumi-lang-java="`github`" pulumi-lang-hcl="`github`">`github`</span>
      *   - <span pulumi-lang-nodejs="`gitlab`" pulumi-lang-dotnet="`Gitlab`" pulumi-lang-go="`gitlab`" pulumi-lang-python="`gitlab`" pulumi-lang-yaml="`gitlab`" pulumi-lang-java="`gitlab`" pulumi-lang-hcl="`gitlab`">`gitlab`</span>
@@ -323,11 +322,10 @@ export interface SourceOauthState {
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`openidconnect`" pulumi-lang-dotnet="`Openidconnect`" pulumi-lang-go="`openidconnect`" pulumi-lang-python="`openidconnect`" pulumi-lang-yaml="`openidconnect`" pulumi-lang-java="`openidconnect`" pulumi-lang-hcl="`openidconnect`">`openidconnect`</span>
-     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
-     *   - <span pulumi-lang-nodejs="`azuread`" pulumi-lang-dotnet="`Azuread`" pulumi-lang-go="`azuread`" pulumi-lang-python="`azuread`" pulumi-lang-yaml="`azuread`" pulumi-lang-java="`azuread`" pulumi-lang-hcl="`azuread`">`azuread`</span>
+     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`discord`" pulumi-lang-dotnet="`Discord`" pulumi-lang-go="`discord`" pulumi-lang-python="`discord`" pulumi-lang-yaml="`discord`" pulumi-lang-java="`discord`" pulumi-lang-hcl="`discord`">`discord`</span>
+     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
      *   - <span pulumi-lang-nodejs="`facebook`" pulumi-lang-dotnet="`Facebook`" pulumi-lang-go="`facebook`" pulumi-lang-python="`facebook`" pulumi-lang-yaml="`facebook`" pulumi-lang-java="`facebook`" pulumi-lang-hcl="`facebook`">`facebook`</span>
      *   - <span pulumi-lang-nodejs="`github`" pulumi-lang-dotnet="`Github`" pulumi-lang-go="`github`" pulumi-lang-python="`github`" pulumi-lang-yaml="`github`" pulumi-lang-java="`github`" pulumi-lang-hcl="`github`">`github`</span>
      *   - <span pulumi-lang-nodejs="`gitlab`" pulumi-lang-dotnet="`Gitlab`" pulumi-lang-go="`gitlab`" pulumi-lang-python="`gitlab`" pulumi-lang-yaml="`gitlab`" pulumi-lang-java="`gitlab`" pulumi-lang-hcl="`gitlab`">`gitlab`</span>
@@ -444,11 +442,10 @@ export interface SourceOauthArgs {
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allowed values:
-     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`openidconnect`" pulumi-lang-dotnet="`Openidconnect`" pulumi-lang-go="`openidconnect`" pulumi-lang-python="`openidconnect`" pulumi-lang-yaml="`openidconnect`" pulumi-lang-java="`openidconnect`" pulumi-lang-hcl="`openidconnect`">`openidconnect`</span>
-     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
-     *   - <span pulumi-lang-nodejs="`azuread`" pulumi-lang-dotnet="`Azuread`" pulumi-lang-go="`azuread`" pulumi-lang-python="`azuread`" pulumi-lang-yaml="`azuread`" pulumi-lang-java="`azuread`" pulumi-lang-hcl="`azuread`">`azuread`</span>
+     *   - <span pulumi-lang-nodejs="`apple`" pulumi-lang-dotnet="`Apple`" pulumi-lang-go="`apple`" pulumi-lang-python="`apple`" pulumi-lang-yaml="`apple`" pulumi-lang-java="`apple`" pulumi-lang-hcl="`apple`">`apple`</span>
      *   - <span pulumi-lang-nodejs="`discord`" pulumi-lang-dotnet="`Discord`" pulumi-lang-go="`discord`" pulumi-lang-python="`discord`" pulumi-lang-yaml="`discord`" pulumi-lang-java="`discord`" pulumi-lang-hcl="`discord`">`discord`</span>
+     *   - <span pulumi-lang-nodejs="`entraid`" pulumi-lang-dotnet="`Entraid`" pulumi-lang-go="`entraid`" pulumi-lang-python="`entraid`" pulumi-lang-yaml="`entraid`" pulumi-lang-java="`entraid`" pulumi-lang-hcl="`entraid`">`entraid`</span>
      *   - <span pulumi-lang-nodejs="`facebook`" pulumi-lang-dotnet="`Facebook`" pulumi-lang-go="`facebook`" pulumi-lang-python="`facebook`" pulumi-lang-yaml="`facebook`" pulumi-lang-java="`facebook`" pulumi-lang-hcl="`facebook`">`facebook`</span>
      *   - <span pulumi-lang-nodejs="`github`" pulumi-lang-dotnet="`Github`" pulumi-lang-go="`github`" pulumi-lang-python="`github`" pulumi-lang-yaml="`github`" pulumi-lang-java="`github`" pulumi-lang-hcl="`github`">`github`</span>
      *   - <span pulumi-lang-nodejs="`gitlab`" pulumi-lang-dotnet="`Gitlab`" pulumi-lang-go="`gitlab`" pulumi-lang-python="`gitlab`" pulumi-lang-yaml="`gitlab`" pulumi-lang-java="`gitlab`" pulumi-lang-hcl="`gitlab`">`gitlab`</span>

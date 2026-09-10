@@ -5,6 +5,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
+export { AgentArgs, AgentState } from "./agent";
+export type Agent = import("./agent").Agent;
+export const Agent: typeof import("./agent").Agent = null as any;
+utilities.lazyLoad(exports, ["Agent"], () => require("./agent"));
+
 export { ApplicationArgs, ApplicationState } from "./application";
 export type Application = import("./application").Application;
 export const Application: typeof import("./application").Application = null as any;
@@ -205,6 +210,11 @@ export type Group = import("./group").Group;
 export const Group: typeof import("./group").Group = null as any;
 utilities.lazyLoad(exports, ["Group"], () => require("./group"));
 
+export { ObjectAttributeArgs, ObjectAttributeState } from "./objectAttribute";
+export type ObjectAttribute = import("./objectAttribute").ObjectAttribute;
+export const ObjectAttribute: typeof import("./objectAttribute").ObjectAttribute = null as any;
+utilities.lazyLoad(exports, ["ObjectAttribute"], () => require("./objectAttribute"));
+
 export { OutpostArgs, OutpostState } from "./outpost";
 export type Outpost = import("./outpost").Outpost;
 export const Outpost: typeof import("./outpost").Outpost = null as any;
@@ -353,6 +363,11 @@ export type ProviderOauth2 = import("./providerOauth2").ProviderOauth2;
 export const ProviderOauth2: typeof import("./providerOauth2").ProviderOauth2 = null as any;
 utilities.lazyLoad(exports, ["ProviderOauth2"], () => require("./providerOauth2"));
 
+export { ProviderOauth2DcrArgs, ProviderOauth2DcrState } from "./providerOauth2Dcr";
+export type ProviderOauth2Dcr = import("./providerOauth2Dcr").ProviderOauth2Dcr;
+export const ProviderOauth2Dcr: typeof import("./providerOauth2Dcr").ProviderOauth2Dcr = null as any;
+utilities.lazyLoad(exports, ["ProviderOauth2Dcr"], () => require("./providerOauth2Dcr"));
+
 export { ProviderProxyArgs, ProviderProxyState } from "./providerProxy";
 export type ProviderProxy = import("./providerProxy").ProviderProxy;
 export const ProviderProxy: typeof import("./providerProxy").ProviderProxy = null as any;
@@ -412,6 +427,21 @@ export { RbacRoleArgs, RbacRoleState } from "./rbacRole";
 export type RbacRole = import("./rbacRole").RbacRole;
 export const RbacRole: typeof import("./rbacRole").RbacRole = null as any;
 utilities.lazyLoad(exports, ["RbacRole"], () => require("./rbacRole"));
+
+export { RequestRuleArgs, RequestRuleState } from "./requestRule";
+export type RequestRule = import("./requestRule").RequestRule;
+export const RequestRule: typeof import("./requestRule").RequestRule = null as any;
+utilities.lazyLoad(exports, ["RequestRule"], () => require("./requestRule"));
+
+export { RequestRuleBindingArgs, RequestRuleBindingState } from "./requestRuleBinding";
+export type RequestRuleBinding = import("./requestRuleBinding").RequestRuleBinding;
+export const RequestRuleBinding: typeof import("./requestRuleBinding").RequestRuleBinding = null as any;
+utilities.lazyLoad(exports, ["RequestRuleBinding"], () => require("./requestRuleBinding"));
+
+export { RequestRuleChildBindingArgs, RequestRuleChildBindingState } from "./requestRuleChildBinding";
+export type RequestRuleChildBinding = import("./requestRuleChildBinding").RequestRuleChildBinding;
+export const RequestRuleChildBinding: typeof import("./requestRuleChildBinding").RequestRuleChildBinding = null as any;
+utilities.lazyLoad(exports, ["RequestRuleChildBinding"], () => require("./requestRuleChildBinding"));
 
 export { ServiceConnectionDockerArgs, ServiceConnectionDockerState } from "./serviceConnectionDocker";
 export type ServiceConnectionDocker = import("./serviceConnectionDocker").ServiceConnectionDocker;
@@ -613,6 +643,11 @@ export type User = import("./user").User;
 export const User: typeof import("./user").User = null as any;
 utilities.lazyLoad(exports, ["User"], () => require("./user"));
 
+export { UserOffboardingArgs, UserOffboardingState } from "./userOffboarding";
+export type UserOffboarding = import("./userOffboarding").UserOffboarding;
+export const UserOffboarding: typeof import("./userOffboarding").UserOffboarding = null as any;
+utilities.lazyLoad(exports, ["UserOffboarding"], () => require("./userOffboarding"));
+
 
 // Export sub-modules:
 import * as config from "./config";
@@ -627,6 +662,8 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
+            case "authentik:index/agent:Agent":
+                return new Agent(name, <any>undefined, { urn })
             case "authentik:index/application:Application":
                 return new Application(name, <any>undefined, { urn })
             case "authentik:index/applicationEntitlement:ApplicationEntitlement":
@@ -657,6 +694,8 @@ const _module = {
                 return new FlowStageBinding(name, <any>undefined, { urn })
             case "authentik:index/group:Group":
                 return new Group(name, <any>undefined, { urn })
+            case "authentik:index/objectAttribute:ObjectAttribute":
+                return new ObjectAttribute(name, <any>undefined, { urn })
             case "authentik:index/outpost:Outpost":
                 return new Outpost(name, <any>undefined, { urn })
             case "authentik:index/outpostProviderAttachment:OutpostProviderAttachment":
@@ -715,6 +754,8 @@ const _module = {
                 return new ProviderMicrosoftEntra(name, <any>undefined, { urn })
             case "authentik:index/providerOauth2:ProviderOauth2":
                 return new ProviderOauth2(name, <any>undefined, { urn })
+            case "authentik:index/providerOauth2Dcr:ProviderOauth2Dcr":
+                return new ProviderOauth2Dcr(name, <any>undefined, { urn })
             case "authentik:index/providerProxy:ProviderProxy":
                 return new ProviderProxy(name, <any>undefined, { urn })
             case "authentik:index/providerRac:ProviderRac":
@@ -739,6 +780,12 @@ const _module = {
                 return new RbacPermissionUser(name, <any>undefined, { urn })
             case "authentik:index/rbacRole:RbacRole":
                 return new RbacRole(name, <any>undefined, { urn })
+            case "authentik:index/requestRule:RequestRule":
+                return new RequestRule(name, <any>undefined, { urn })
+            case "authentik:index/requestRuleBinding:RequestRuleBinding":
+                return new RequestRuleBinding(name, <any>undefined, { urn })
+            case "authentik:index/requestRuleChildBinding:RequestRuleChildBinding":
+                return new RequestRuleChildBinding(name, <any>undefined, { urn })
             case "authentik:index/serviceConnectionDocker:ServiceConnectionDocker":
                 return new ServiceConnectionDocker(name, <any>undefined, { urn })
             case "authentik:index/serviceConnectionKubernetes:ServiceConnectionKubernetes":
@@ -819,11 +866,14 @@ const _module = {
                 return new Token(name, <any>undefined, { urn })
             case "authentik:index/user:User":
                 return new User(name, <any>undefined, { urn })
+            case "authentik:index/userOffboarding:UserOffboarding":
+                return new UserOffboarding(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
+pulumi.runtime.registerResourceModule("authentik", "index/agent", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/application", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/applicationEntitlement", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/blueprint", _module)
@@ -839,6 +889,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/eventTransport", _modu
 pulumi.runtime.registerResourceModule("authentik", "index/flow", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/flowStageBinding", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/group", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/objectAttribute", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/outpost", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/outpostProviderAttachment", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/policyBinding", _module)
@@ -868,6 +919,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/providerGoogleWorkspac
 pulumi.runtime.registerResourceModule("authentik", "index/providerLdap", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerMicrosoftEntra", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerOauth2", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/providerOauth2Dcr", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerProxy", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerRac", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerRadius", _module)
@@ -880,6 +932,9 @@ pulumi.runtime.registerResourceModule("authentik", "index/rbacInitialPermissions
 pulumi.runtime.registerResourceModule("authentik", "index/rbacPermissionRole", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/rbacPermissionUser", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/rbacRole", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/requestRule", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/requestRuleBinding", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/requestRuleChildBinding", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/serviceConnectionDocker", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/serviceConnectionKubernetes", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/sourceKerberos", _module)
@@ -920,6 +975,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/systemSettings", _modu
 pulumi.runtime.registerResourceModule("authentik", "index/taskSchedule", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/token", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/user", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/userOffboarding", _module)
 pulumi.runtime.registerResourcePackage("authentik", {
     version: utilities.getVersion(),
     constructProvider: (name: string, type: string, urn: string): pulumi.ProviderResource => {
