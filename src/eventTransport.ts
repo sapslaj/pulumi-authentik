@@ -18,6 +18,17 @@ export class EventTransport extends pulumi.CustomResource {
         return new EventTransport(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing EventTransport resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: EventTransportState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("authentik:index/eventTransport:EventTransport", id, <any>state || {}, { ...opts }, utilities.getPackage());
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'authentik:index/eventTransport:EventTransport';
 

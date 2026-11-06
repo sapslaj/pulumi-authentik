@@ -18,6 +18,17 @@ export class ProviderLdap extends pulumi.CustomResource {
         return new ProviderLdap(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing ProviderLdap resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: ProviderLdapState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("authentik:index/providerLdap:ProviderLdap", id, <any>state || {}, { ...opts }, utilities.getPackage());
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'authentik:index/providerLdap:ProviderLdap';
 

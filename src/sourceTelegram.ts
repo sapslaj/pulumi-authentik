@@ -18,6 +18,17 @@ export class SourceTelegram extends pulumi.CustomResource {
         return new SourceTelegram(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing SourceTelegram resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: SourceTelegramState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("authentik:index/sourceTelegram:SourceTelegram", id, <any>state || {}, { ...opts }, utilities.getPackage());
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'authentik:index/sourceTelegram:SourceTelegram';
 
@@ -49,6 +60,10 @@ export class SourceTelegram extends pulumi.CustomResource {
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
     declare public readonly preAuthenticationFlow: pulumi.Output<string>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    declare public readonly promoted: pulumi.Output<boolean | undefined>;
     declare public readonly propertyMappings: pulumi.Output<string[] | undefined>;
     declare public readonly propertyMappingsGroups: pulumi.Output<string[] | undefined>;
     /**
@@ -97,6 +112,7 @@ export class SourceTelegram extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["policyEngineMode"] = state?.policyEngineMode;
             resourceInputs["preAuthenticationFlow"] = state?.preAuthenticationFlow;
+            resourceInputs["promoted"] = state?.promoted;
             resourceInputs["propertyMappings"] = state?.propertyMappings;
             resourceInputs["propertyMappingsGroups"] = state?.propertyMappingsGroups;
             resourceInputs["requestMessageAccess"] = state?.requestMessageAccess;
@@ -127,6 +143,7 @@ export class SourceTelegram extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["policyEngineMode"] = args?.policyEngineMode;
             resourceInputs["preAuthenticationFlow"] = args?.preAuthenticationFlow;
+            resourceInputs["promoted"] = args?.promoted;
             resourceInputs["propertyMappings"] = args?.propertyMappings;
             resourceInputs["propertyMappingsGroups"] = args?.propertyMappingsGroups;
             resourceInputs["requestMessageAccess"] = args?.requestMessageAccess;
@@ -162,6 +179,10 @@ export interface SourceTelegramState {
      */
     policyEngineMode?: pulumi.Input<string | undefined>;
     preAuthenticationFlow?: pulumi.Input<string | undefined>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    promoted?: pulumi.Input<boolean | undefined>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -211,6 +232,10 @@ export interface SourceTelegramArgs {
      */
     policyEngineMode?: pulumi.Input<string | undefined>;
     preAuthenticationFlow: pulumi.Input<string>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    promoted?: pulumi.Input<boolean | undefined>;
     propertyMappings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     propertyMappingsGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**

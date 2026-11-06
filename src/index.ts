@@ -155,6 +155,11 @@ export const getPropertyMappingSourceLdap: typeof import("./getPropertyMappingSo
 export const getPropertyMappingSourceLdapOutput: typeof import("./getPropertyMappingSourceLdap").getPropertyMappingSourceLdapOutput = null as any;
 utilities.lazyLoad(exports, ["getPropertyMappingSourceLdap","getPropertyMappingSourceLdapOutput"], () => require("./getPropertyMappingSourceLdap"));
 
+export { GetPropertyMappingSourceTelegramArgs, GetPropertyMappingSourceTelegramResult, GetPropertyMappingSourceTelegramOutputArgs } from "./getPropertyMappingSourceTelegram";
+export const getPropertyMappingSourceTelegram: typeof import("./getPropertyMappingSourceTelegram").getPropertyMappingSourceTelegram = null as any;
+export const getPropertyMappingSourceTelegramOutput: typeof import("./getPropertyMappingSourceTelegram").getPropertyMappingSourceTelegramOutput = null as any;
+utilities.lazyLoad(exports, ["getPropertyMappingSourceTelegram","getPropertyMappingSourceTelegramOutput"], () => require("./getPropertyMappingSourceTelegram"));
+
 export { GetProviderOauth2ConfigArgs, GetProviderOauth2ConfigResult, GetProviderOauth2ConfigOutputArgs } from "./getProviderOauth2Config";
 export const getProviderOauth2Config: typeof import("./getProviderOauth2Config").getProviderOauth2Config = null as any;
 export const getProviderOauth2ConfigOutput: typeof import("./getProviderOauth2Config").getProviderOauth2ConfigOutput = null as any;
@@ -339,6 +344,11 @@ export { PropertyMappingSourceScimArgs, PropertyMappingSourceScimState } from ".
 export type PropertyMappingSourceScim = import("./propertyMappingSourceScim").PropertyMappingSourceScim;
 export const PropertyMappingSourceScim: typeof import("./propertyMappingSourceScim").PropertyMappingSourceScim = null as any;
 utilities.lazyLoad(exports, ["PropertyMappingSourceScim"], () => require("./propertyMappingSourceScim"));
+
+export { PropertyMappingSourceTelegramArgs, PropertyMappingSourceTelegramState } from "./propertyMappingSourceTelegram";
+export type PropertyMappingSourceTelegram = import("./propertyMappingSourceTelegram").PropertyMappingSourceTelegram;
+export const PropertyMappingSourceTelegram: typeof import("./propertyMappingSourceTelegram").PropertyMappingSourceTelegram = null as any;
+utilities.lazyLoad(exports, ["PropertyMappingSourceTelegram"], () => require("./propertyMappingSourceTelegram"));
 
 export * from "./provider";
 import { Provider } from "./provider";
@@ -746,6 +756,8 @@ const _module = {
                 return new PropertyMappingSourceSaml(name, <any>undefined, { urn })
             case "authentik:index/propertyMappingSourceScim:PropertyMappingSourceScim":
                 return new PropertyMappingSourceScim(name, <any>undefined, { urn })
+            case "authentik:index/propertyMappingSourceTelegram:PropertyMappingSourceTelegram":
+                return new PropertyMappingSourceTelegram(name, <any>undefined, { urn })
             case "authentik:index/providerGoogleWorkspace:ProviderGoogleWorkspace":
                 return new ProviderGoogleWorkspace(name, <any>undefined, { urn })
             case "authentik:index/providerLdap:ProviderLdap":
@@ -915,6 +927,7 @@ pulumi.runtime.registerResourceModule("authentik", "index/propertyMappingSourceO
 pulumi.runtime.registerResourceModule("authentik", "index/propertyMappingSourcePlex", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/propertyMappingSourceSaml", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/propertyMappingSourceScim", _module)
+pulumi.runtime.registerResourceModule("authentik", "index/propertyMappingSourceTelegram", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerGoogleWorkspace", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerLdap", _module)
 pulumi.runtime.registerResourceModule("authentik", "index/providerMicrosoftEntra", _module)

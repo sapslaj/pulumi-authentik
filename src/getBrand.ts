@@ -20,9 +20,11 @@ export function getBrand(args?: GetBrandArgs, opts?: pulumi.InvokeOptions): Prom
         "flowAuthentication": args.flowAuthentication,
         "flowDeviceCode": args.flowDeviceCode,
         "flowInvalidation": args.flowInvalidation,
+        "flowLockdown": args.flowLockdown,
         "flowRecovery": args.flowRecovery,
         "flowUnenrollment": args.flowUnenrollment,
         "flowUserSettings": args.flowUserSettings,
+        "flowUserSwitch": args.flowUserSwitch,
         "id": args.id,
         "webCertificate": args.webCertificate,
     }, opts, utilities.getPackage());
@@ -44,9 +46,11 @@ export interface GetBrandArgs {
     flowAuthentication?: string;
     flowDeviceCode?: string;
     flowInvalidation?: string;
+    flowLockdown?: string;
     flowRecovery?: string;
     flowUnenrollment?: string;
     flowUserSettings?: string;
+    flowUserSwitch?: string;
     id?: string;
     webCertificate?: string;
 }
@@ -67,9 +71,11 @@ export interface GetBrandResult {
     readonly flowAuthentication: string;
     readonly flowDeviceCode: string;
     readonly flowInvalidation: string;
+    readonly flowLockdown: string;
     readonly flowRecovery: string;
     readonly flowUnenrollment: string;
     readonly flowUserSettings: string;
+    readonly flowUserSwitch: string;
     readonly id: string;
     readonly webCertificate: string;
 }
@@ -89,9 +95,11 @@ export function getBrandOutput(args?: GetBrandOutputArgs, opts?: pulumi.InvokeOu
         "flowAuthentication": args.flowAuthentication,
         "flowDeviceCode": args.flowDeviceCode,
         "flowInvalidation": args.flowInvalidation,
+        "flowLockdown": args.flowLockdown,
         "flowRecovery": args.flowRecovery,
         "flowUnenrollment": args.flowUnenrollment,
         "flowUserSettings": args.flowUserSettings,
+        "flowUserSwitch": args.flowUserSwitch,
         "id": args.id,
         "webCertificate": args.webCertificate,
     }, opts, utilities.getPackage());
@@ -113,9 +121,11 @@ export interface GetBrandOutputArgs {
     flowAuthentication?: pulumi.Input<string | undefined>;
     flowDeviceCode?: pulumi.Input<string | undefined>;
     flowInvalidation?: pulumi.Input<string | undefined>;
+    flowLockdown?: pulumi.Input<string | undefined>;
     flowRecovery?: pulumi.Input<string | undefined>;
     flowUnenrollment?: pulumi.Input<string | undefined>;
     flowUserSettings?: pulumi.Input<string | undefined>;
+    flowUserSwitch?: pulumi.Input<string | undefined>;
     id?: pulumi.Input<string | undefined>;
     webCertificate?: pulumi.Input<string | undefined>;
 }

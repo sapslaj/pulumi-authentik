@@ -18,6 +18,17 @@ export class SourceKerberos extends pulumi.CustomResource {
         return new SourceKerberos(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing SourceKerberos resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: SourceKerberosState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("authentik:index/sourceKerberos:SourceKerberos", id, <any>state || {}, { ...opts }, utilities.getPackage());
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'authentik:index/sourceKerberos:SourceKerberos';
 
@@ -62,6 +73,10 @@ export class SourceKerberos extends pulumi.CustomResource {
      *      Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`" pulumi-lang-hcl="`any`">`any`</span>.
      */
     declare public readonly policyEngineMode: pulumi.Output<string | undefined>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    declare public readonly promoted: pulumi.Output<boolean | undefined>;
     /**
      * Kerberos realm
      */
@@ -152,6 +167,7 @@ export class SourceKerberos extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["passwordLoginUpdateInternalPassword"] = state?.passwordLoginUpdateInternalPassword;
             resourceInputs["policyEngineMode"] = state?.policyEngineMode;
+            resourceInputs["promoted"] = state?.promoted;
             resourceInputs["realm"] = state?.realm;
             resourceInputs["slug"] = state?.slug;
             resourceInputs["sourceKerberosId"] = state?.sourceKerberosId;
@@ -184,6 +200,7 @@ export class SourceKerberos extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["passwordLoginUpdateInternalPassword"] = args?.passwordLoginUpdateInternalPassword;
             resourceInputs["policyEngineMode"] = args?.policyEngineMode;
+            resourceInputs["promoted"] = args?.promoted;
             resourceInputs["realm"] = args?.realm;
             resourceInputs["slug"] = args?.slug;
             resourceInputs["sourceKerberosId"] = args?.sourceKerberosId;
@@ -242,6 +259,10 @@ export interface SourceKerberosState {
      *      Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`" pulumi-lang-hcl="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string | undefined>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    promoted?: pulumi.Input<boolean | undefined>;
     /**
      * Kerberos realm
      */
@@ -346,6 +367,10 @@ export interface SourceKerberosArgs {
      *      Defaults to <span pulumi-lang-nodejs="`any`" pulumi-lang-dotnet="`Any`" pulumi-lang-go="`any`" pulumi-lang-python="`any`" pulumi-lang-yaml="`any`" pulumi-lang-java="`any`" pulumi-lang-hcl="`any`">`any`</span>.
      */
     policyEngineMode?: pulumi.Input<string | undefined>;
+    /**
+     * Defaults to <span pulumi-lang-nodejs="`false`" pulumi-lang-dotnet="`False`" pulumi-lang-go="`false`" pulumi-lang-python="`false`" pulumi-lang-yaml="`false`" pulumi-lang-java="`false`" pulumi-lang-hcl="`false`">`false`</span>.
+     */
+    promoted?: pulumi.Input<boolean | undefined>;
     /**
      * Kerberos realm
      */
